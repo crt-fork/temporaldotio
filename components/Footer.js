@@ -47,19 +47,17 @@ export default function Footer() {
                 <a
                   className="hover:text-blue-200 hover:underline"
                   href="https://community.temporal.io/">
-                  Community
+                  Support Forum
                 </a>
               </li>
               <li className="mb-2 font-light">
-                <a
-                  className="hover:text-blue-200 hover:underline"
-                  href="https://join.slack.com/t/temporalio/shared_invite/zt-onhti57l-J0bl~Tr7MqSUnIc1upjRkw">
+                <a className="hover:text-blue-200 hover:underline" href="https://temporal.io/slack">
                   Slack
                 </a>
               </li>
               <li className="mb-2 font-light">
                 <a className="hover:text-blue-200 hover:underline" href="https://lu.ma/temporal">
-                  Signup for Office Hours
+                  Meetup
                 </a>
               </li>
               <li className="mb-2 font-light">
@@ -79,6 +77,13 @@ export default function Footer() {
               <li className="mb-2 font-light">
                 <a className="hover:text-blue-200 hover:underline" href="/press">
                   Press/Brand Assets
+                </a>
+              </li>
+              <li className="mb-2 font-light">
+                <a
+                  className="hover:text-blue-200 hover:underline"
+                  href="https://open.spotify.com/playlist/3J1oYYHf1lkLsMkfTZEpMO?si=02b77f1f7a6a4253">
+                  Spotify Playlist
                 </a>
               </li>
             </ul>
@@ -103,7 +108,7 @@ export default function Footer() {
                 <a
                   className="hover:text-blue-200 hover:underline"
                   href="https://docs.temporal.io/docs/sdks-introduction">
-                  API
+                  SDKs
                 </a>
               </li>
               <li className="mb-2 font-light">
@@ -111,6 +116,13 @@ export default function Footer() {
                   className="hover:text-blue-200 hover:underline"
                   href="https://docs.temporal.io/docs/concept-overview">
                   Concepts
+                </a>
+              </li>
+              <li className="mb-2 font-light">
+                <a
+                  className="hover:text-blue-200 hover:underline"
+                  href="https://docs.temporal.io/docs/system-tools/introduction">
+                  CLI & Web UI
                 </a>
               </li>
               <li className="mb-2 font-light">
