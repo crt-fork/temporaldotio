@@ -178,6 +178,15 @@ export default function CareersPage() {
             </a>{' '}
             <span className="text-sm text-gray-500">North America Remote</span>
           </li>
+          <li>
+            <span className="font-bold text-xl uppercase">Snap</span>:{' '}
+            <a
+              href="https://eng.snap.com/monolith-to-multicloud-microservices-snap-service-mesh"
+              className="font-bold underline text-blue-400 hover:text-blue-200">
+              General Engineering Hires
+            </a>{' '}
+            <span className="text-sm text-gray-500">Los Angeles, London, Israel</span>
+          </li>
         </ul>
       </div>
       <Footer />
