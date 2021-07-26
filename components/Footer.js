@@ -142,7 +142,7 @@ export default function Footer() {
               <li className="mb-2 font-light">
                 <a
                   className="hover:text-blue-200 hover:underline"
-                  href="https://docs.temporal.io/pdf/temporal-tos-2021-01-19.pdf">
+                  href="https://docs.temporal.io/pdf/temporal-tos-2021-07-24.pdf">
                   Terms of Service
                 </a>
               </li>

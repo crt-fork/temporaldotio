@@ -26,10 +26,9 @@ const QUOTES = [
     img: 'https://pbs.twimg.com/profile_images/943640175/new_photo_400x400.jpg',
     quote: (
       <span>
-        Trying to model complex SAGAS using{' '}
-        <span className="text-temporalblue">a plain execution graph</span> such as Zeebe and Step
-        Functions <span className="text-temporalblue">makes things unnecessarily complex</span>.
-        This is where Temporal really shines.
+        Temporal* maintains <span className="text-temporalblue">high reliability</span> while
+        providing <span className="text-temporalblue">tremendous visibility</span>. Things we
+        thought to be much more complex... feel much easier!
       </span>
     ),
     name: 'Anthony Dmitriyev',
@@ -42,9 +41,9 @@ const QUOTES = [
     img: 'https://avatars.githubusercontent.com/u/2502591?v=4',
     quote: (
       <span>
-        It was a game changing revelation - Temporal gave us{' '}
+        A <span className="text-temporalblue">game changing</span> revelation - Temporal gave us{' '}
         <span className="text-temporalblue">the ability to test our workflows</span> with unit
-        tests. Write code instead of writing JSON or YAML, which are completely untestable!
+        tests. JSON or YAML are completely untestable!
       </span>
     ),
     name: 'Nicolas Gere',
@@ -57,9 +56,9 @@ const QUOTES = [
     img: 'https://temporal.io/logos/photo-steven.png',
     quote: (
       <span>
-        One thing that the API does really well is give you this{' '}
-        <span className="text-temporalblue">illusion of single threaded execution</span> without
-        manually orchestrating multiple things. It's pretty amazing.
+        The API gives you this{' '}
+        <span className="text-temporalblue">illusion of single threaded execution</span>
+        ... It's amazing.
       </span>
     ),
     name: 'Steven Cipolla',

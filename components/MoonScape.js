@@ -5,34 +5,35 @@ const MoonScape = () => {
   const footerRef = useRef(null);
   const moonOneRef = useRef(null);
   const moonTwoRef = useRef(null);
-  useEffect(() => {
-    const moonOneX = gsap.utils.mapRange(0, window.innerWidth, -10, 25);
-    const moonTwoX = gsap.utils.mapRange(0, window.innerWidth, 10, -10);
-    const footX = gsap.utils.mapRange(0, window.innerWidth, -5, 5);
-    const moonOneY = gsap.utils.mapRange(0, window.innerHeight, 20, -25);
-    const moonTwoY = gsap.utils.mapRange(0, window.innerHeight, -30, 10);
-    const footY = gsap.utils.mapRange(0, window.innerHeight, 5, -5);
-    const UPDATE = ({ x, y }) => {
-      gsap.set(moonOneRef.current, {
-        xPercent: moonOneX(x),
-        yPercent: moonOneY(y)
-      });
-      gsap.set(moonTwoRef.current, {
-        xPercent: moonTwoX(x),
-        yPercent: moonTwoY(y)
-      });
-      gsap.set(footerRef.current, {
-        xPercent: footX(x),
-        yPercent: footY(y)
-      });
-    };
+  // // moons used to move with mice but we received negative feedback on this
+  // useEffect(() => {
+  //   const moonOneX = gsap.utils.mapRange(0, window.innerWidth, -10, 25);
+  //   const moonTwoX = gsap.utils.mapRange(0, window.innerWidth, 10, -10);
+  //   const footX = gsap.utils.mapRange(0, window.innerWidth, -5, 5);
+  //   const moonOneY = gsap.utils.mapRange(0, window.innerHeight, 20, -25);
+  //   const moonTwoY = gsap.utils.mapRange(0, window.innerHeight, -30, 10);
+  //   const footY = gsap.utils.mapRange(0, window.innerHeight, 5, -5);
+  //   const UPDATE = ({ x, y }) => {
+  //     gsap.set(moonOneRef.current, {
+  //       xPercent: moonOneX(x),
+  //       yPercent: moonOneY(y)
+  //     });
+  //     gsap.set(moonTwoRef.current, {
+  //       xPercent: moonTwoX(x),
+  //       yPercent: moonTwoY(y)
+  //     });
+  //     gsap.set(footerRef.current, {
+  //       xPercent: footX(x),
+  //       yPercent: footY(y)
+  //     });
+  //   };
 
-    window.addEventListener('pointermove', UPDATE);
+  //   window.addEventListener('pointermove', UPDATE);
 
-    return () => {
-      window.removeEventListener('pointermove', UPDATE);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('pointermove', UPDATE);
+  //   };
+  // }, []);
 
   return (
     <svg

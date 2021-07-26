@@ -4,7 +4,7 @@ import ExplainTemporal from '../components/ExplainTemporal';
 import StackedUseCases from '../components/StackedUseCases';
 import CaseStudies from '../components/CaseStudies';
 import JoinUs from '../components/JoinUs';
-import TemporalVs from '../components/TemporalVs';
+import FAQ from '../components/FAQ';
 import FinalQuote from '../components/FinalQuote';
 import Footer from '../components/Footer';
 import Head from 'next/head';
@@ -21,7 +21,7 @@ export default function IndexPage() {
       <CaseStudies />
       <StackedUseCases />
       <JoinUs />
-      <TemporalVs />
+      <FAQ />
       <FinalQuote />
       <Footer />
     </div>

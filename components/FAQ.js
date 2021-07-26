@@ -1,4 +1,4 @@
-export default function TemporalVs() {
+export default function FAQ() {
   return (
     <section
       id="temporal-vs"
@@ -8,13 +8,13 @@ export default function TemporalVs() {
     px-2 sm:px-8 py-16
     `}>
       <h1 className=" text-60 leading-60 lg:text-144 lg:leading-144 uppercase mb-4 lg:mb-16">
-        Temporal Vs.
+        FAQ
       </h1>
       <h2 className="font-light italic text-md sm:text-2xl mb-4">
         What's the difference between Temporal and...
       </h2>
 
-      <ul className="border-t border-l border-r border-white mb-32 container">
+      <ul className="border-t border-l border-r border-white mb-16 container">
         <VSItem header="Homegrown Scripts and Queues" defaultState>
           <h2 className="font-bold">
             Most developers hand-write async flows using queues and job processors.
@@ -114,13 +114,27 @@ export default function TemporalVs() {
           </p>
         </VSItem>
       </ul>
+      <div className="font-light italic text-md sm:text-2xl mb-4">
+        Still not getting it? See our{' '}
+        <a
+          className="text-temporalblue hover:underline"
+          href="https://docs.temporal.io/docs/external-resources/">
+          External Resources
+        </a>{' '}
+        and ask questions at
+        <a className="text-temporalblue hover:underline" href="https://lu.ma/temporal">
+          {' '}
+          our monthly Meetup
+        </a>
+        !
+      </div>
     </section>
   );
 }
 
 // this looks very similar to VSItem in UseCases.js
 // but we keep it separate to keep it agile and customizable without affecting usecases.js
-function VSItem({ header, children, defaultState = true }) {
+function VSItem({ header, children, defaultState = false }) {
   const [state, setState] = React.useState(defaultState);
   return (
     <li className="border-b border-white">
