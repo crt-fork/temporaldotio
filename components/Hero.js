@@ -30,13 +30,10 @@ export default function Hero() {
       Node: 'https://docs.temporal.io/docs/node/hello-world'
     }[lang] || 'https://docs.temporal.io/application-development/';
   return (
-    <div className=" border-b border-white">
+    // <div className=" border-b border-white">
+    <div className="">
       {/* <Banner /> */}
-      <section
-        id="hero"
-        className={`
-    min-h-screen max-h-[1080px] container mx-auto flex flex-col p-4 sm:p-4 justify-between
-    `}>
+      <section id="hero" className={`container mx-auto flex flex-col p-4 sm:p-4 justify-between`}>
         <Nav />
         <div className="flex flex-1 flex-col">
           <div className="mt-8">
@@ -63,7 +60,7 @@ export default function Hero() {
               scale.
             </p>
           </div>
-          <div className="block mb-4 overflow-x-auto">{dynamicCodeSample}</div>
+          <div className="block mb-16 overflow-x-auto">{dynamicCodeSample}</div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between mb-2 sm:mb-4 items-center">
           <div className="flex flex-col gap-4 lg:flex-row lg:text-xl">

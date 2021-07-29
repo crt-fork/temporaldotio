@@ -20,7 +20,6 @@ export default function ExplainTemporal() {
     <section
       id="explain-temporal"
       className={`
-    min-h-screen max-h-[1080px]
     container mx-auto
     flex flex-col justify-evenly
     px-8 py-16
