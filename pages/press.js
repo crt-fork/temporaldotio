@@ -99,63 +99,59 @@ export default function PressPage() {
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             <Asset url="/press/favicon.png" label="White logo icon on Black (Circle)" />
             <Asset url="/press/master-favicon.png" label="Black logo icon on White (Transparent)" />
-            <Asset url="/press/logo-only-white-on-black.svg" label="White logo on Black (Square)" />
             <Asset
-              url="/press/twitter-banner-logo-text-black-on-white.png"
+              // url="/press/twitter-banner-logo-text-black-on-white.png"
+              url="/press/trim-banner-logo-text-black-on-white.png"
               label="Black logo+text on White Banner"
             />
             <Asset
-              url="/press/twitter-banner-logo-text-white-on-black.png"
+              // url="/press/twitter-banner-logo-text-white-on-black.png"
+              url="/press/trim-banner-logo-text-white-on-black.png"
               label="White logo+text on Black Banner"
             />
             <Asset
               url="/press/twitter-banner-black-on-white.png"
-              label="Black logo on White Banner (no text)"
+              label="Black on White Banner (logo only)"
             />
             <Asset
               url="/press/twitter-banner-white-on-black.png"
-              label="White logo on Black Banner (no text)"
+              label="White on Black Banner (logo only)"
             />
             <Asset
               url="/press/twitter-banner-text-white-on-black.png"
-              label="White text on Black Banner (text)"
+              label="White on Black Banner (text only)"
             />
             <Asset
               url="/press/twitter-banner-text-black-on-white.png"
-              label="Black text on White Banner (text)"
+              label="Black on White Banner (text only)"
             />
           </ul>
 
-          <h2 className="mt-16 mb-4 sm:mb-8 text-4xl sm:text-60 leading-48 sm:leading-72">SVG</h2>
+          <h2 className="mt-16 mb-4 sm:mb-8 text-4xl sm:text-60 leading-48 sm:leading-72">
+            Brand Assets (SVG)
+          </h2>
           <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            <Asset url="/press/twitter-card.svg" label="Dark logo+text on White" />
-            <Asset url="/press/logo-only-black-on-white.svg" label="Dark logo on White" />
-            <Asset url="/press/icon-dark.svg" label="Dark logo (Transparent)" />
-            <Asset url="/press/icon-light.svg" label="Light logo (Transparent)" dark />
+            <Asset url="/press/logo-only-white-on-black.svg" label="White logo on Black (Square)" />
+            <Asset url="/press/logo-only-black-on-white.svg" label="Black logo on White (Square)" />
+            <Asset url="/press/twitter-card.svg" label="Black logo+text on White" />
+            <Asset url="/press/icon-dark.svg" label="Black logo (Transparent)" />
+            <Asset url="/press/icon-light.svg" label="White logo (Transparent)" dark />
             <Asset
               url="/press/logo-with-text-white-nobg.svg"
-              label="Light logo+text (Transparent)"
+              label="White logo+text (Transparent)"
               dark
             />
             <Asset
               url="/press/logo-with-text-black-nobg.svg"
-              label="Dark logo+text (Transparent)"
+              label="Black logo+text (Transparent)"
             />
           </ul>
         </section>
         <section>
-          <h3 className="mt-8 text-xl font-bold">
-                Temporal's corporate address:
-          </h3>
-          <p className="mt-2 ml-4">
-                Temporal Technologies, Inc
-          </p>
-          <p className="mt-2 ml-4">
-                4431 175th Pl SE
-          </p>
-          <p className="mt-2 ml-4">
-                Bellevue, WA 98006
-          </p>
+          <h3 className="mt-8 text-xl font-bold">Temporal's corporate address:</h3>
+          <p className="mt-2 ml-4">Temporal Technologies, Inc</p>
+          <p className="mt-2 ml-4">4431 175th Pl SE</p>
+          <p className="mt-2 ml-4">Bellevue, WA 98006</p>
         </section>
       </div>
       <Footer />
@@ -172,7 +168,7 @@ function Asset({ url, label, dark }) {
         <img
           className={
             'presetTransition hover:scale-110 h-16 w-16 sm:h-32 sm:w-32 object-contain' +
-            (dark ? ' bg-gray-800 bg-opacity-25' : '')
+            (dark ? ' bg-gray-800 bg-opacity-25 hover:bg-opacity-100' : '')
           }
           src={url}
           aria-label={label}
