@@ -81,7 +81,7 @@ export default function PressPage() {
             <li className="">Minimum logo size is 32pixels</li>
             <li className="">
               Do not use custom fonts for the Temporal brand name. Only use the official brand
-              logo/name asset
+              logo/name asset (Aeonik Regular/Medium for headlines, Aeonik Light for body copy)
             </li>
           </ul>
         </section>
@@ -145,6 +145,62 @@ export default function PressPage() {
               url="/press/logo-with-text-black-nobg.svg"
               label="Black logo+text (Transparent)"
             />
+          </ul>
+          <h2 className="mt-16 mb-4 sm:mb-8 text-4xl sm:text-60 leading-48 sm:leading-72">Misc</h2>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <Asset url="/press/Temporal_logos_black_white.png" label="Black/White square" />
+            <Asset url="/press/Temporal_logos_alt_colors.png" label="Alt colors" />
+            <Asset url="/press/Temporal_Logo_Animation.gif" label="Temporal loading spinner" />
+            <Asset url="/press/Illustration_01.png" label="Temporal Illustration" />
+            <Asset url="/press/Illustration_02.png" label="Temporal Illustration" />
+            <Asset url="/press/Illustration_03.png" label="Temporal Illustration" />
+          </ul>
+        </section>
+        <section>
+          <h2 className="mt-16 mb-4 sm:mb-8 text-4xl sm:text-60 leading-48 sm:leading-72">
+            Color Palette
+          </h2>
+          <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            <li>
+              <div className="border border-white bg-spaceblack p-16"></div>
+              <span>Space Black #141414</span>
+            </li>
+            <li>
+              <div className="border border-white bg-offwhite p-16"></div>
+              <span>Off White #F2F2F2</span>
+            </li>
+            <li>
+              <div className="border border-white bg-temporalblue p-16"></div>
+              <span>Temporal Blue #C7EDEF</span>
+            </li>
+            <li>
+              <div className="border border-white bg-temporalpurple p-16"></div>
+              <span>Temporal Purple #B8B4DC</span>
+            </li>
+            <li>
+              <div className="border border-white bg-temporalbrightblue p-16"></div>
+              <span>Temporal Bright Blue #127AE5</span>
+            </li>
+            <li>
+              <div className="border border-white bg-temporalbrightpurple p-16"></div>
+              <span>Temporal Bright Purple #8F86DA</span>
+            </li>
+            <li>
+              <div className="border border-white bg-orange1 p-16"></div>
+              <span>Temporal Orange 1 #FFA280</span>
+            </li>
+            <li>
+              <div className="border border-white bg-orange2 p-16"></div>
+              <span>Temporal Orange 2 #FFA280</span>
+            </li>
+            <li>
+              <div className="border border-white bg-green1 p-16"></div>
+              <span>Temporal Green 1 #FFA280</span>
+            </li>
+            <li>
+              <div className="border border-white bg-green2 p-16"></div>
+              <span>Temporal Green 2 #FFA280</span>
+            </li>
           </ul>
         </section>
         <section>
