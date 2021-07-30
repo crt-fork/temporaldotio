@@ -7,19 +7,9 @@ const allSites = [
     url: 'https://docs.temporal.io/blog/Temporal-a-central-brain-for-Box'
   },
   {
-    src: '/logos/logo-Snapchat.png',
-    label: 'Snapchat logo',
-    url: 'https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap'
-  },
-  {
     src: '/logos/logo-Checkr.png',
     label: 'Checkr logo',
     url: 'https://docs.temporal.io/blog/how-temporal-simplified-checkr-workflows'
-  },
-  {
-    src: '/logos/logo-Datadog.png',
-    label: 'Datadog logo',
-    url: 'https://www.youtube.com/watch?v=eWFpl-nzGsY'
   },
   {
     src: '/logos/logo-Coinbase.svg',
