@@ -187,6 +187,15 @@ export default function CareersPage() {
             </a>{' '}
             <span className="text-sm text-gray-500">Los Angeles, London, Israel</span>
           </li>
+          <li>
+            <span className="font-bold text-xl uppercase">WELL Health</span>:{' '}
+            <a
+              href="https://arc.dev/remote-jobs/j/well-health-inc-senior-software-engineer-backend-cip35uvrrf"
+              className="font-bold underline text-blue-400 hover:text-blue-200">
+              Senior Software Engineer (Backend)
+            </a>{' '}
+            <span className="text-sm text-gray-500">Remote anywhere</span>
+          </li>
         </ul>
       </div>
       <Footer />
