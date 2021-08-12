@@ -2,6 +2,16 @@ import React from 'react';
 
 const sites = [
   {
+    src: '/logos/logo-Airbyte.svg',
+    alt: 'Airbyte logo',
+    url: 'https://docs.temporal.io/blog/airbyte-case-study'
+  },
+  {
+    src: '/logos/logo-Zebra-Medical-Vision.svg',
+    alt: 'Zebra Medical Vision logo',
+    url: 'https://docs.temporal.io/blog/zebra-medical-case-study/'
+  },
+  {
     src: '/logos/logo-Checkr.svg',
     alt: 'Checkr logo',
     url: 'https://docs.temporal.io/blog/how-temporal-simplified-checkr-workflows'
