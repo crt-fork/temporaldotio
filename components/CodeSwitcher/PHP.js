@@ -1,4 +1,6 @@
 import React from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 export const PHP = () => {
   return (
@@ -60,36 +62,54 @@ export const PHP = () => {
         <p style={{ display: 'block' }}>
           <span style={{ color: '#A6ACCD' }}>{'   '}</span>
           <span style={{ color: '#89DDFF' }}>{'   '}</span>
-          <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>yield</span>
-          <span style={{ color: '#A6ACCD' }}> </span>
-          <span style={{ color: '#FFCB6B' }}>Workflow</span>
-          <span style={{ color: '#89DDFF' }}>::</span>
-          <span style={{ color: '#82AAFF' }}>timer</span>
-          <span style={{ color: '#89DDFF' }}>($</span>
-          <span style={{ color: '#A6ACCD' }}>interval </span>
-          <span style={{ color: '#89DDFF' }}>*</span>
-          <span style={{ color: '#A6ACCD' }}> DAYS</span>
-          <span style={{ color: '#89DDFF' }}>);</span>
-          <span style={{ color: '#676E95', fontStyle: 'italic' }}>//</span>
-          <span style={{ color: '#90EE90', fontStyle: 'italic' }}> Sleep for days!</span>
+          <div className="border-b-2 border-dotted border-offwhite inline cursor-pointer">
+            <Tippy
+              arrow={true}
+              placement="left"
+              theme="dark"
+              content="This function can sleep for days then the workflow will continue execution!">
+              <div className="inline">
+                <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>yield</span>
+                <span style={{ color: '#A6ACCD' }}> </span>
+                <span style={{ color: '#FFCB6B' }}>Workflow</span>
+                <span style={{ color: '#89DDFF' }}>::</span>
+                <span style={{ color: '#82AAFF' }}>timer</span>
+                <span style={{ color: '#89DDFF' }}>($</span>
+                <span style={{ color: '#A6ACCD' }}>interval </span>
+                <span style={{ color: '#89DDFF' }}>*</span>
+                <span style={{ color: '#A6ACCD' }}> DAYS</span>
+                <span style={{ color: '#89DDFF' }}>);</span>
+              </div>
+            </Tippy>
+          </div>
         </p>
         <p style={{ display: 'block' }}>
           <span style={{ color: '#A6ACCD' }}>{'   '}</span>
           <span style={{ color: '#89DDFF' }}>{'   '}</span>
-          <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>yield</span>
-          <span style={{ color: '#A6ACCD' }}> </span>
-          <span style={{ color: '#89DDFF' }}>$this-&gt;</span>
-          <span style={{ color: '#A6ACCD' }}>userActivity</span>
-          <span style={{ color: '#89DDFF' }}>-&gt;</span>
-          <span style={{ color: '#82AAFF' }}>sendEmail</span>
-          <span style={{ color: '#89DDFF' }}>($</span>
-          <span style={{ color: '#A6ACCD' }}>interval</span>
-          <span style={{ color: '#89DDFF' }}>,</span>
-          <span style={{ color: '#A6ACCD' }}> </span>
-          <span style={{ color: '#89DDFF' }}>$</span>
-          <span style={{ color: '#A6ACCD' }}>userID</span>
-          <span style={{ color: '#89DDFF' }}>);</span>
-          <span style={{ color: '#A6ACCD' }}> </span>
+          <div className="border-b-2 border-dotted border-offwhite inline cursor-pointer">
+            <Tippy
+              arrow={true}
+              placement="left"
+              theme="dark"
+              content="Activities are retried by default!">
+              <div className="inline">
+                <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>yield</span>
+                <span style={{ color: '#A6ACCD' }}> </span>
+                <span style={{ color: '#89DDFF' }}>$this-&gt;</span>
+                <span style={{ color: '#A6ACCD' }}>userActivity</span>
+                <span style={{ color: '#89DDFF' }}>-&gt;</span>
+                <span style={{ color: '#82AAFF' }}>sendEmail</span>
+                <span style={{ color: '#89DDFF' }}>($</span>
+                <span style={{ color: '#A6ACCD' }}>interval</span>
+                <span style={{ color: '#89DDFF' }}>,</span>
+                <span style={{ color: '#A6ACCD' }}> </span>
+                <span style={{ color: '#89DDFF' }}>$</span>
+                <span style={{ color: '#A6ACCD' }}>userID</span>
+                <span style={{ color: '#89DDFF' }}>);</span>
+                <span style={{ color: '#A6ACCD' }}> </span>
+              </div>
+            </Tippy>
+          </div>
           <span style={{ color: '#90EE90', fontStyle: 'italic' }}>{'          '}</span>
         </p>
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 export const Node = () => {
   return (
@@ -6,11 +8,7 @@ export const Node = () => {
       className="p-4 rounded-br-lg rounded-bl-lg overflow-auto w-full line-numbers"
       style={{ backgroundColor: '#292D3E' }}>
       <code>
-        <p style={{ display: 'block' }}>
-          <span style={{ color: '#676E95', fontStyle: 'italic' }}>//</span>
-          <span style={{ color: '#90EE90', fontStyle: 'italic' }}> workflows/remind-user.js</span>
-        </p>
-        <p style={{ display: 'block' }}>
+        <p>
           <span style={{ color: '#C792EA' }}>async</span>
           <span style={{ color: '#A6ACCD' }}> </span>
           <span style={{ color: '#C792EA' }}>function</span>
@@ -24,7 +22,7 @@ export const Node = () => {
 
           <span style={{ color: '#89DDFF' }}>{'{ '}</span>
         </p>
-        <p style={{ display: 'block' }}>
+        <p>
           <span style={{ color: '#89DDFF' }}>{'  '}</span>
           <span style={{ color: '#676E95', fontStyle: 'italic' }}>//</span>
           <span style={{ color: '#90EE90', fontStyle: 'italic' }}>
@@ -32,7 +30,7 @@ export const Node = () => {
             Send reminder emails, e.g. after 1, 7, and 30 days
           </span>
         </p>
-        <p style={{ display: 'block' }}>
+        <p>
           <span style={{ color: '#F07178' }}>{'  '}</span>
           <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>for</span>
           <span style={{ color: '#F07178' }}> (</span>
@@ -46,49 +44,61 @@ export const Node = () => {
           <span style={{ color: '#F07178' }}>) </span>
           <span style={{ color: '#89DDFF' }}>{'{'}</span>
         </p>
-        <p style={{ display: 'block' }}>
+        <p>
           <span style={{ color: '#F07178' }}>{'    '}</span>
-          <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>await</span>
-          <span style={{ color: '#F07178' }}> </span>
-          <span style={{ color: '#82AAFF' }}>sleep</span>
-          <span style={{ color: '#F07178' }}>(</span>
-          <span style={{ color: '#A6ACCD' }}>interval</span>
-          <span style={{ color: '#F07178' }}> </span>
-          <span style={{ color: '#89DDFF' }}>*</span>
-          <span style={{ color: '#F07178' }}> </span>
-          <span style={{ color: '#A6ACCD' }}>DAYS</span>
-          <span style={{ color: '#F07178' }}>)</span>
-          <span style={{ color: '#89DDFF' }}>;</span>
-          <span style={{ color: '#F07178' }}> </span>
-          <span style={{ color: '#676E95', fontStyle: 'italic' }}>//</span>
-          <span style={{ color: '#90EE90', fontStyle: 'italic' }}> Sleep for days!</span>
+          <div className="border-b-2 border-dotted border-offwhite inline cursor-pointer">
+            <Tippy
+              arrow={true}
+              placement="left"
+              theme="dark"
+              content="This function can sleep for days then the workflow will continue execution!">
+              <div className="inline">
+                <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>await</span>
+                <span style={{ color: '#F07178' }}> </span>
+                <span style={{ color: '#82AAFF' }}>sleep</span>
+                <span style={{ color: '#F07178' }}>(</span>
+                <span style={{ color: '#A6ACCD' }}>interval</span>
+                <span style={{ color: '#F07178' }}> </span>
+                <span style={{ color: '#89DDFF' }}>*</span>
+                <span style={{ color: '#F07178' }}> </span>
+                <span style={{ color: '#A6ACCD' }}>DAYS</span>
+                <span style={{ color: '#F07178' }}>)</span>
+                <span style={{ color: '#89DDFF' }}>;</span>
+              </div>
+            </Tippy>
+          </div>
         </p>
-        <p style={{ display: 'block' }}>
+        <p>
           <span style={{ color: '#F07178' }}>{'    '}</span>
-          <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>await</span>
-          <span style={{ color: '#F07178' }}> </span>
-          <span style={{ color: '#A6ACCD' }}>activities</span>
-          <span style={{ color: '#89DDFF' }}>.</span>
-          <span style={{ color: '#82AAFF' }}>sendEmail</span>
-          <span style={{ color: '#F07178' }}>(</span>
-          <span style={{ color: '#A6ACCD' }}>interval</span>
-          <span style={{ color: '#89DDFF' }}>,</span>
-          <span style={{ color: '#F07178' }}> </span>
-          <span style={{ color: '#A6ACCD' }}>userId</span>
-          <span style={{ color: '#F07178' }}>)</span>
-          <span style={{ color: '#89DDFF' }}>;</span>
-          <span style={{ color: '#F07178' }}> </span>
-          <span style={{ color: '#676E95', fontStyle: 'italic' }}>//</span>
-          <span style={{ color: '#90EE90', fontStyle: 'italic' }}>
-            {' '}
-            Activities retried by default!
-          </span>
+          <div className="border-b-2 border-dotted border-offwhite inline cursor-pointer">
+            <Tippy
+              arrow={true}
+              placement="left"
+              theme="dark"
+              content=" Activities retried by default!">
+              <div className="inline">
+                <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>await</span>
+                <span style={{ color: '#F07178' }}> </span>
+                <span style={{ color: '#A6ACCD' }}>activities</span>
+                <span style={{ color: '#89DDFF' }}>.</span>
+                <span style={{ color: '#82AAFF' }}>sendEmail</span>
+                <span style={{ color: '#F07178' }}>(</span>
+                <span style={{ color: '#A6ACCD' }}>interval</span>
+                <span style={{ color: '#89DDFF' }}>,</span>
+                <span style={{ color: '#F07178' }}> </span>
+                <span style={{ color: '#A6ACCD' }}>userId</span>
+                <span style={{ color: '#F07178' }}>)</span>
+                <span style={{ color: '#89DDFF' }}>;</span>
+                <span style={{ color: '#F07178' }}> </span>
+              </div>
+            </Tippy>
+          </div>
         </p>
-        <p style={{ display: 'block' }}>
+        <p>
           <span style={{ color: '#F07178' }}>{'  '}</span>
-          <span style={{ color: '#89DDFF' }}>{' } '}</span>
+          <span style={{ color: '#89DDFF' }}>{'} '}</span>
         </p>
-        <p style={{ display: 'block' }}>
+        <p>
           <span style={{ color: '#89DDFF' }}>{'  '}</span>
           <span style={{ color: '#676E95', fontStyle: 'italic' }}>//</span>
           <span style={{ color: '#90EE90', fontStyle: 'italic' }}>
@@ -96,8 +106,8 @@ export const Node = () => {
             Easily cancelled when user unsubscribes
           </span>
         </p>
-        <p style={{ display: 'block' }}>
-          <span style={{ color: '#89DDFF' }}>{' } '}</span>
+        <p>
+          <span style={{ color: '#89DDFF' }}>{'} '}</span>
         </p>
       </code>
     </pre>
