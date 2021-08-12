@@ -3,7 +3,7 @@ import { Nav } from './Nav';
 import DirectionalControl from './DirectionalControl';
 // import { Banner } from './Banner'; // company announcements - not needed for now
 import { CodeSwitcher } from './CodeSwitcher/CodeSwitcher';
-import HeroLogos from './HeroLogos';
+import Companies from './Companies';
 
 export default function Hero() {
   return (
@@ -42,7 +42,7 @@ export default function Hero() {
             <CodeSwitcher />
           </div>
           <div className="py-10">
-            <HeroLogos />
+            <Companies />
           </div>
         </div>
       </section>
