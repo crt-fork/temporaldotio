@@ -36,7 +36,7 @@
     @apply hover:text-temporalblue transition-colors relative;
   }
   .dir-control {
-    @apply w-300 h-60 md:w-200 lg:w-300 transition-all border-2 no-underline outline-none rounded-full text-center cursor-pointer font-bold relative flex items-center justify-center;
+    @apply w-300 h-60 md:w-200 lg:w-300 transition-all border-2 no-underline outline-none rounded-lg text-center cursor-pointer font-bold relative flex items-center justify-center text-xl;
   }
 }
 
