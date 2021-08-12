@@ -32,7 +32,7 @@ export function Nav() {
             </a>
           </Link>
         </li>
-        <ul className="items-center justify-between hidden md:flex md:text-xl lg:text-2xl space-x-4">
+        <ul className="items-center justify-between hidden md:flex md:text-xl space-x-4">
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
               <a href={href} className="nav-link">
