@@ -12,14 +12,14 @@ const sites = [
     url: 'https://docs.temporal.io/blog/reliable-crypto-transactions-at-coinbase'
   },
   {
-    src: '/logos/logo-Descript.svg',
-    alt: 'Descript logo',
-    url: 'https://docs.temporal.io/blog/descript-case-study'
-  },
-  {
     src: '/logos/logo-Box.svg',
     alt: 'Box logo',
     url: 'https://docs.temporal.io/blog/Temporal-a-central-brain-for-Box'
+  },
+  {
+    src: '/logos/logo-Descript.svg',
+    alt: 'Descript logo',
+    url: 'https://docs.temporal.io/blog/descript-case-study'
   }
 ];
 
@@ -43,15 +43,27 @@ export default function HeroLogos() {
       </div>
       <p className="mt-5 text-xl text-center">
         <span className="opacity-75">Check out studies from</span>{' '}
-        <a href="https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap/">
+        <a
+          className="nav-link"
+          href="https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap/">
           Snapchat
         </a>
         ,{' '}
-        <a href="https://spiralscout.com/blog/temporal-workflow-and-microservices">Spiral Scout</a>,{' '}
-        <a href="https://www.youtube.com/watch?v=kDlrM6sgk2k&t=1188s&ab_channel=HashiCorp">
+        <a
+          className="nav-link"
+          href="https://spiralscout.com/blog/temporal-workflow-and-microservices">
+          Spiral Scout
+        </a>
+        ,{' '}
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/watch?v=kDlrM6sgk2k&t=1188s&ab_channel=HashiCorp">
           Hashicorp
         </a>{' '}
-        & <a href="https://docs.temporal.io/blog/tags/case-study">more</a>
+        &{' '}
+        <a className="nav-link" href="https://docs.temporal.io/blog/tags/case-study">
+          more
+        </a>
       </p>
     </div>
   );
