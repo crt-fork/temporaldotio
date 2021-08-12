@@ -3,6 +3,7 @@ import { Nav } from './Nav';
 import DirectionalControl from './DirectionalControl';
 // import { Banner } from './Banner'; // company announcements - not needed for now
 import { CodeSwitcher } from './CodeSwitcher/CodeSwitcher';
+import HeroLogos from './HeroLogos';
 
 export default function Hero() {
   return (
@@ -24,7 +25,7 @@ export default function Hero() {
               How it works
             </DirectionalControl>
           </div>
-          <div className="flex space-x-2 items-center text-lg ">
+          <div className="flex space-x-2 items-center md:text-lg ">
             <img className="w-5 h-5" src="/icons/icon-github.svg" alt="GitHub Icon" />
             <p>
               <a href="https://github.com/temporalio/temporal" rel="noreferrer" target="_blank">
@@ -39,6 +40,9 @@ export default function Hero() {
 
           <div className="hidden md:block">
             <CodeSwitcher />
+          </div>
+          <div className="py-10">
+            <HeroLogos />
           </div>
         </div>
       </section>
