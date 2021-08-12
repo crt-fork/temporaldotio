@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Go } from './Go';
-import { Node } from './Node';
+import { TypeScript } from './TypeScript';
 import { Java } from './Java';
 import { PHP } from './PHP';
 
@@ -21,7 +21,7 @@ export const CodeSwitcher = () => {
             <p>Go</p>
           </Tab>
           <Tab selectedClassName="bg-green1 text-spaceblack p-1 rounded-lg">
-            <p>Node</p>
+            <p>TypeScript</p>
           </Tab>
           <Tab selectedClassName="bg-temporalbrightblue text-spaceblack p-1 rounded-lg">
             <p>PHP</p>
@@ -34,7 +34,7 @@ export const CodeSwitcher = () => {
           <Go />
         </TabPanel>
         <TabPanel>
-          <Node />
+          <TypeScript />
         </TabPanel>
         <TabPanel>
           <PHP />

@@ -2,7 +2,7 @@ import React from 'react';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-export const Node = () => {
+export const TypeScript = () => {
   return (
     <pre
       className="p-4 rounded-br-lg rounded-bl-lg overflow-auto w-full line-numbers"
