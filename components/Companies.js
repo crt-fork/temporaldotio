@@ -2,6 +2,11 @@ import React from 'react';
 
 const sites = [
   {
+    src: '/logos/logo-Coinbase.svg',
+    alt: 'Coinbase logo',
+    url: 'https://docs.temporal.io/blog/reliable-crypto-transactions-at-coinbase'
+  },
+  {
     src: '/logos/logo-Airbyte.svg',
     alt: 'Airbyte logo',
     url: 'https://docs.temporal.io/blog/airbyte-case-study'
@@ -15,11 +20,6 @@ const sites = [
     src: '/logos/logo-Checkr.svg',
     alt: 'Checkr logo',
     url: 'https://docs.temporal.io/blog/how-temporal-simplified-checkr-workflows'
-  },
-  {
-    src: '/logos/logo-Coinbase.svg',
-    alt: 'Coinbase logo',
-    url: 'https://docs.temporal.io/blog/reliable-crypto-transactions-at-coinbase'
   },
   {
     src: '/logos/logo-Box.svg',
@@ -39,11 +39,11 @@ export default function Companies() {
       <p className="text-center text-2xl mt-10 mb-3 capitalize font-bold tracking-wide">
         Trusted by
       </p>
-      <div className="flex flex-wrap items-center justify-center space-x-5 font-bold ">
+      <div className="flex flex-wrap md:space-x-5 font-bold items-center justify-center">
         {sites.map((site, i) => (
-          <a key={i} className="" href={site.url}>
+          <a className="md:mt-4 flex" key={i} href={site.url}>
             <img
-              className="w-32 h-32 md:w-36 lg:w-44 md:h-36 lg:h-44"
+              className="w-32 h-32 md:w-44 md:h-44"
               src={site.src}
               key={site.src}
               alt={site.alt}
