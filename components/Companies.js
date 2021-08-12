@@ -42,7 +42,7 @@ export default function Companies() {
         ))}
       </div>
       <p className="mt-5 text-xl text-center">
-        <span className="opacity-75">Check out case studies from</span>{' '}
+        <span className="opacity-75">Check out more from</span>{' '}
         <a
           className="nav-link"
           href="https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap/">
