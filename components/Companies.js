@@ -27,7 +27,7 @@ export default function Companies() {
   return (
     <div>
       <p className="text-center text-2xl mt-10 mb-3 capitalize font-bold tracking-wide">
-        Trusted in production by
+        Trusted by
       </p>
       <div className="flex flex-wrap items-center justify-center space-x-5 font-bold ">
         {sites.map((site, i) => (
