@@ -20,7 +20,7 @@ export default function Hero() {
             orchestration for mission-critical applications.
           </p>
           <div className="py-4 text-lg font-medium flex flex-col justify-center sm:justify-start space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4 items-center">
-            <DirectionalControl href="#explain-temporal">Get Started</DirectionalControl>
+            <DirectionalControl href="https://docs.temporal.io/">Get Started</DirectionalControl>
             <DirectionalControl secondary={true} href="#explain-temporal">
               How it works
             </DirectionalControl>
