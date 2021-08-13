@@ -36,7 +36,7 @@
     @apply hover:text-temporalblue transition-colors relative;
   }
   .dir-control {
-    @apply w-300 h-60 md:w-200 lg:w-300 transition-all border-2 no-underline outline-none rounded-full text-center cursor-pointer font-bold relative flex items-center justify-center;
+    @apply w-300 h-60 md:w-200 lg:w-300 transition-all border-2 no-underline outline-none rounded-lg text-center cursor-pointer font-bold relative flex items-center justify-center text-xl;
   }
 }
 
@@ -280,4 +280,79 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background: linear-gradient(var(--temporal-blue), var(--scroll-white));
   border-radius: 2px;
+}
+
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid #aaa;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: #aaa;
+  color: black;
+  border-radius: 5px 5px 0 0;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.line-numbers p {
+  counter-increment: line;
+}
+
+.line-numbers p:before {
+  content: counter(line);
+  margin-right: 0.75rem;
+  color: white;
+  opacity: 60%;
+}
+
+.tippy-box[data-theme~='dark'] {
+  @apply text-offwhite bg-spaceblack font-mono p-2 rounded-lg shadow-temporalblue;
+}
+.tippy-box[data-theme~='dark'][data-placement^='left'] > .tippy-arrow::before {
+  @apply border-l-spaceblack;
 }

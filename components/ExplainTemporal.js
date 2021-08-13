@@ -1,55 +1,29 @@
-import ReactPlayer from 'react-player';
 import DirectionalControl from './DirectionalControl';
 
-function ResponsivePlayer({ url }) {
+function ResponsivePlayer({ videoId }) {
   return (
-    <ReactPlayer
-      style={{
-        border: '1px solid #E0E0E0'
-      }}
-      url={url}
-      controls
-      width="800px"
-      height="500px"
-    />
+    <div
+      className=" h-0 relative overflow-hidden shadow-temporalblue"
+      style={{ paddingBottom: '56.25%' }}>
+      <iframe
+        className="rounded-lg  absolute top-0 left-0 w-full h-full"
+        src={`https://www.youtube.com/embed/${videoId}`}
+        title="YouTube video player"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen></iframe>
+    </div>
   );
 }
+
 export default function ExplainTemporal() {
-  // const [clicked, setClicked] = React.useState(false);
   return (
-    <section
-      id="explain-temporal"
-      className={`
-    container mx-auto
-    flex flex-col justify-evenly
-    px-8 py-16
-    `}>
-      <style jsx>{`
-        @media (min-width: 1024px) {
-          .playerShadow {
-            position: absolute;
-            z-index: -1;
-            margin-top: 10px;
-            margin-left: 20px;
-            width: 800px;
-            height: 500px;
-            border: 1px solid #e0e0e0;
-          }
-        }
-        .wrapper {
-          display: flex;
-          justify-items: center;
-          position: relative;
-          /* padding-top: 56.25%; */
-          /* Player ratio: 100 / (1280 / 720) */
-        }
-      `}</style>
-      <h1 className="sm:mb-4 text-4xl sm:text-60 leading-48 sm:leading-72">
+    <section id="explain-temporal" className="container mx-auto px-8 py-16">
+      <h1 className="mb-10 sm:mb-20 text-3xl font-bold tracking-wide text-center sm:text-60 leading-48 sm:leading-72">
         Temporal in 2 Minutes
       </h1>
-      <div className="wrapper my-8 flex justify-center">
-        <ResponsivePlayer url="https://www.youtube.com/watch?v=f-18XztyN6c&feature=youtu.be" />
-        <div className="playerShadow"></div>
+      <div className="max-w-screen-lg w-full mx-auto">
+        <ResponsivePlayer videoId="f-18XztyN6c" />
       </div>
       <div className="flex flex-col gap-4 sm:flex-row justify-center items-center my-8">
         <DirectionalControl href="https://www.youtube.com/channel/UCGovZyy8OfFPNlNV0i1fI1g">
@@ -69,16 +43,9 @@ export default function ExplainTemporal() {
           </svg>
         </DirectionalControl>
         <DirectionalControl secondary href="https://docs.temporal.io/docs/external-resources">
-          Why Temporal?
+          More resources
         </DirectionalControl>
       </div>
-      {/* <div className="flex flex-col sm:flex-row justify-center items-center my-4">
-        <a
-          className="nav-link font-bold text-temporalblue"
-          href="mailto:support@temporal.io?subject=[Temporal.io] Enquiry&body=Hi, I heard about Temporal via YOUR_SOURCE_HERE and I had some questions...">
-          More questions? Email us!
-        </a>
-      </div> */}
     </section>
   );
 }

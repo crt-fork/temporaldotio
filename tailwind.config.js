@@ -40,6 +40,9 @@ module.exports = {
         lightgray: 'rgba(242,242,242,0.5)',
         lightteal: '#C7EDEF'
       },
+      boxShadow: {
+        temporalblue: '0 25px 50px -12px rgba(178, 231, 234, 0.1)'
+      },
       gridTemplateColumns: {
         usecases: '200px minmax(0, 1fr)'
       },

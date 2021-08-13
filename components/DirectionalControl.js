@@ -16,22 +16,22 @@ const DirectionalControl = ({ as, className, children, filled, secondary, ...res
       <span className="inline-block absolute z-1" />
       <span className="inline-block absolute z-1" />
       <b
-        className="border-2 font-bold absolute transition-all rounded-full flex items-center justify-center"
+        className="border-2 font-bold absolute transition-all rounded-lg flex items-center justify-center"
         aria-hidden="true">
         {children}
       </b>
       <b
-        className="border-2 font-bold absolute transition-all rounded-full flex items-center justify-center"
+        className="border-2 font-bold absolute transition-all rounded-lg flex items-center justify-center"
         aria-hidden="true">
         {children}
       </b>
       <b
-        className="border-2 font-bold absolute transition-all rounded-full flex items-center justify-center"
+        className="border-2 font-bold absolute transition-all rounded-lg flex items-center justify-center"
         aria-hidden="true">
         {children}
       </b>
       <b
-        className="border-2 font-bold absolute transition-all rounded-full flex items-center justify-center"
+        className="border-2 font-bold absolute transition-all rounded-lg flex items-center justify-center"
         aria-hidden="true">
         {children}
       </b>
