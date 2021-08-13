@@ -43,7 +43,7 @@ export default function Companies() {
         {sites.map((site, i) => (
           <a className="md:mt-4 flex" key={i} href={site.url}>
             <img
-              className="w-32 h-32 md:w-44 md:h-44"
+              className="w-32 h-32 md:w-44 md:h-44 hover:text-temporalblue"
               src={site.src}
               key={site.src}
               alt={site.alt}
