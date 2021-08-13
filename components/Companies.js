@@ -56,23 +56,29 @@ export default function Companies() {
         <a
           className="nav-link"
           href="https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap/">
-          Snapchat
-        </a>
-        ,{' '}
-        <a
-          className="nav-link"
-          href="https://spiralscout.com/blog/temporal-workflow-and-microservices">
-          Spiral Scout
+          Snap
         </a>
         ,{' '}
         <a
           className="nav-link"
           href="https://www.youtube.com/watch?v=kDlrM6sgk2k&t=1188s&ab_channel=HashiCorp">
           Hashicorp
+        </a>
+        ,{' '}
+        <a
+          className="nav-link"
+          href="https://www.youtube.com/watch?v=eWFpl-nzGsY&feature=youtu.be">
+          Datadog
+        </a>
+        ,{' '}
+        <a
+          className="nav-link"
+          href="https://doordash.engineering/2020/08/14/workflows-cadence-event-driven-processing/">
+          Doordash
         </a>{' '}
         &{' '}
-        <a className="nav-link" href="https://docs.temporal.io/blog/tags/case-study">
-          more
+        <a className="nav-link" href="https://docs.temporal.io/docs/external-resources">
+          others
         </a>
       </p>
     </div>
