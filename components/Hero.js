@@ -28,8 +28,8 @@ export default function Hero() {
           <div className="flex space-x-2 items-center md:text-lg ">
             <img className="w-5 h-5" src="/icons/icon-github.svg" alt="GitHub Icon" />
             <p>
-              <a href="https://github.com/temporalio/temporal" rel="noreferrer" target="_blank">
-                Check out Temporal on GitHub
+              <a className="hover:text-temporalblue hover:underline" href="https://github.com/temporalio/temporal" rel="noreferrer" target="_blank">
+                View Source and give us a star!
               </a>
             </p>
             <div className="flex space-x-2 items-center text-lg">
