@@ -34,7 +34,6 @@ export default function Hero() {
             </p>
             <div className="flex space-x-2 items-center text-lg">
               <img className="w-5 h-5" src="/icons/icon-star.svg" alt="GitHub Icon" />
-              <p className="font-medium">2210</p>
             </div>
           </div>
 
