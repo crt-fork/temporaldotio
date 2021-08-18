@@ -22,6 +22,11 @@
       "source": "/assets",
       "destination": "/press",
       "permanent": false
-    }
+    },
+    {
+      "source": "/cloud",
+      "destination": "https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a",
+      "permanent": false
+    },
   ]
 }
