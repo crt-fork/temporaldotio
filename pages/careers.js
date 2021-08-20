@@ -125,6 +125,15 @@ export default function CareersPage() {
             <span className="text-sm text-gray-500">NY/Paris Remote</span>
           </li>
           <li>
+            <span className="font-bold text-xl uppercase">Descript</span>:{' '}
+            <a
+              href="https://boards.greenhouse.io/descript/jobs/4310029003?gh_jid=4310029003"
+              className="font-bold underline text-blue-400 hover:text-blue-200">
+              Senior Software Engineer - Backend
+            </a>{' '}
+            <span className="text-sm text-gray-500">SF/Montreal/Remote</span>
+          </li>
+          <li>
             <span className="font-bold text-xl uppercase">Nylas</span>:{' '}
             <a
               href="https://jobs.lever.co/nylas/d8788060-ef4f-48ea-8b7b-787c31ec4e46"
