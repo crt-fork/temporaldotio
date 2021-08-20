@@ -55,9 +55,7 @@ export default function CareersPage() {
           </h1>
           <h2 className="text-xl leading-tight italic">
             If none of these positions are a fit, email{' '}
-            <a
-              href="careers@temporal.io"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+            <a href="careers@temporal.io" className="underline text-blue-400 hover:text-blue-200">
               careers@temporal.io
             </a>{' '}
             describing your dream job.
@@ -68,7 +66,7 @@ export default function CareersPage() {
         </div>
       </div>
       <hr />
-      <div className="mx-4 sm:mx-16 mb-12">
+      <div className="mx-4 sm:mx-16 mb-12 bg-black bg-opacity-10">
         <h1
           id="external-jobs"
           className="text-3xl sm:w-800 mt-12 leading-lg sm:text-4xl sm:leading-4xl font-bold mb-4">
@@ -79,7 +77,7 @@ export default function CareersPage() {
             If you are a company that uses Temporal, you can{' '}
             <a
               href="mailto:careers@temporal.io"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               email us to advertise a job here
             </a>{' '}
             for free.
@@ -88,7 +86,7 @@ export default function CareersPage() {
             If you are a developer that loves Temporal, you can{' '}
             <a
               href="http://eepurl.com/hhcaaX"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               sign up for our mailing list
             </a>{' '}
             to hear when jobs are advertised.
@@ -104,13 +102,13 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Bolt</span>:{' '}
             <a
               href="https://www.bolt.com/careers/software-engineer-platforms/f193e0fa-7cf0-42aa-8837-8bdd4dca3e22/"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Software Engineer
             </a>{' '}
             and{' '}
             <a
               href="https://www.bolt.com/careers/senior-software-engineer-platforms/ce0d1fe3-bb00-4b4a-99f0-848bbc5a87c3/"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Senior Software Engineer
             </a>{' '}
             - Platforms <span className="text-sm text-gray-500">San Francisco</span>
@@ -119,7 +117,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Datadog</span>:{' '}
             <a
               href="https://www.datadoghq.com/careers/detail/?gh_jid=1825853"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Software Engineer - Site Reliability
             </a>{' '}
             <span className="text-sm text-gray-500">NY/Paris Remote</span>
@@ -128,7 +126,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Descript</span>:{' '}
             <a
               href="https://boards.greenhouse.io/descript/jobs/4310029003?gh_jid=4310029003"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Senior Software Engineer - Backend
             </a>{' '}
             <span className="text-sm text-gray-500">SF/Montreal/Remote</span>
@@ -137,7 +135,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Nylas</span>:{' '}
             <a
               href="https://jobs.lever.co/nylas/d8788060-ef4f-48ea-8b7b-787c31ec4e46"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Senior Software Engineer (Workflows)
             </a>{' '}
             <span className="text-sm text-gray-500">Toronto</span>
@@ -146,7 +144,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Nylas</span>:{' '}
             <a
               href="https://jobs.lever.co/nylas/50471019-fe86-4429-b857-98b17434d839"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Senior Software Engineer (Workflows)
             </a>{' '}
             <span className="text-sm text-gray-500">Vancouver</span>
@@ -155,7 +153,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Nightfall AI</span>:{' '}
             <a
               href="https://jobs.lever.co/nightfall/2284505f-49e4-48b6-a530-4e1869a68fe4"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Senior Backend Engineer
             </a>{' '}
             <span className="text-sm text-gray-500">US & Canada Remote</span>
@@ -164,7 +162,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Square</span>:{' '}
             <a
               href="https://www.linkedin.com/jobs/view/senior-software-engineer-cloud-database-infra-cash-app-at-cash-app-2315548952/"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Senior Software Engineer (Cloud Database Infra), Cash App
             </a>{' '}
             <span className="text-sm text-gray-500">US Remote</span>
@@ -173,7 +171,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">SS&C Technologies</span>:{' '}
             <a
               href="https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies/job/Denver-CO/Staff-Software-Engineer---Private-Cloud_R3140"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Staff Software Engineer - Private Cloud
             </a>{' '}
             <span className="text-sm text-gray-500">Denver/US Remote</span>
@@ -182,7 +180,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Stripe</span>:{' '}
             <a
               href="https://stripe.com/jobs/listing/infrastructure-engineer-developer-productivity-workflow-engine/2964407"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Infrastructure Engineer, Developer Productivity (Workflow Engine)
             </a>{' '}
             <span className="text-sm text-gray-500">North America Remote</span>
@@ -191,7 +189,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">Snap</span>:{' '}
             <a
               href="https://eng.snap.com/monolith-to-multicloud-microservices-snap-service-mesh"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               General Engineering Hires
             </a>{' '}
             <span className="text-sm text-gray-500">Los Angeles, London, Israel</span>
@@ -200,7 +198,7 @@ export default function CareersPage() {
             <span className="font-bold text-xl uppercase">WELL Health</span>:{' '}
             <a
               href="https://arc.dev/remote-jobs/j/well-health-inc-senior-software-engineer-backend-cip35uvrrf"
-              className="font-bold underline text-blue-400 hover:text-blue-200">
+              className="underline text-blue-400 hover:text-blue-200">
               Senior Software Engineer (Backend)
             </a>{' '}
             <span className="text-sm text-gray-500">Remote anywhere</span>
