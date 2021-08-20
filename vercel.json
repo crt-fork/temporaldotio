@@ -32,6 +32,6 @@
       "source": "/meetup",
       "destination": "https://lu.ma/temporal",
       "permanent": false
-    },
+    }
   ]
 }

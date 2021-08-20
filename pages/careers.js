@@ -70,7 +70,7 @@ export default function CareersPage() {
         <h1
           id="external-jobs"
           className="text-3xl sm:w-800 mt-12 leading-lg sm:text-4xl sm:leading-4xl font-bold mb-4">
-          Other Companies on Temporal with open Developer Jobs
+          Temporal Users Who Are Hiring
         </h1>
         <ul className="container rounded-lg">
           <li className="test">
