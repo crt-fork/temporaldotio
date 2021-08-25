@@ -8,7 +8,7 @@ export default function Footer() {
       className={`
       overflow-hidden
     border-t border-lightgray
-    flex flex-col-reverse sm:flex-row sm:mt-16
+    flex flex-col-reverse sm:flex-row
     `}>
       <div className="flex-1 border-r border-lightgray relative">
         <MoonScape />

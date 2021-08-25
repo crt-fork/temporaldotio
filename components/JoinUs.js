@@ -5,12 +5,11 @@ export default function JoinUs() {
     <section
       id="join-us"
       className={`
-    border-b border-lightgray
-    flex flex-col sm:flex-row
-    container mx-auto
+    border-t border-lightgray
+    flex flex-col sm:flex-row 
     `}>
       <div className="flex-1 flex flex-col justify-between sm:border-r border-lightgray px-8 py-16">
-        <h2 className="text-4xl leading-48 sm:text-60 sm:leading-60 mb-8">
+        <h2 className="text-4xl leading-48 sm:text-60 sm:leading-60 mb-8 max-w-xl mx-auto">
           Experience at the largest scale. Backing from the greatest investors.
         </h2>
         <div className="inline-flex flex-col items-center">
@@ -28,7 +27,7 @@ export default function JoinUs() {
             alt="samar abbas"></img>
           <div>
             <div className="mb-2 sm:mb-4 font-bold text-lg">Samar Abbas (CTO)</div>
-            <div>
+            <div className="max-w-md">
               AWS, Microsoft, Uber engineering leadership veteran, created Durable Task Framework
               which was the basis of Azure Durable Functions. Co-created Cadence (Temporal
               predecessor) with Maxim.
@@ -42,7 +41,7 @@ export default function JoinUs() {
             alt="Maxim Fateev"></img>
           <div>
             <div className="mb-2 sm:mb-4 font-bold text-lg">Maxim Fateev (CEO)</div>
-            <div>
+            <div className="max-w-md">
               AWS, Google, Uber, engineering leadership veteran, led development of SQS replicated
               message store and the SWF project at AWS. Co-created Cadence (Temporal predecessor)
               with Samar.
