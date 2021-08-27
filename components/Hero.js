@@ -4,6 +4,7 @@ import DirectionalControl from './DirectionalControl';
 // import { Banner } from './Banner'; // company announcements - not needed for now
 import { CodeSwitcher } from './CodeSwitcher/CodeSwitcher';
 import Companies from './Companies';
+import ExplainTemporal from './ExplainTemporal';
 
 export default function Hero() {
   return (
@@ -16,19 +17,21 @@ export default function Hero() {
             Build Invincible Apps
           </h1>
           <p className="text-xl md:text-2xl max-w-screen-md text-center">
-            Temporal is the open source runtime for running highly reliable, scalable microservice
-            orchestration for mission-critical applications.
+            Temporal is the open source microservices orchestration engine for running highly
+            reliable mission-critical applications at any scale.
           </p>
-          <div className="py-4 text-lg font-medium flex flex-col justify-center sm:justify-start space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4 items-center">
+          <div className="py-4 text-lg font-medium flex flex-col justify-center sm:justify-start space-y-4 sm:space-y-0 sm:flex-row sm:space-x-14 items-center">
             <DirectionalControl href="https://docs.temporal.io/">Get Started</DirectionalControl>
-            <DirectionalControl secondary={true} href="#explain-temporal">
-              How it works
-            </DirectionalControl>
+            <ExplainTemporal />
           </div>
           <div className="flex space-x-2 items-center md:text-lg ">
             <img className="w-5 h-5" src="/icons/icon-github.svg" alt="GitHub Icon" />
             <p>
-              <a className="hover:text-temporalblue hover:underline" href="https://github.com/temporalio/temporal" rel="noreferrer" target="_blank">
+              <a
+                className="hover:text-temporalblue hover:underline"
+                href="https://github.com/temporalio/temporal"
+                rel="noreferrer"
+                target="_blank">
                 View Source and give us a star!
               </a>
             </p>
@@ -36,7 +39,6 @@ export default function Hero() {
               <img className="w-5 h-5" src="/icons/icon-star.svg" alt="GitHub Icon" />
             </div>
           </div>
-
           <div className="hidden md:block">
             <CodeSwitcher />
           </div>

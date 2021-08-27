@@ -1,189 +1,193 @@
 import React from 'react';
+import { Disclosure, Transition } from '@headlessui/react';
 
-export default function FAQ() {
+const Strong = ({ children }) => (
+  <strong className="font-bold text-temporalblue">{children}</strong>
+);
+const Link = ({ href, children }) => (
+  <a href={href} className="text-temporalblue hover:text-blue-200 hover:underline">
+    {children}
+  </a>
+);
+
+const faqs = [
+  {
+    question: 'Is Temporal open-source?',
+    answer: (
+      <span>
+        Yes, we have very large companies using open source Temporal in production without paying us
+        a dime. You can:{' '}
+        <ul className="list-disc pl-4">
+          <li className="ml-4">
+            <Link href="https://github.com/temporalio/temporal">view our source here</Link> (give us
+            a star!),
+          </li>
+          <li className="ml-4">
+            <Link href="https://github.com/temporalio/docker-compose">run Temporal locally</Link>{' '}
+            with Docker, and{' '}
+          </li>
+          <li className="ml-4">
+            <Link href="https://docs.temporal.io/docs/server/production-deployment">
+              contribute to our self hosting docs
+            </Link>
+            .
+          </li>
+        </ul>
+      </span>
+    )
+  },
+  // Todo: add comparison docs
+  // {
+  //   question: `What's the difference between Temporal and Airflow, Camunda, Argo, Step Functions...`,
+  //   answer: (
+  //     <span>
+
+  //     </span>
+  //   )
+  // },
+  {
+    question: 'Is there a hosted version of Temporal?',
+    answer: (
+      <span>
+        Yes, we are building out Temporal Cloud right now with select enterprise scale Design
+        Partners. If you would like to work with us, you can{' '}
+        <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
+          register your interest in Temporal Cloud here.
+        </Link>
+      </span>
+    )
+  },
+  {
+    question: 'How does Temporal work under the hood?',
+    answer: (
+      <span>
+        You can{' '}
+        <Link href="https://docs.temporal.io/docs/server-architecture">
+          read our docs on Temporal's architecture
+        </Link>{' '}
+        or{' '}
+        <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
+          watch a 23 minute talk about our design principles
+        </Link>
+        . You can also see our <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
+        <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link> for
+        more explanations in podcast, tweet, and blog forms. You can also{' '}
+        <Link href="https://github.com/temporalio/temporal">read our source code</Link>!
+      </span>
+    )
+  },
+  {
+    question: (
+      <span>
+        Temporal seems to do everything. When should I <span className="">NOT</span> use Temporal?
+      </span>
+    ),
+    answer: (
+      <div>
+        <ul className="list-disc sm:pl-4">
+          <li className="ml-4">
+            <Strong>Realtime</Strong>: While task latency is an important advantage of Temporal
+            compared to other workflow systems, Temporal is not a good fit for realtime usecases
+            like gaming and streaming as we optimize for transactional consistency over absolute
+            lowest latency.
+          </li>
+          <li className="ml-4">
+            <Strong>Non-Critical</Strong>: Temporal persists every state transition and retries
+            failures by default. If you are sending "fire and forget" notifications, Temporal is
+            overkill because the resiliency we provide is not needed.
+          </li>
+          <li className="ml-4">
+            <Strong>Simple</Strong>: Temporal is strongly opinionated about enabling{' '}
+            <em>developers</em> to write <Strong>workflows as code</Strong> in general purpose
+            languages. If your needs can be fulfilled by a visual builder like Zapier or If This
+            Then That, or a non-Turing-complete Domain Specific Language like a small CI YAML file,
+            you will build faster with those. However if you are <em>building</em> these tools for
+            others, Temporal is a good fit.
+          </li>
+        </ul>
+      </div>
+    )
+  },
+  {
+    question: 'What is your roadmap? When will there be a $MY_FAVORITE_LANGUAGE SDK?',
+    answer: (
+      <span>
+        We currently have{' '}
+        <Link href="https://docs.temporal.io/application-development">Go, Java, and PHP SDKs</Link>,
+        with TypeScript SDK in alpha. We do not publish a public roadmap, but will be building more
+        SDKs according to demand.{' '}
+        <Link href="https://temporal.io/careers">We are actively hiring for this</Link> if you'd
+        like to help!
+      </span>
+    )
+  },
+  {
+    question: 'I still have more questions!',
+    answer: (
+      <span>
+        Join <Link href="https://temporal.io/meetup">our monthly meetup</Link>, ask questions in{' '}
+        <Link href="https://community.temporal.io/">our forum</Link> and{' '}
+        <Link href="https://temporal.io/slack">Slack</Link>, and{' '}
+        <Link href="https://twitter.com/temporalio">ask us on Twitter</Link>!
+      </span>
+    )
+  }
+];
+
+const FAQ = () => {
   return (
-    <section
-      id="temporal-vs"
-      className={`
-    container mx-auto
-    text-white
-    px-2 sm:px-8 py-16
-    `}>
-      <h1 className=" text-60 leading-60 lg:text-144 lg:leading-144 uppercase mb-4 lg:mb-16">
-        FAQ
-      </h1>
-      <h2 className="font-light italic text-md sm:text-2xl mb-4">
-        What's the difference between Temporal and...
-      </h2>
-
-      <ul className="border-t border-l border-r border-white mb-16 container">
-        <VSItem header="Homegrown Scripts and Queues" defaultState>
-          <h2 className="font-bold">
-            Most developers hand-write async flows using queues and job processors.
+    <section className="sm:mb-28 border-t border-lightgray">
+      <div className="max-w-7xl mx-auto py-12 px-4 sm:py-28 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-center text-3xl font-bold sm:text-6xl" id="FAQ">
+            Frequently Asked Questions
           </h2>
-          <p>
-            This often requires requisitioning new infrastructure, and hand-writing often buggy,
-            not-well-distributed and hard-to-test code. Temporal offers a battle tested framework
-            enabling you to capture and define your business logic in a structured way and run it it
-            atop a single set of infrastructure at massive scale. It allows developers to focus on
-            your actual business requirements and not plumbing work.
-          </p>
-        </VSItem>
-        <VSItem header="DAG-based Workflow Engines">
-          <h2 className="font-bold mb-3">
-            DAG-based Workflow Engines like Airflow/Prefect/Luigi are pipeline solutions aimed at
-            data scientists running at a small-to-medium scale.
-          </h2>
-          <p className="mb-3">
-            Temporal provides a code-first development environment which can be used to build data
-            pipelines, orchestrate microservices, provision resources and much more at any scale.
-            Code written with Temporal is executed directly which enables users to easily integrate
-            Temporal into their existing development, testing, and debugging environmentss.
-          </p>
-          <p className="mb-3">
-            While Temporal is a great option for data pipelines, this encompasses only a very small
-            subset of its use cases. Temporal enables development of applications of all shapes and
-            sizes, regardless of scale.
-          </p>
-          <p className="mb-3">
-            Temporal targets developers. All code written with Temporal runs directly, eliminating
-            any extra compilation steps often required by DAG-based solutions. This provides extra
-            flexibility which is impossible to achieve with more rigid DAG based systems.
-          </p>
-        </VSItem>
-        <VSItem header="BPM Engines">
-          <h2 className="font-bold mb-4">
-            BPM Engines like Camunda Zeebe define their workflows using a flow-chart based DSL such
-            as BPMN.
-          </h2>
-          <p className="mb-3">
-            Flow-chart based workflow DSLs suffer from being bound to a specific set of features and
-            capabilities provided by the underlying workflow language they use. Even though they
-            promote the visualization aspect of workflow design, the actual execution semantics are
-            expressed as a mix of programming and expression languages which are enforced by the
-            specific runtime implementation. Temporal does not suffer from these types of
-            restrictions enabling you to fully define your workflows using a programming language.
-            This provides a high level of flexibility not only with defining your workflow logic but
-            also testing and debugging in the development environment of your choice.
-          </p>
-          <p className="mb-3">
-            BPM engines translate workflow definition markup into code, which requires additional
-            compilation steps. This kind of code generation is approached differently by each
-            runtime engine using tools they chose. Temporal eliminates the intermediate compilation
-            steps enabling you to express your workflow logic directly in code. In addition,
-            Temporal provides you with high-level concepts such as asynchronous invocations,
-            retries, error propagation and compensation which can be expressed much easier than in
-            BPM-based solutions, especially for larger workflows.
-          </p>
-        </VSItem>
-        <VSItem header="JSON/YAML-based Workflow Engines">
-          <h2 className="font-bold mb-4">
-            JSON/YAML-based Workflow Engines like AWS Step Functions are aimed at high scale, light
-            complexity applications.{' '}
-          </h2>
-          <p className="mb-3">
-            Workflow engines based on declarative DSLs contain a very small set of features and
-            typically target very specific technology domains. Similar to BPM-based engines, they
-            require additional compilation steps to translate the workflow definitions into
-            executable code. They also often target stateless orchestration use cases only. Temporal
-            not only eliminates the intermediate compilation steps allowing you to express your
-            workflow logic directly in code, but it also targets a much larger set of use cases. It
-            can be used to build data pipelines, orchestrate microservices, provision resources and
-            much more. Code written with Temporal is executed directly which enables users to easily
-            develop, debug, and test their workflows using a development environment of their
-            choice.
-          </p>
-          <p className="mb-3">
-            Step Functions can be a great service for non-developers or technical managers to define
-            business logic without writing code. While Step Functions is a great service there is no
-            open source implementation provided which puts it into a much different class compared
-            to Temporal.
-          </p>
-          <p className="mb-3">
-            Temporal is an open source platform which enables you to deploy your workflow
-            applications on environments of your choice. Step Functions on the other hand is only
-            available as a service from AWS.
-          </p>
-          <p className="mb-3">
-            Temporal targets developers and all code written with Temporal runs directly instead of
-            being translated from a DSL. This gives you flexibility which is impossible to achieve
-            with more rigid DSL based systems.
-          </p>
-          <p className="mb-3">
-            Temporal provides you with high-level concepts such as asynchronous invocations,
-            retries, error propagation and compensation which can be expressed much easier and are
-            often not existing in domain-specific DSL based solutions.
-          </p>
-        </VSItem>
-      </ul>
-      <div className="font-light italic text-md sm:text-2xl mb-4">
-        Still not getting it? See our{' '}
-        <a
-          className="text-temporalblue hover:underline"
-          href="https://docs.temporal.io/docs/external-resources/">
-          External Resources
-        </a>{' '}
-        and ask questions at
-        <a className="text-temporalblue hover:underline" href="https://lu.ma/temporal">
-          {' '}
-          our monthly Meetup
-        </a>
-        !
+          <dl className="mt-6 space-y-6">
+            {faqs.map((faq) => (
+              <Disclosure as="div" key={faq.question} className="pt-6">
+                {({ open }) => (
+                  <>
+                    <dt className="text-lg">
+                      <Disclosure.Button className="flex space-x-5 items-center">
+                        <span className="ml-5 h-7 flex items-center">
+                          <svg
+                            className={`${open ? 'rotate-0' : '-rotate-90'}
+                            h-6 w-6 transform transition-transform`}
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M19 9l-7 7-7-7"></path>
+                          </svg>
+                        </span>
+                        <span className="text-left text-2xl">{faq.question}</span>
+                      </Disclosure.Button>
+                    </dt>
+                    <Transition
+                      enter="transition-opacity duration-75"
+                      enterFrom="opacity-0"
+                      enterTo="opacity-100"
+                      leave="transition-opacity duration-150"
+                      leaveFrom="opacity-100"
+                      leaveTo="opacity-0">
+                      <Disclosure.Panel as="dd" className="mt-2">
+                        <p className="text-lg leading-8 pl-16">{faq.answer}</p>
+                      </Disclosure.Panel>
+                    </Transition>
+                  </>
+                )}
+              </Disclosure>
+            ))}
+          </dl>
+        </div>
       </div>
     </section>
   );
-}
+};
 
-// this looks very similar to VSItem in UseCases.js
-// but we keep it separate to keep it agile and customizable without affecting usecases.js
-function VSItem({ header, children, defaultState = false }) {
-  const [state, setState] = React.useState(defaultState);
-  return (
-    <li className="border-b border-white">
-      <div
-        className={
-          (state ? ' bg-gray5 text-spaceblack' : '') + ' p-4 border-b border-spaceblack text-2xl'
-        }>
-        <button
-          onClick={() => setState(!state)}
-          className={
-            'w-full cursor-pointer flex items-center justify-between ' +
-            (state ? 'hover:text-teal-700' : 'hover:text-temporalblue')
-          }>
-          <span>{header}</span>
-          <span>
-            {state ? (
-              // - icon
-              <svg
-                className="w-8 sm:w-12 h-8 sm:h-12"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
-              </svg>
-            ) : (
-              // plus icon
-              <svg
-                className="w-8 sm:w-12 h-8 sm:h-12"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                />
-              </svg>
-            )}
-          </span>
-        </button>
-      </div>
-      {state && (
-        <div className={(state ? 'bg-white text-spaceblack' : '') + ' p-4'}>{children}</div>
-      )}
-    </li>
-  );
-}
+export default FAQ;

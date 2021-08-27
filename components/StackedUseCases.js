@@ -3,13 +3,15 @@ import DirectionalControl from './DirectionalControl';
 
 const Stack = ({ content, link, title }) => (
   <div className="stack after:transition-all text-white relative">
-    <div className="stack__content transition-all h-full w-full p-4 bg-black relative border-2 flex flex-col">
-      <span className="text-lg font-bold">{title}</span>
-      <p className="flex-grow font-light my-4">{content}</p>
-      <Link href={link}>
-        <a className="nav-link text-center text-temporalblue">Learn More</a>
-      </Link>
-    </div>
+    <Link href={link}>
+      <a>
+        <div className="stack__content transition-all h-full w-full p-4 bg-black rounded-lg relative border-2 flex flex-col">
+          <h2 className="text-2xl tracking-wide font-bold">{title}</h2>
+          <p className="flex-grow font-light my-4 text-lg">{content}</p>
+          <a className="nav-link text-center text-temporalblue">Learn More</a>
+        </div>
+      </a>
+    </Link>
   </div>
 );
 
@@ -70,9 +72,10 @@ const StackedUseCases = () => (
     className={`
     container mx-auto
     px-8 py-16
-    border-b border-white
+    mt-12 mb-24
     `}>
-    <div className="grid gap-6 md:grid-cols-2 lg:w-800 mx-auto">
+    <h2 className="text-center text-3xl font-bold sm:text-6xl mb-16">Use Cases</h2>
+    <div className="grid gap-10 md:grid-cols-2 lg:w-800 mx-auto">
       {USE_CASES.map((useCase) => (
         <Stack
           content={useCase.content}
@@ -82,7 +85,7 @@ const StackedUseCases = () => (
         />
       ))}
     </div>
-    <div className="mt-12 flex justify-center">
+    <div className="mt-16 flex justify-center">
       <DirectionalControl secondary href="/usecases">
         More Use Cases
       </DirectionalControl>

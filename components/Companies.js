@@ -41,7 +41,10 @@ export default function Companies() {
       </p>
       <div className="flex flex-wrap md:space-x-5 font-bold items-center justify-center">
         {sites.map((site, i) => (
-          <a className="md:mt-4 flex" key={i} href={site.url}>
+          <a
+            className="md:mt-4 flex hover:scale-110 transform transition-transform"
+            key={i}
+            href={site.url}>
             <img
               className="w-32 h-32 md:w-44 md:h-44 hover:text-temporalblue"
               src={site.src}
@@ -65,9 +68,7 @@ export default function Companies() {
           Hashicorp
         </a>
         ,{' '}
-        <a
-          className="nav-link"
-          href="https://www.youtube.com/watch?v=eWFpl-nzGsY&feature=youtu.be">
+        <a className="nav-link" href="https://www.youtube.com/watch?v=eWFpl-nzGsY&feature=youtu.be">
           Datadog
         </a>
         ,{' '}
