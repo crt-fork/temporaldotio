@@ -12,38 +12,6 @@ const Link = ({ href, children }) => (
 
 const faqs = [
   {
-    question: (
-      <span>
-        Temporal seems to do everything. When should I <span className="">NOT</span> use Temporal?
-      </span>
-    ),
-    answer: (
-      <div>
-        <ul className="list-disc sm:pl-4">
-          <li className="ml-4">
-            <Strong>Realtime</Strong>: While task latency is an important advantage of Temporal
-            compared to other workflow systems, Temporal is not a good fit for realtime usecases
-            like gaming and streaming as we optimize for transactional consistency over absolute
-            lowest latency.
-          </li>
-          <li className="ml-4">
-            <Strong>Non-Critical</Strong>: Temporal persists every state transition and retries
-            failures by default. If you are sending "fire and forget" notifications, Temporal is
-            overkill because the resiliency we provide is not needed.
-          </li>
-          <li className="ml-4">
-            <Strong>Simple</Strong>: Temporal is strongly opinionated about enabling{' '}
-            <em>developers</em> to write <Strong>workflows as code</Strong> in general purpose
-            languages. If your needs can be fulfilled by a visual builder like Zapier or If This
-            Then That, or a non-Turing-complete Domain Specific Language like a small CI YAML file,
-            you will build faster with those. However if you are <em>building</em> these tools for
-            others, Temporal is a good fit.
-          </li>
-        </ul>
-      </div>
-    )
-  },
-  {
     question: 'Is Temporal open-source?',
     answer: (
       <span>
@@ -103,8 +71,41 @@ const faqs = [
         </Link>
         . You can also see our <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
         <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link> for
-        more explanations in podcast, tweet, and blog forms.
+        more explanations in podcast, tweet, and blog forms. You can also{' '}
+        <Link href="https://github.com/temporalio/temporal">read our source code</Link>!
       </span>
+    )
+  },
+  {
+    question: (
+      <span>
+        Temporal seems to do everything. When should I <span className="">NOT</span> use Temporal?
+      </span>
+    ),
+    answer: (
+      <div>
+        <ul className="list-disc sm:pl-4">
+          <li className="ml-4">
+            <Strong>Realtime</Strong>: While task latency is an important advantage of Temporal
+            compared to other workflow systems, Temporal is not a good fit for realtime usecases
+            like gaming and streaming as we optimize for transactional consistency over absolute
+            lowest latency.
+          </li>
+          <li className="ml-4">
+            <Strong>Non-Critical</Strong>: Temporal persists every state transition and retries
+            failures by default. If you are sending "fire and forget" notifications, Temporal is
+            overkill because the resiliency we provide is not needed.
+          </li>
+          <li className="ml-4">
+            <Strong>Simple</Strong>: Temporal is strongly opinionated about enabling{' '}
+            <em>developers</em> to write <Strong>workflows as code</Strong> in general purpose
+            languages. If your needs can be fulfilled by a visual builder like Zapier or If This
+            Then That, or a non-Turing-complete Domain Specific Language like a small CI YAML file,
+            you will build faster with those. However if you are <em>building</em> these tools for
+            others, Temporal is a good fit.
+          </li>
+        </ul>
+      </div>
     )
   },
   {
