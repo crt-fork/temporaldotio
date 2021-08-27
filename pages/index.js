@@ -19,8 +19,8 @@ export default function IndexPage() {
         <StackedUseCases />
         <LargeQuote />
         <Testimonials />
-        <FAQ />
         <JoinUs />
+        <FAQ />
       </div>
       <Footer />
     </div>

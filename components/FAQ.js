@@ -19,7 +19,7 @@ const faqs = [
     ),
     answer: (
       <div>
-        <ul className="list-disc pl-4">
+        <ul className="list-disc sm:pl-4">
           <li className="ml-4">
             <Strong>Realtime</Strong>: While task latency is an important advantage of Temporal
             compared to other workflow systems, Temporal is not a good fit for realtime usecases
@@ -32,12 +32,12 @@ const faqs = [
             overkill because the resiliency we provide is not needed.
           </li>
           <li className="ml-4">
-            <Strong>Simple</Strong>: If your needs can be fulfilled by a visual builder like Zapier
-            or If This Then That, or a non-Turing-complete Domain Specific Language like a CI build
-            script, you will build faster with those. If you are <em>building</em> these tools,
-            Temporal is a good fit. Temporal is strongly opinionated about enabling{' '}
+            <Strong>Simple</Strong>: Temporal is strongly opinionated about enabling{' '}
             <em>developers</em> to write <Strong>workflows as code</Strong> in general purpose
-            languages.
+            languages. If your needs can be fulfilled by a visual builder like Zapier or If This
+            Then That, or a non-Turing-complete Domain Specific Language like a small CI YAML file,
+            you will build faster with those. However if you are <em>building</em> these tools for
+            others, Temporal is a good fit.
           </li>
         </ul>
       </div>
@@ -81,8 +81,8 @@ const faqs = [
     question: 'Is there a hosted version of Temporal?',
     answer: (
       <span>
-        Yes, we are building out Temporal Cloud right now with select Design Partners. If you would
-        like to register your interest, you can{' '}
+        Yes, we are building out Temporal Cloud right now with select enterprise scale Design
+        Partners. If you would like to work with us, you can{' '}
         <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
           register your interest in Temporal Cloud here.
         </Link>
@@ -127,7 +127,7 @@ const faqs = [
         Join <Link href="https://temporal.io/meetup">our monthly meetup</Link>, ask questions in{' '}
         <Link href="https://community.temporal.io/">our forum</Link> and{' '}
         <Link href="https://temporal.io/slack">Slack</Link>, and{' '}
-        <Link href="https://twitter.com/temporalio">tag us on Twitter</Link>!
+        <Link href="https://twitter.com/temporalio">ask us on Twitter</Link>!
       </span>
     )
   }
@@ -135,7 +135,7 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="sm:my-28">
+    <section className="sm:mb-28 border-t border-lightgray">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-28 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-center text-3xl font-bold sm:text-6xl" id="FAQ">
