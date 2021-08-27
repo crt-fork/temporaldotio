@@ -1,61 +1,133 @@
 import React from 'react';
 import { Disclosure, Transition } from '@headlessui/react';
 
+const Strong = ({ children }) => (
+  <strong className="font-bold text-temporalblue">{children}</strong>
+);
+const Link = ({ href, children }) => (
+  <a href={href} className="text-temporalblue hover:text-blue-200 hover:underline">
+    {children}
+  </a>
+);
+
 const faqs = [
   {
-    question: 'Do you offer a hosted version?',
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
-  },
-  {
-    question: 'When NOT to use Temporal?',
-    answer: `If you're building something simple`
+    question: (
+      <span>
+        Temporal seems to do everything. When should I <span className="">NOT</span> use Temporal?
+      </span>
+    ),
+    answer: (
+      <div>
+        <ul className="list-disc pl-4">
+          <li className="ml-4">
+            <Strong>Realtime</Strong>: While task latency is an important advantage of Temporal
+            compared to other workflow systems, Temporal is not a good fit for realtime usecases
+            like gaming and streaming as we optimize for transactional consistency over absolute
+            lowest latency.
+          </li>
+          <li className="ml-4">
+            <Strong>Non-Critical</Strong>: Temporal persists every state transition and retries
+            failures by default. If you are sending "fire and forget" notifications, Temporal is
+            overkill because the resiliency we provide is not needed.
+          </li>
+          <li className="ml-4">
+            <Strong>Simple</Strong>: If your needs can be fulfilled by a visual builder like Zapier
+            or If This Then That, or a non-Turing-complete Domain Specific Language like a CI build
+            script, you will build faster with those. If you are <em>building</em> these tools,
+            Temporal is a good fit. Temporal is strongly opinionated about enabling{' '}
+            <em>developers</em> to write <Strong>workflows as code</Strong> in general purpose
+            languages.
+          </li>
+        </ul>
+      </div>
+    )
   },
   {
     question: 'Is Temporal open-source?',
-    answer: `If you're building something simple`
-  },
-  {
-    question: `What's the difference between Temporal and Homegrown Scripts and Queues?`,
     answer: (
       <span>
-        <span className="text-temporalblue">Developer happiness has increased</span>. Thinking in
-        terms of workflows and activities has{' '}
-        <span className="text-temporalblue">clarified our product</span> and allowed us to{' '}
-        <span className="text-temporalblue">share workflow components</span> with different teams.
+        Yes, we have very large companies using open source Temporal in production without paying us
+        a dime. You can:{' '}
+        <ul className="list-disc pl-4">
+          <li className="ml-4">
+            <Link href="https://github.com/temporalio/temporal">view our source here</Link> (give us
+            a star!),
+          </li>
+          <li className="ml-4">
+            <Link href="https://github.com/temporalio/docker-compose">run Temporal locally</Link>{' '}
+            with Docker, and{' '}
+          </li>
+          <li className="ml-4">
+            <Link href="https://docs.temporal.io/docs/server/production-deployment">
+              contribute to our self hosting docs
+            </Link>
+            .
+          </li>
+        </ul>
+      </span>
+    )
+  },
+  // Todo: add comparison docs
+  // {
+  //   question: `What's the difference between Temporal and Airflow, Camunda, Argo, Step Functions...`,
+  //   answer: (
+  //     <span>
+
+  //     </span>
+  //   )
+  // },
+  {
+    question: 'Is there a hosted version of Temporal?',
+    answer: (
+      <span>
+        Yes, we are building out Temporal Cloud right now with select Design Partners. If you would
+        like to register your interest, you can{' '}
+        <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
+          register your interest in Temporal Cloud here.
+        </Link>
       </span>
     )
   },
   {
-    question: `What's the difference between Temporal and DAG-based Workflow Engines`,
+    question: 'How does Temporal work under the hood?',
     answer: (
       <span>
-        <span className="text-temporalblue">Developer happiness has increased</span>. Thinking in
-        terms of workflows and activities has{' '}
-        <span className="text-temporalblue">clarified our product</span> and allowed us to{' '}
-        <span className="text-temporalblue">share workflow components</span> with different teams.
+        You can{' '}
+        <Link href="https://docs.temporal.io/docs/server-architecture">
+          read our docs on Temporal's architecture
+        </Link>{' '}
+        or{' '}
+        <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
+          watch a 23 minute talk about our design principles
+        </Link>
+        . You can also see our <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
+        <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link> for
+        more explanations in podcast, tweet, and blog forms.
       </span>
     )
   },
   {
-    question: `What's the difference between Temporal and BPM Engines`,
+    question: 'What is your roadmap? When will there be a $MY_FAVORITE_LANGUAGE SDK?',
     answer: (
       <span>
-        <span className="text-temporalblue">Developer happiness has increased</span>. Thinking in
-        terms of workflows and activities has{' '}
-        <span className="text-temporalblue">clarified our product</span> and allowed us to{' '}
-        <span className="text-temporalblue">share workflow components</span> with different teams.
+        We currently have{' '}
+        <Link href="https://docs.temporal.io/application-development">Go, Java, and PHP SDKs</Link>,
+        with TypeScript SDK in alpha. We do not publish a public roadmap, but will be building more
+        SDKs according to demand.{' '}
+        <Link href="https://temporal.io/careers">We are actively hiring for this</Link> if you'd
+        like to help!
       </span>
     )
   },
   {
-    question: `What's the difference between Temporal and JSON/YAML-based Workflow Engines`,
+    question: 'I still have more questions!',
     answer: (
       <span>
-        <span className="text-temporalblue">Developer happiness has increased</span>. Thinking in
-        terms of workflows and activities has{' '}
-        <span className="text-temporalblue">clarified our product</span> and allowed us to{' '}
-        <span className="text-temporalblue">share workflow components</span> with different teams.
+        Join <Link href="https://temporal.io/meetup">our monthly meetup</Link>, ask questions in{' '}
+        <Link href="https://community.temporal.io/">our forum</Link> and{' '}
+        <Link href="https://temporal.io/slack">Slack</Link>, and{' '}
+        <Link href="https://twitter.com/temporalio">tag us on Twitter</Link>!
       </span>
     )
   }
@@ -66,7 +138,9 @@ const FAQ = () => {
     <section className="sm:my-28">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-28 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-center text-3xl font-bold sm:text-6xl">Frequently Asked Questions</h2>
+          <h2 className="text-center text-3xl font-bold sm:text-6xl" id="FAQ">
+            Frequently Asked Questions
+          </h2>
           <dl className="mt-6 space-y-6">
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
