@@ -12,11 +12,13 @@ const Link = ({ href, children }) => (
 
 const faqs = [
   {
-    question: 'Is Temporal open-source?',
+    question: 'Is Temporal open source?',
     answer: (
       <span>
-        Yes, we have very large companies using open source Temporal in production without paying us
-        a dime. You can:{' '}
+        Yes,{' '}
+        <Link href="https://github.com/temporalio/temporal/blob/master/LICENSE">MIT licensed</Link>.
+        We have very large companies using open source Temporal in production without paying us a
+        dime. You can:{' '}
         <ul className="list-disc pl-4">
           <li className="ml-4">
             <Link href="https://github.com/temporalio/temporal">view our source here</Link> (give us
