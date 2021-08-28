@@ -81,7 +81,7 @@ export default function ExplainTemporal() {
                     className={`absolute top-0 left-0  w-full h-full`}
                     width="1424"
                     height="652"
-                    src={`https://www.youtube.com/embed/f-18XztyN6c`}
+                    src={`https://www.youtube.com/embed/f-18XztyN6c?autoplay=1`}
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
