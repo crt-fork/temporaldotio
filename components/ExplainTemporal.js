@@ -15,10 +15,6 @@ export default function ExplainTemporal() {
   return (
     <>
       <button className="flex items-center justify-center space-x-3" onClick={openModal}>
-        <div>
-          <p className="text-2xl">How it works</p>
-          <p className="text-lg font-light">2 min video</p>
-        </div>
         <svg
           className="w-12 h-12 transform transition duration-300 hover:scale-110"
           viewBox="0 0 24 24"
@@ -41,6 +37,10 @@ export default function ExplainTemporal() {
             strokeLinejoin="round"
           />
         </svg>
+        <div className="text-left">
+          <p className="text-2xl">How it works</p>
+          <p className="text-lg font-light">2 min video</p>
+        </div>
       </button>
 
       <Transition appear show={isOpen} as={Fragment}>
@@ -77,15 +77,15 @@ export default function ExplainTemporal() {
                 <div
                   className=" h-0 relative overflow-hidden shadow-temporalblue"
                   style={{ paddingBottom: '56.25%' }}>
-                  <video
-                    ref={videoRef}
-                    autoPlay={true}
-                    loop={true}
-                    controls={true}
-                    className="rounded-lg absolute top-0 left-0 w-full h-full">
-                    <track kind="captions" />
-                    <source type="video/mp4" src="/temporal-in-two-minutes.mp4"></source>
-                  </video>
+                  <iframe
+                    className={`absolute top-0 left-0  w-full h-full`}
+                    width="1424"
+                    height="652"
+                    src={`https://www.youtube.com/embed/f-18XztyN6c`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen></iframe>
                 </div>
               </div>
             </Transition.Child>
