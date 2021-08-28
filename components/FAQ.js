@@ -62,20 +62,37 @@ const faqs = [
   {
     question: 'How does Temporal work under the hood?',
     answer: (
-      <span>
-        You can{' '}
-        <Link href="https://docs.temporal.io/docs/server-architecture">
-          read our docs on Temporal's architecture
-        </Link>{' '}
-        or{' '}
-        <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
-          watch a 23 minute talk about our design principles
-        </Link>
-        . You can also see our <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
-        <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link> for
-        more explanations in podcast, tweet, and blog forms. You can also{' '}
-        <Link href="https://github.com/temporalio/temporal">read our source code</Link>!
-      </span>
+      <div>
+        <ul className="list-disc">
+          <li>
+            Temporal Server runs as a cluster of 4 horizontally scalable Go services with a
+            pluggable persistence layer (MySQL, PostgreSQL, or Cassandra), optional ElasticSearch
+            visibility and an integrated Web UI.
+          </li>
+          <li>
+            Application code sends Commands and Signals to lightweight Task Queues maintained by
+            Temporal Server, which are polled by a scalable fleet of Workers.
+          </li>
+          <li>
+            Workers execute Workflow and Activity code written in Temporal SDKs to determine state
+            transitions, which are durably persisted by Temporal Server.
+          </li>
+        </ul>
+        <p>
+          You can{' '}
+          <Link href="https://docs.temporal.io/docs/server-architecture">
+            read our docs on Temporal's architecture
+          </Link>{' '}
+          or{' '}
+          <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
+            watch a 23 minute talk about our design principles
+          </Link>
+          . You can also see our <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
+          <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link>{' '}
+          for more explanations in podcast, tweet, and blog forms. You can also{' '}
+          <Link href="https://github.com/temporalio/temporal">read our source code</Link>!
+        </p>
+      </div>
     )
   },
   {
@@ -99,12 +116,11 @@ const faqs = [
             overkill because the resiliency we provide is not needed.
           </li>
           <li className="ml-4">
-            <Strong>Simple</Strong>: Temporal is strongly opinionated about enabling{' '}
+            <Strong>Non-Developers</Strong>: Temporal is strongly opinionated about enabling{' '}
             <em>developers</em> to write <Strong>workflows as code</Strong> in general purpose
-            languages. If your needs can be fulfilled by a visual builder like Zapier or If This
-            Then That, or a non-Turing-complete Domain Specific Language like a small CI YAML file,
-            you will build faster with those. However if you are <em>building</em> these tools for
-            others, Temporal is a good fit.
+            languages. If you are not a developer, Temporal probably isn't the right fit for you.
+            However if you are <em>building</em> low code automation tools and DSLs, that is one of
+            the top use cases for Temporal!
           </li>
         </ul>
       </div>
