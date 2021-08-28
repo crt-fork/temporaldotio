@@ -63,7 +63,7 @@ const faqs = [
     question: 'How does Temporal work under the hood?',
     answer: (
       <div>
-        <ul className="list-disc">
+        <ul className="list-disc my-4 pl-4">
           <li>
             Temporal Server runs as a cluster of 4 horizontally scalable Go services with a
             pluggable persistence layer (MySQL, PostgreSQL, or Cassandra), optional ElasticSearch
@@ -85,12 +85,13 @@ const faqs = [
           </Link>{' '}
           or{' '}
           <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
-            watch a 23 minute talk about our design principles
+            watch our CEO's 23 minute talk on our design principles
           </Link>
-          . You can also see our <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
+          . More explanations from employees and users are available on our{' '}
+          <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
           <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link>{' '}
-          for more explanations in podcast, tweet, and blog forms. You can also{' '}
-          <Link href="https://github.com/temporalio/temporal">read our source code</Link>!
+          page. If you just want code, you can read through{' '}
+          <Link href="https://github.com/temporalio/temporal">Temporal's source</Link>!
         </p>
       </div>
     )
