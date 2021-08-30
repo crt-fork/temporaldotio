@@ -128,7 +128,7 @@ const faqs = [
     )
   },
   {
-    question: 'What is your roadmap? When will there be a $MY_FAVORITE_LANGUAGE SDK?',
+    question: 'What is your roadmap? When will there be a $MY_LANGUAGE SDK?',
     answer: (
       <span>
         We currently have{' '}
