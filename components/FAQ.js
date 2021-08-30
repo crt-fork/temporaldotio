@@ -37,7 +37,7 @@ const faqs = [
         </ul>
         <span>
           If you want a fully managed version of Temporal, we are building out Temporal Cloud right
-          now with select enterprise scale Design Partners.
+          now with select enterprise scale Design Partners.{' '}
           <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
             Register your interest in Temporal Cloud here!
           </Link>
@@ -82,7 +82,7 @@ const faqs = [
         </ul>
         <p>
           Learn more:
-          <ul>
+          <ul className="list-disc pl-4">
             <li>
               <Link href="https://docs.temporal.io/docs/server-architecture">
                 Read our docs on Temporal's architecture
@@ -95,8 +95,11 @@ const faqs = [
             </li>
             <li>
               <Link href="https://www.youtube.com/watch?v=taKrIWt6KMY">
-                Watch a 22 minute live code demo
+                Watch our Head of Product's 22 minute live code demo
               </Link>
+            </li>
+            <li>
+              <Link href="https://temporal.io/meetup">Ask questions at our monthly meetup</Link>
             </li>
             <li>
               Read other explanations from users and employees in{' '}
@@ -113,7 +116,7 @@ const faqs = [
   {
     question: (
       <span>
-        Temporal seems to do everything. When should I <span className="">NOT</span> use Temporal?
+        When should I <span className="">NOT</span> use Temporal?
       </span>
     ),
     answer: (
@@ -145,12 +148,13 @@ const faqs = [
     question: 'What is your roadmap? When will there be a $MY_LANGUAGE SDK?',
     answer: (
       <span>
-        We currently have{' '}
+        <Strong>We do not publish a public roadmap</Strong>, but are very responsive to demand from
+        our open source community and paying Design Partners. We currently have{' '}
         <Link href="https://docs.temporal.io/application-development">Go, Java, and PHP SDKs</Link>,
-        with TypeScript SDK in alpha. <Strong>We do not publish a public roadmap</Strong>, but are
-        very responsive to demand from our open source community and paying Design Partners.{' '}
-        <Link href="https://temporal.io/careers">We are actively hiring for this</Link> if you'd
-        like to help!
+        with TypeScript SDK in public alpha. All development is fully open source and trackable on
+        GitHub.
+        <Link href="https://temporal.io/careers">We are actively hiring</Link> if you'd like to work
+        on great open source!
       </span>
     )
   },
