@@ -17,8 +17,8 @@ const faqs = [
       <span>
         Yes,{' '}
         <Link href="https://github.com/temporalio/temporal/blob/master/LICENSE">MIT licensed</Link>.
-        We have &gt;$100 billion dollar publicly listed companies using Temporal in production
-        without paying us a dime. You can:{' '}
+        We have &gt;$X00b publicly listed companies using Temporal in production without paying us a
+        dime. You can:{' '}
         <ul className="list-disc pl-4">
           <li className="ml-4">
             <Link href="https://github.com/temporalio/temporal">view our source here</Link> (give us
@@ -37,10 +37,9 @@ const faqs = [
         </ul>
         <span>
           If you want a fully managed version of Temporal, we are building out Temporal Cloud right
-          now with select enterprise scale Design Partners. If you would like to work with us, you
-          can{' '}
+          now with select enterprise scale Design Partners.
           <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
-            register your interest in Temporal Cloud here.
+            Register your interest in Temporal Cloud here!
           </Link>
         </span>
       </span>
@@ -50,12 +49,12 @@ const faqs = [
     question: 'How does Temporal work under the hood?',
     answer: (
       <div>
-        <ul className="list-disc my-4 pl-4">
-          <li>
-            The Temporal “System” consists of <span className="font-bold">Temporal Server</span>{' '}
-            (run by Temporal Cloud, or self-hosted) and a fleet of{' '}
-            <span className="font-bold">Workers</span> (operated by application developers).
-          </li>
+        <p>
+          The Temporal “System” consists of <span className="font-bold">Temporal Server</span> (run
+          by Temporal Cloud, or self-hosted) and a fleet of{' '}
+          <span className="font-bold">Workers</span> (operated by application developers).
+        </p>
+        <ul className="list-disc my-4 pl-8">
           <li>
             <Link href="https://docs.temporal.io/docs/server/introduction/">Temporal Server</Link>{' '}
             runs as a cluster of 4 horizontally scalable Go services with a pluggable{' '}
@@ -72,9 +71,9 @@ const faqs = [
           </li>
           <li>
             <Link href="https://docs.temporal.io/docs/concepts/workers">Workers</Link> host
-            application code consisting of 'fault oblivious'
+            application code consisting of 'fault oblivious'{' '}
             <Link href="https://docs.temporal.io/docs/concepts/workflows">Workflows</Link> that
-            orchestrate idempotent
+            orchestrate idempotent{' '}
             <Link href="https://docs.temporal.io/docs/concepts/activities">Activities</Link>,
             written using polyglot{' '}
             <Link href="https://docs.temporal.io/application-development/">Temporal SDKs</Link>{' '}
@@ -82,19 +81,31 @@ const faqs = [
           </li>
         </ul>
         <p>
-          You can{' '}
-          <Link href="https://docs.temporal.io/docs/server-architecture">
-            read our docs on Temporal's architecture
-          </Link>{' '}
-          or{' '}
-          <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
-            watch our CEO's 23 minute talk on our design principles
-          </Link>
-          . More explanations from employees and users are available on our{' '}
-          <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
-          <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link>{' '}
-          page. If you just want code, you can read through{' '}
-          <Link href="https://github.com/temporalio/temporal">Temporal's source</Link>!
+          Learn more:
+          <ul>
+            <li>
+              <Link href="https://docs.temporal.io/docs/server-architecture">
+                Read our docs on Temporal's architecture
+              </Link>
+            </li>
+            <li>
+              <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
+                Watch our CEO's 23 minute talk on our design principles
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.youtube.com/watch?v=taKrIWt6KMY">
+                Watch a 22 minute live code demo
+              </Link>
+            </li>
+            <li>
+              Read other explanations from users and employees in{' '}
+              <Link href="https://docs.temporal.io/docs/external-resources/">
+                External Resources
+              </Link>
+              !
+            </li>
+          </ul>
         </p>
       </div>
     )
@@ -136,8 +147,8 @@ const faqs = [
       <span>
         We currently have{' '}
         <Link href="https://docs.temporal.io/application-development">Go, Java, and PHP SDKs</Link>,
-        with TypeScript SDK in alpha. We do not publish a public roadmap, but will be building more
-        SDKs according to demand.{' '}
+        with TypeScript SDK in alpha. <Strong>We do not publish a public roadmap</Strong>, but are
+        very responsive to demand from our open source community and paying Design Partners.{' '}
         <Link href="https://temporal.io/careers">We are actively hiring for this</Link> if you'd
         like to help!
       </span>
