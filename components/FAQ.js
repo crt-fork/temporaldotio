@@ -65,17 +65,33 @@ const faqs = [
       <div>
         <ul className="list-disc my-4 pl-4">
           <li>
-            Temporal Server runs as a cluster of 4 horizontally scalable Go services with a
-            pluggable persistence layer (MySQL, PostgreSQL, or Cassandra), optional ElasticSearch
-            visibility and an integrated Web UI.
+            The Temporal “System” consists of <span className="font-bold">Temporal Server</span>{' '}
+            (run by Temporal Cloud, or self-hosted) and a fleet of{' '}
+            <span className="font-bold">Workers</span> (operated by application developers).
           </li>
           <li>
-            Application code sends Commands and Signals to lightweight Task Queues maintained by
-            Temporal Server, which are polled by a scalable fleet of Workers.
+            <Link href="https://docs.temporal.io/docs/server/introduction/">Temporal Server</Link>{' '}
+            runs as a cluster of 4 horizontally scalable Go services with a pluggable{' '}
+            <Link href="https://docs.temporal.io/docs/server/configuration#persistence">
+              persistence
+            </Link>
+            layer (MySQL, PostgreSQL, or Cassandra), an integrated{' '}
+            <Link href="https://docs.temporal.io/docs/system-tools/web-ui">Web UI</Link> and{' '}
+            <Link href="https://docs.temporal.io/docs/system-tools/tctl">CLI</Link>, and optional
+            <Link href="https://docs.temporal.io/docs/server/elasticsearch-setup">
+              ElasticSearch
+            </Link>{' '}
+            visibility.
           </li>
           <li>
-            Workers execute Workflow and Activity code written in Temporal SDKs to determine state
-            transitions, which are durably persisted by Temporal Server.
+            <Link href="https://docs.temporal.io/docs/concepts/workers">Workers</Link> host
+            application code consisting of 'fault oblivious'
+            <Link href="https://docs.temporal.io/docs/concepts/workflows">Workflows</Link> that
+            orchestrate idempotent
+            <Link href="https://docs.temporal.io/docs/concepts/activities">Activities</Link>,
+            written using polyglot{' '}
+            <Link href="https://docs.temporal.io/application-development/">Temporal SDKs</Link>{' '}
+            which persist and replay Workflow state in all failure and retry scenarios.
           </li>
         </ul>
         <p>
