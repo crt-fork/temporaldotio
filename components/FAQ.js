@@ -12,11 +12,13 @@ const Link = ({ href, children }) => (
 
 const faqs = [
   {
-    question: 'Is Temporal open-source?',
+    question: 'Is Temporal open source? Is there a hosted version?',
     answer: (
       <span>
-        Yes, we have very large companies using open source Temporal in production without paying us
-        a dime. You can:{' '}
+        Yes,{' '}
+        <Link href="https://github.com/temporalio/temporal/blob/master/LICENSE">MIT licensed</Link>.
+        We have &gt;$X00b publicly listed companies using Temporal in production without paying us a
+        dime. You can:{' '}
         <ul className="list-disc pl-4">
           <li className="ml-4">
             <Link href="https://github.com/temporalio/temporal">view our source here</Link> (give us
@@ -33,47 +35,79 @@ const faqs = [
             .
           </li>
         </ul>
-      </span>
-    )
-  },
-  // Todo: add comparison docs
-  // {
-  //   question: `What's the difference between Temporal and Airflow, Camunda, Argo, Step Functions...`,
-  //   answer: (
-  //     <span>
-
-  //     </span>
-  //   )
-  // },
-  {
-    question: 'Is there a hosted version of Temporal?',
-    answer: (
-      <span>
-        Yes, we are building out Temporal Cloud right now with select enterprise scale Design
-        Partners. If you would like to work with us, you can{' '}
-        <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
-          register your interest in Temporal Cloud here.
-        </Link>
+        <span>
+          If you want a fully managed version of Temporal, we are building out Temporal Cloud right
+          now with select enterprise scale Design Partners.
+          <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
+            Register your interest in Temporal Cloud here!
+          </Link>
+        </span>
       </span>
     )
   },
   {
     question: 'How does Temporal work under the hood?',
     answer: (
-      <span>
-        You can{' '}
-        <Link href="https://docs.temporal.io/docs/server-architecture">
-          read our docs on Temporal's architecture
-        </Link>{' '}
-        or{' '}
-        <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
-          watch a 23 minute talk about our design principles
-        </Link>
-        . You can also see our <Link href="https://temporal.io/youtube">YouTube</Link> and{' '}
-        <Link href="https://docs.temporal.io/docs/external-resources/">External Resources</Link> for
-        more explanations in podcast, tweet, and blog forms. You can also{' '}
-        <Link href="https://github.com/temporalio/temporal">read our source code</Link>!
-      </span>
+      <div>
+        <p>
+          The Temporal “System” consists of <span className="font-bold">Temporal Server</span> (run
+          by Temporal Cloud, or self-hosted) and a fleet of{' '}
+          <span className="font-bold">Workers</span> (operated by application developers).
+        </p>
+        <ul className="list-disc my-4 pl-8">
+          <li>
+            <Link href="https://docs.temporal.io/docs/server/introduction/">Temporal Server</Link>{' '}
+            runs as a cluster of 4 horizontally scalable Go services with a pluggable{' '}
+            <Link href="https://docs.temporal.io/docs/server/configuration#persistence">
+              persistence
+            </Link>{' '}
+            layer (MySQL, PostgreSQL, or Cassandra), an integrated{' '}
+            <Link href="https://docs.temporal.io/docs/system-tools/web-ui">Web UI</Link> and{' '}
+            <Link href="https://docs.temporal.io/docs/system-tools/tctl">CLI</Link>, and optional{' '}
+            <Link href="https://docs.temporal.io/docs/server/elasticsearch-setup">
+              ElasticSearch
+            </Link>{' '}
+            visibility.
+          </li>
+          <li>
+            <Link href="https://docs.temporal.io/docs/concepts/workers">Workers</Link> host
+            application code consisting of 'fault oblivious'{' '}
+            <Link href="https://docs.temporal.io/docs/concepts/workflows">Workflows</Link> that
+            orchestrate idempotent{' '}
+            <Link href="https://docs.temporal.io/docs/concepts/activities">Activities</Link>,
+            written using polyglot{' '}
+            <Link href="https://docs.temporal.io/application-development/">Temporal SDKs</Link>{' '}
+            which persist and replay Workflow state in all failure and retry scenarios.
+          </li>
+        </ul>
+        <p>
+          Learn more:
+          <ul>
+            <li>
+              <Link href="https://docs.temporal.io/docs/server-architecture">
+                Read our docs on Temporal's architecture
+              </Link>
+            </li>
+            <li>
+              <Link href="https://docs.temporal.io/blog/workflow-engine-principles">
+                Watch our CEO's 23 minute talk on our design principles
+              </Link>
+            </li>
+            <li>
+              <Link href="https://www.youtube.com/watch?v=taKrIWt6KMY">
+                Watch a 22 minute live code demo
+              </Link>
+            </li>
+            <li>
+              Read other explanations from users and employees in{' '}
+              <Link href="https://docs.temporal.io/docs/external-resources/">
+                External Resources
+              </Link>
+              !
+            </li>
+          </ul>
+        </p>
+      </div>
     )
   },
   {
@@ -86,10 +120,10 @@ const faqs = [
       <div>
         <ul className="list-disc sm:pl-4">
           <li className="ml-4">
-            <Strong>Realtime</Strong>: While task latency is an important advantage of Temporal
-            compared to other workflow systems, Temporal is not a good fit for realtime usecases
-            like gaming and streaming as we optimize for transactional consistency over absolute
-            lowest latency.
+            <Strong>Real-time</Strong>: While task latency is an important advantage of Temporal
+            compared to other workflow systems, Temporal is not a good fit for realtime usecases in
+            gaming and streaming, because we optimize for <Strong>transactional consistency</Strong>{' '}
+            over absolute lowest latency.
           </li>
           <li className="ml-4">
             <Strong>Non-Critical</Strong>: Temporal persists every state transition and retries
@@ -97,25 +131,24 @@ const faqs = [
             overkill because the resiliency we provide is not needed.
           </li>
           <li className="ml-4">
-            <Strong>Simple</Strong>: Temporal is strongly opinionated about enabling{' '}
+            <Strong>Non-Developers</Strong>: Temporal is strongly opinionated about enabling{' '}
             <em>developers</em> to write <Strong>workflows as code</Strong> in general purpose
-            languages. If your needs can be fulfilled by a visual builder like Zapier or If This
-            Then That, or a non-Turing-complete Domain Specific Language like a small CI YAML file,
-            you will build faster with those. However if you are <em>building</em> these tools for
-            others, Temporal is a good fit.
+            languages. If you are not a developer, Temporal probably isn't the right fit for you.
+            However if you are <em>building</em> low code automation tools and DSLs, that is one of
+            the top use cases for Temporal!
           </li>
         </ul>
       </div>
     )
   },
   {
-    question: 'What is your roadmap? When will there be a $MY_FAVORITE_LANGUAGE SDK?',
+    question: 'What is your roadmap? When will there be a $MY_LANGUAGE SDK?',
     answer: (
       <span>
         We currently have{' '}
         <Link href="https://docs.temporal.io/application-development">Go, Java, and PHP SDKs</Link>,
-        with TypeScript SDK in alpha. We do not publish a public roadmap, but will be building more
-        SDKs according to demand.{' '}
+        with TypeScript SDK in alpha. <Strong>We do not publish a public roadmap</Strong>, but are
+        very responsive to demand from our open source community and paying Design Partners.{' '}
         <Link href="https://temporal.io/careers">We are actively hiring for this</Link> if you'd
         like to help!
       </span>

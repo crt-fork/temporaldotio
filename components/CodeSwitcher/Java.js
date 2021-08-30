@@ -11,8 +11,6 @@ export const Java = () => {
         <p style={{ display: 'block' }}>
           <span style={{ color: '#C792EA' }}>public</span>
           <span style={{ color: '#A6ACCD' }}> </span>
-          <span style={{ color: '#C792EA' }}>static</span>
-          <span style={{ color: '#A6ACCD' }}> </span>
           <span style={{ color: '#C792EA' }}>class</span>
           <span style={{ color: '#A6ACCD' }}> </span>
           <span style={{ color: '#FFCB6B' }}>RemindUserWorkflowImpl</span>
