@@ -12,13 +12,13 @@ const Link = ({ href, children }) => (
 
 const faqs = [
   {
-    question: 'Is Temporal open source?',
+    question: 'Is Temporal open source? Is there a hosted version?',
     answer: (
       <span>
         Yes,{' '}
         <Link href="https://github.com/temporalio/temporal/blob/master/LICENSE">MIT licensed</Link>.
-        We have very large companies using open source Temporal in production without paying us a
-        dime. You can:{' '}
+        We have &gt;$100 billion dollar publicly listed companies using Temporal in production
+        without paying us a dime. You can:{' '}
         <ul className="list-disc pl-4">
           <li className="ml-4">
             <Link href="https://github.com/temporalio/temporal">view our source here</Link> (give us
@@ -35,27 +35,14 @@ const faqs = [
             .
           </li>
         </ul>
-      </span>
-    )
-  },
-  // Todo: add comparison docs
-  // {
-  //   question: `What's the difference between Temporal and Airflow, Camunda, Argo, Step Functions...`,
-  //   answer: (
-  //     <span>
-
-  //     </span>
-  //   )
-  // },
-  {
-    question: 'Is there a hosted version of Temporal?',
-    answer: (
-      <span>
-        Yes, we are building out Temporal Cloud right now with select enterprise scale Design
-        Partners. If you would like to work with us, you can{' '}
-        <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
-          register your interest in Temporal Cloud here.
-        </Link>
+        <span>
+          If you want a fully managed version of Temporal, we are building out Temporal Cloud right
+          now with select enterprise scale Design Partners. If you would like to work with us, you
+          can{' '}
+          <Link href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
+            register your interest in Temporal Cloud here.
+          </Link>
+        </span>
       </span>
     )
   },
@@ -74,10 +61,10 @@ const faqs = [
             runs as a cluster of 4 horizontally scalable Go services with a pluggable{' '}
             <Link href="https://docs.temporal.io/docs/server/configuration#persistence">
               persistence
-            </Link>
+            </Link>{' '}
             layer (MySQL, PostgreSQL, or Cassandra), an integrated{' '}
             <Link href="https://docs.temporal.io/docs/system-tools/web-ui">Web UI</Link> and{' '}
-            <Link href="https://docs.temporal.io/docs/system-tools/tctl">CLI</Link>, and optional
+            <Link href="https://docs.temporal.io/docs/system-tools/tctl">CLI</Link>, and optional{' '}
             <Link href="https://docs.temporal.io/docs/server/elasticsearch-setup">
               ElasticSearch
             </Link>{' '}
