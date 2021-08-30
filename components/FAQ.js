@@ -123,9 +123,9 @@ const faqs = [
         <ul className="list-disc sm:pl-4">
           <li className="ml-4">
             <Strong>Real-time</Strong>: While task latency is an important advantage of Temporal
-            compared to other workflow systems, Temporal is not a good fit for realtime usecases
-            like gaming and streaming as we optimize for transactional consistency over absolute
-            lowest latency.
+            compared to other workflow systems, Temporal is not a good fit for realtime usecases in
+            gaming and streaming, because we optimize for <Strong>transactional consistency</Strong>{' '}
+            over absolute lowest latency.
           </li>
           <li className="ml-4">
             <Strong>Non-Critical</Strong>: Temporal persists every state transition and retries
