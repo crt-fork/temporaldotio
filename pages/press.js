@@ -60,6 +60,12 @@ export default function PressPage() {
           </p>
         </div>
 
+        <section className="mb-8">
+          <h3 className="mt-8 text-xl font-bold">Temporal's corporate address:</h3>
+          <p className="mt-2 ml-4">Temporal Technologies, Inc</p>
+          <p className="mt-2 ml-4">300 Lenora Street PMB 1743</p>
+          <p className="mt-2 ml-4">Bellevue, WA 98121</p>
+        </section>
         <section
           id="guidelines"
           className={`
@@ -84,12 +90,6 @@ export default function PressPage() {
               logo/name asset (Aeonik Regular/Medium for headlines, Aeonik Light for body copy)
             </li>
           </ul>
-        </section>
-        <section>
-          <h3 className="mt-8 text-xl font-bold">Temporal's corporate address:</h3>
-          <p className="mt-2 ml-4">Temporal Technologies, Inc</p>
-          <p className="mt-2 ml-4">300 Lenora Street PMB 1743</p>
-          <p className="mt-2 ml-4">Bellevue, WA 98121</p>
         </section>
         <section
           id="brand assets"
@@ -162,7 +162,7 @@ export default function PressPage() {
             <Asset url="/press/Illustration_03.png" label="Temporal Illustration" />
           </ul>
         </section>
-        <section>
+        <section className="mb-8">
           <h2 className="mt-16 mb-4 sm:mb-8 text-4xl sm:text-60 leading-48 sm:leading-72">
             Color Palette
           </h2>
