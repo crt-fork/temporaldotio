@@ -20,27 +20,27 @@ export const CodeSwitcher = () => {
           <Tab selectedClassName="bg-temporalblue text-spaceblack p-1 rounded-lg">
             <p>Go</p>
           </Tab>
-          <Tab selectedClassName="bg-green1 text-spaceblack p-1 rounded-lg">
-            <p>TypeScript</p>
+          <Tab selectedClassName="bg-orange1 text-spaceblack p-1 rounded-lg">
+            <p>Java</p>
           </Tab>
           <Tab selectedClassName="bg-temporalbrightblue text-spaceblack p-1 rounded-lg">
             <p>PHP</p>
           </Tab>
-          <Tab selectedClassName="bg-orange1 text-spaceblack p-1 rounded-lg">
-            <p>Java</p>
+          <Tab selectedClassName="bg-green1 text-spaceblack p-1 rounded-lg">
+            <p>TypeScript (alpha)</p>
           </Tab>
         </TabList>
         <TabPanel>
           <Go />
         </TabPanel>
         <TabPanel>
-          <TypeScript />
+          <Java />
         </TabPanel>
         <TabPanel>
           <PHP />
         </TabPanel>
         <TabPanel>
-          <Java />
+          <TypeScript />
         </TabPanel>
       </Tabs>
     </div>

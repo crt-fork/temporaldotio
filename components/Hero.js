@@ -17,8 +17,8 @@ export default function Hero() {
             Build Invincible Apps
           </h1>
           <p className="text-xl md:text-2xl max-w-screen-md text-center">
-            Temporal is the open source microservices orchestration engine for running highly
-            reliable mission-critical applications at any scale.
+            Temporal is the open source runtime for orchestrating highly reliable, mission-critical
+            applications at any scale.
           </p>
           <div className="py-4 text-lg font-medium flex flex-col justify-center sm:justify-start space-y-4 sm:space-y-0 sm:flex-row sm:space-x-14 items-center">
             <DirectionalControl href="https://docs.temporal.io/">Get Started</DirectionalControl>
