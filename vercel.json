@@ -32,6 +32,11 @@
       "source": "/meetup",
       "destination": "https://lu.ma/temporal",
       "permanent": false
+    },
+    {
+      "source": "/tos",
+      "destination": "https://docs.temporal.io/pdf/temporal-tos-2021-07-24.pdf",
+      "permanent": false
     }
   ]
 }
