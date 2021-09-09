@@ -203,6 +203,24 @@ export default function CareersPage() {
             </a>{' '}
             <span className="text-sm text-gray-500">Remote anywhere</span>
           </li>
+          <li>
+            <span className="font-bold text-xl uppercase">WellHive</span>:{' '}
+            <a
+              href="https://www.wellhive.com/software-engineer-integrations"
+              className="underline text-blue-400 hover:text-blue-200">
+              Software Engineer - Integrations
+            </a>{' '}
+            <span className="text-sm text-gray-500">US Remote</span>
+          </li>
+          <li>
+            <span className="font-bold text-xl uppercase">WellHive</span>:{' '}
+            <a
+              href="https://www.wellhive.com/performance-test-engineer"
+              className="underline text-blue-400 hover:text-blue-200">
+              Performance Test Engineer
+            </a>{' '}
+            <span className="text-sm text-gray-500">US Remote</span>
+          </li>
         </ul>
       </div>
       <Footer />
