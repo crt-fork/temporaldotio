@@ -197,15 +197,15 @@ export default function PressPage() {
             </li>
             <li>
               <div className="border border-white bg-orange2 p-16"></div>
-              <span>Temporal Orange 2 #FFA280</span>
+              <span>Temporal Orange 2 #FF7065</span>
             </li>
             <li>
               <div className="border border-white bg-green1 p-16"></div>
-              <span>Temporal Green 1 #FFA280</span>
+              <span>Temporal Green 1 #9EE587</span>
             </li>
             <li>
               <div className="border border-white bg-green2 p-16"></div>
-              <span>Temporal Green 2 #FFA280</span>
+              <span>Temporal Green 2 #32D67B</span>
             </li>
           </ul>
         </section>
