@@ -37,6 +37,31 @@
       "source": "/tos",
       "destination": "https://docs.temporal.io/pdf/temporal-tos-2021-07-24.pdf",
       "permanent": false
+    },
+    {
+      "source": "/blog",
+      "destination": "https://docs.temporal.io/blog",
+      "permanent": false
+    },
+    {
+      "source": "/go",
+      "destination": "https://docs.temporal.io/docs/go/introduction",
+      "permanent": false
+    },
+    {
+      "source": "/java",
+      "destination": "https://docs.temporal.io/docs/java/introduction",
+      "permanent": false
+    },
+    {
+      "source": "/php",
+      "destination": "https://docs.temporal.io/docs/php/introduction",
+      "permanent": false
+    },
+    {
+      "source": "/node",
+      "destination": "https://docs.temporal.io/docs/node/introduction",
+      "permanent": false
     }
   ]
 }
