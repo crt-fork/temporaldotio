@@ -20,7 +20,7 @@ export function Banner() {
           📆
         </span>
         Join our next Temporal Meetup to ask your questions!
-        <span className="hidden md:inline">Also featuring: a *very* special guest!</span>
+        <span className="hidden md:inline"> Also featuring: a *very* special guest!</span>
       </a>
       <button onClick={() => setOpen(false)}>
         <svg
