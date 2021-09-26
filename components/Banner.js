@@ -16,11 +16,11 @@ export function Banner() {
       </span>
     </a> */}
       <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
+        📆 Join our next Temporal Meetup
         <span role="img" aria-label="Celebration" className="hidden md:inline">
-          📆
+          to ask your questions
         </span>
-        Join our next Temporal Meetup to ask your questions!
-        <span className="hidden md:inline"> Also featuring: a *very* special guest!</span>
+        !<span className="hidden md:inline"> Also featuring: a *very* special guest!</span>
       </a>
       <button onClick={() => setOpen(false)}>
         <svg

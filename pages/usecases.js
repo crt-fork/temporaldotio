@@ -73,7 +73,7 @@ export default function Page() {
           <Header
             id="orchestration"
             extra={
-              <ul className="list-disc pl-4 my-4 text-md">
+              <ul className="list-disc pl-4 my-4 text-md hidden md:block">
                 <li>
                   <a
                     className="text-blue-300 hover:text-blue-200"
@@ -92,13 +92,13 @@ export default function Page() {
             }>
             Microservices Orchestration
           </Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <Orchestration slugPrefix="orchestration" />
           </div>
           <Header
             id="provisioning"
             extra={
-              <ul className="list-disc pl-4 my-4 text-md">
+              <ul className="list-disc pl-4 my-4 text-md hidden md:block">
                 <li>
                   <a
                     className="text-blue-300 hover:text-blue-200"
@@ -117,13 +117,13 @@ export default function Page() {
             }>
             Infrastructure Provisioning
           </Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <Provisioning slugPrefix="provisioning" />
           </div>
           <Header
             id="transactions"
             extra={
-              <ul className="list-disc pl-4 my-4 text-md">
+              <ul className="list-disc pl-4 my-4 text-md hidden md:block">
                 <li>
                   <a
                     className="text-blue-300 hover:text-blue-200"
@@ -142,13 +142,13 @@ export default function Page() {
             }>
             Distributed Transactions
           </Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <Transactions slugPrefix="transactions" />
           </div>
           <Header
             id="Pipelines"
             extra={
-              <ul className="list-disc pl-4 my-4 text-md">
+              <ul className="list-disc pl-4 my-4 text-md hidden md:block">
                 <li>
                   <a
                     className="text-blue-300 hover:text-blue-200"
@@ -175,13 +175,13 @@ export default function Page() {
             Data <br />
             Pipelines
           </Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <Pipelines slugPrefix="Pipelines" />
           </div>
           <Header
             id="Processes"
             extra={
-              <ul className="list-disc pl-4 my-4 text-md">
+              <ul className="list-disc pl-4 my-4 text-md hidden md:block">
                 <li>
                   <a
                     className="text-blue-300 hover:text-blue-200"
@@ -193,19 +193,25 @@ export default function Page() {
             }>
             Long Running Processes
           </Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <Processes slugPrefix="Processes" />
           </div>
-          <Header id="Monitoring">Monitoring and Polling</Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <Header id="Monitoring">
+            Monitoring <br /> and Polling
+          </Header>
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <Monitoring slugPrefix="Monitoring" />
           </div>
-          <Header id="DSL">DSL Workflows</Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <Header id="DSL">
+            DSL <br /> Workflows
+          </Header>
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <DSL slugPrefix="DSL" />
           </div>
-          <Header id="Actors">Scalable Actors</Header>
-          <div className="bg-black text-gray-200 px-8 max-w-[65ch]">
+          <Header id="Actors">
+            Scalable <br /> Actors
+          </Header>
+          <div className="bg-black text-gray-200 md:px-8 max-w-[65ch]">
             <Actors slugPrefix="Actors" />
           </div>
         </section>
@@ -220,7 +226,7 @@ function Header({ id, children, extra }) {
     <div
       className="self-start sticky top-0
     bg-spaceblack w-full mb-4 py-4 pt-10
- border-t-2 border-temporalblue min-h-[300px]
+ border-t-2 border-temporalblue md:min-h-[300px]
     ">
       <div>
         <h2
