@@ -61,6 +61,11 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mb-2 font-light">
+                <a className="hover:text-blue-200 hover:underline" href="https://temporal.io/blog">
+                  Blog
+                </a>
+              </li>
+              <li className="mb-2 font-light">
                 <a
                   className="hover:text-blue-200 hover:underline"
                   href="https://twitter.com/temporalio">
@@ -75,15 +80,15 @@ export default function Footer() {
                 </a>
               </li>
               <li className="mb-2 font-light">
-                <a className="hover:text-blue-200 hover:underline" href="/press">
-                  Press/Brand Assets
-                </a>
-              </li>
-              <li className="mb-2 font-light">
                 <a
                   className="hover:text-blue-200 hover:underline"
                   href="https://open.spotify.com/playlist/3J1oYYHf1lkLsMkfTZEpMO?si=02b77f1f7a6a4253">
-                  Spotify Playlist
+                  Spotify
+                </a>
+              </li>
+              <li className="mb-2 font-light">
+                <a className="hover:text-blue-200 hover:underline" href="/press">
+                  Press Assets
                 </a>
               </li>
             </ul>

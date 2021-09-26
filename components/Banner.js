@@ -1,19 +1,26 @@
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 export function Banner() {
-  const [open, setOpen] = useLocalStorage('bannerOpen', true);
+  const [open, setOpen] = useLocalStorage('meetupOpen', true);
   if (!open) return null;
   return (
     <div className="relative bg-temporalblue text-spaceblack text-center py-2">
-      <a className=" hover:text-blue-800" href="https://docs.temporal.io/blog/funding-announcement">
+      {/* <a className=" hover:text-blue-800" href="https://docs.temporal.io/blog/funding-announcement">
+      <span role="img" aria-label="Celebration" className="hidden md:inline">
+        🎉
+      </span>
+      Announcing our $18.75m Series A
+      <span role="img" aria-label="Celebration" className="hidden md:inline">
+        {' '}
+        led by Sequoia! 🎉
+      </span>
+    </a> */}
+      <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
         <span role="img" aria-label="Celebration" className="hidden md:inline">
-          🎉
+          📆
         </span>
-        Announcing our $18.75m Series A
-        <span role="img" aria-label="Celebration" className="hidden md:inline">
-          {' '}
-          led by Sequoia! 🎉
-        </span>
+        Join our next Temporal Meetup to ask your questions!
+        <span className="hidden md:inline">Also featuring: a *very* special guest!</span>
       </a>
       <button onClick={() => setOpen(false)}>
         <svg
