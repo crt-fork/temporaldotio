@@ -18,7 +18,7 @@ export const Go = () => {
           <span style={{ color: '#89DDFF' }}>.</span>
           <span style={{ color: '#A6ACCD' }}>Context</span>
           <span style={{ color: '#89DDFF' }}>,</span>
-          <span style={{ color: '#A6ACCD' }}> userId </span>
+          <span style={{ color: '#A6ACCD' }}> userID </span>
           <span style={{ color: '#C792EA' }}>string</span>
           <span style={{ color: '#89DDFF' }}>,</span>
           <span style={{ color: '#A6ACCD' }}> intervals </span>
@@ -41,9 +41,9 @@ export const Go = () => {
         <p>
           <span style={{ color: '#A6ACCD' }}>{'  '}</span>
           <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>for</span>
-          <span style={{ color: '#A6ACCD' }}> interval</span>
+          <span style={{ color: '#A6ACCD' }}> _</span>
           <span style={{ color: '#89DDFF' }}>,</span>
-          <span style={{ color: '#A6ACCD' }}> _ </span>
+          <span style={{ color: '#A6ACCD' }}> interval </span>
           <span style={{ color: '#89DDFF' }}>:=</span>
           <span style={{ color: '#A6ACCD' }}> </span>
           <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>range</span>
@@ -66,9 +66,11 @@ export const Go = () => {
                 <span style={{ color: '#89DDFF' }}>(</span>
                 <span style={{ color: '#A6ACCD' }}>interval </span>
                 <span style={{ color: '#89DDFF' }}>*</span>
+                <span style={{ color: '#A6ACCD' }}> 24 </span>
+                <span style={{ color: '#89DDFF' }}>*</span>
                 <span style={{ color: '#A6ACCD' }}> time</span>
                 <span style={{ color: '#89DDFF' }}>.</span>
-                <span style={{ color: '#A6ACCD' }}>Day</span>
+                <span style={{ color: '#A6ACCD' }}>Hour</span>
                 <span style={{ color: '#89DDFF' }}>)</span>
               </div>
             </Tippy>
@@ -94,7 +96,7 @@ export const Go = () => {
                 <span style={{ color: '#89DDFF' }}>,</span>
                 <span style={{ color: '#A6ACCD' }}> SendEmail</span>
                 <span style={{ color: '#89DDFF' }}>,</span>
-                <span style={{ color: '#A6ACCD' }}> userId</span>
+                <span style={{ color: '#A6ACCD' }}> userID</span>
                 <span style={{ color: '#89DDFF' }}>).</span>
                 <span style={{ color: '#82AAFF' }}>Get</span>
                 <span style={{ color: '#89DDFF' }}>(</span>
