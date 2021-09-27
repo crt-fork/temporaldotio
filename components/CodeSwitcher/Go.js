@@ -42,6 +42,8 @@ export const Go = () => {
           <span style={{ color: '#A6ACCD' }}>{'  '}</span>
           <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>for</span>
           <span style={{ color: '#A6ACCD' }}> interval </span>
+          <span style={{ color: '#89DDFF' }}>,</span>
+          <span style={{ color: '#A6ACCD' }}> _ </span>
           <span style={{ color: '#89DDFF' }}>:=</span>
           <span style={{ color: '#A6ACCD' }}> </span>
           <span style={{ color: '#89DDFF', fontStyle: 'italic' }}>range</span>

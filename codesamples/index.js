@@ -12,8 +12,12 @@ let data = {};
         theme: 'material-palenight'
       })
       .then((highlighter) => {
-        const text = highlighter
-          .codeToHtml(fs.readFileSync(path.join(__dirname, 'sample.' + lang), 'utf-8'), lang)
+        let text = highlighter.codeToHtml(
+          fs.readFileSync(path.join(__dirname, 'sample.' + lang), 'utf-8'),
+          lang
+        );
+        console.log({ text });
+        text = text
           .replaceAll('>}<', '>{"}"}<')
           .replaceAll('>{<', '>{"{"}<')
           .replaceAll('    ', '{"    "}')
