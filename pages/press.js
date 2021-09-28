@@ -64,7 +64,7 @@ export default function PressPage() {
           <h3 className="mt-8 text-xl font-bold">Temporal's corporate address:</h3>
           <p className="mt-2 ml-4">Temporal Technologies, Inc</p>
           <p className="mt-2 ml-4">300 Lenora Street PMB 1743</p>
-          <p className="mt-2 ml-4">Bellevue, WA 98121</p>
+          <p className="mt-2 ml-4">Seattle, WA 98121</p>
         </section>
         <section
           id="guidelines"
