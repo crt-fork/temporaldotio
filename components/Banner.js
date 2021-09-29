@@ -15,12 +15,14 @@ export function Banner() {
         led by Sequoia! 🎉
       </span>
     </a> */}
-      <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
-        📆 Join our next Temporal Meetup
+      <a
+        className=" hover:text-blue-800"
+        href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2RtN2ZmZzdiY2trM282MDgwdHFhcXE2a2Mgc3d5eEB0ZW1wb3JhbC5pbw&tmsrc=swyx%40temporal.io">
+        📆 Join our Intro to Temporal Workshop{' '}
         <span role="img" aria-label="Celebration" className="hidden md:inline">
           to ask your questions
         </span>
-        !<span className="hidden md:inline"> Also featuring: a *very* special guest!</span>
+        !
       </a>
       <button onClick={() => setOpen(false)}>
         <svg
