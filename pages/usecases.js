@@ -13,7 +13,7 @@ import Footer from '../components/Footer';
 export default function Page() {
   return (
     <Layout>
-      <Banner />
+      {/* <Banner /> */}
       <section id="usecases-group" className={`container mx-auto justify-evenly px-8 py-16`}>
         <Nav />
       </section>
