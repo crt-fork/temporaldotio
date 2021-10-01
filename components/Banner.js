@@ -15,10 +15,8 @@ export function Banner() {
         led by Sequoia! 🎉
       </span>
     </a> */}
-      <a
-        className=" hover:text-blue-800"
-        href="https://calendar.google.com/event?action=TEMPLATE&tmeid=M2RtN2ZmZzdiY2trM282MDgwdHFhcXE2a2Mgc3d5eEB0ZW1wb3JhbC5pbw&tmsrc=swyx%40temporal.io">
-        📆 Join our Intro to Temporal Workshop{' '}
+      <a className=" hover:text-blue-800" href="https://lu.ma/temporalintro">
+        📆 Join our Intro to Temporal with Java Workshop{' '}
         <span role="img" aria-label="Celebration" className="hidden md:inline">
           to ask your questions
         </span>

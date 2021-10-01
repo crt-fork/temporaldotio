@@ -9,7 +9,7 @@ import ExplainTemporal from './ExplainTemporal';
 export default function Hero() {
   return (
     <div>
-      {/* <Banner /> */}
+      <Banner />
       <section className="container mx-auto p-4">
         <Nav />
         <div className="my-12 md:my-14 flex flex-col space-y-5 justify-center items-center">
