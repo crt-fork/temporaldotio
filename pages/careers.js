@@ -195,6 +195,24 @@ export default function CareersPage() {
             <span className="text-sm text-gray-500">Los Angeles, London, Israel</span>
           </li>
           <li>
+            <span className="font-bold text-xl uppercase">Sureify</span>:{' '}
+            <a
+              href="https://apply.workable.com/sureify-1/j/EAF36BA284/"
+              className="underline text-blue-400 hover:text-blue-200">
+              Staff Software Engineer
+            </a>{' '}
+            <span className="text-sm text-gray-500">San Jose</span>
+          </li>
+          <li>
+            <span className="font-bold text-xl uppercase">Sureify</span>:{' '}
+            <a
+              href="https://apply.workable.com/sureify-1/j/8C8F075725/"
+              className="underline text-blue-400 hover:text-blue-200">
+              Senior Software Engineer
+            </a>{' '}
+            <span className="text-sm text-gray-500">San Jose</span>
+          </li>
+          <li>
             <span className="font-bold text-xl uppercase">WELL Health</span>:{' '}
             <a
               href="https://arc.dev/remote-jobs/j/well-health-inc-senior-software-engineer-backend-cip35uvrrf"
