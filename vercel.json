@@ -67,6 +67,16 @@
       "source": "/node",
       "destination": "https://docs.temporal.io/docs/node/introduction",
       "permanent": false
+    },
+    {
+      "source": "/happy-hour",
+      "destination": "https://lu.ma/temporalkubecon",
+      "permanent": false
+    },
+    {
+      "source": "/university",
+      "destination": "https://lu.ma/temporaluniversity",
+      "permanent": false
     }
   ]
 }
