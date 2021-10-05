@@ -44,6 +44,11 @@
       "permanent": false
     },
     {
+      "source": "/principles",
+      "destination": "https://docs.temporal.io/blog/workflow-engine-principles",
+      "permanent": false
+    },
+    {
       "source": "/go",
       "destination": "https://docs.temporal.io/docs/go/introduction",
       "permanent": false
