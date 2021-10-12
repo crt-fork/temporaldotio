@@ -69,6 +69,11 @@
       "permanent": false
     },
     {
+      "source": "/react",
+      "destination": "https://www.youtube.com/watch?v=Cxaf8E00GMM",
+      "permanent": false
+    },
+    {
       "source": "/happy-hour",
       "destination": "https://lu.ma/temporalkubecon",
       "permanent": false
