@@ -132,6 +132,15 @@ export default function CareersPage() {
             <span className="text-sm text-gray-500">SF/Montreal/Remote</span>
           </li>
           <li>
+            <span className="font-bold text-xl uppercase">Fronted</span>:{' '}
+            <a
+              href="https://docs.google.com/document/d/1muUEnuSSROdKR8QMxOe1V-Y9qBTCCrifOV3jcr3835c"
+              className="underline text-blue-400 hover:text-blue-200">
+              Backend Engineerg
+            </a>{' '}
+            <span className="text-sm text-gray-500">London</span>
+          </li>
+          <li>
             <span className="font-bold text-xl uppercase">Nylas</span>:{' '}
             <a
               href="https://jobs.lever.co/nylas/d8788060-ef4f-48ea-8b7b-787c31ec4e46"
