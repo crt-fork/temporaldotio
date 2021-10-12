@@ -136,7 +136,7 @@ export default function CareersPage() {
             <a
               href="https://docs.google.com/document/d/1muUEnuSSROdKR8QMxOe1V-Y9qBTCCrifOV3jcr3835c"
               className="underline text-blue-400 hover:text-blue-200">
-              Backend Engineerg
+              Backend Engineer
             </a>{' '}
             <span className="text-sm text-gray-500">London</span>
           </li>
