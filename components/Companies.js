@@ -62,6 +62,10 @@ export default function Companies() {
           Snap
         </a>
         ,{' '}
+        <a className="nav-link" href="https://www.youtube.com/watch?v=LliBP7YMGyA">
+          Netflix
+        </a>
+        ,{' '}
         <a
           className="nav-link"
           href="https://www.youtube.com/watch?v=kDlrM6sgk2k&t=1188s&ab_channel=HashiCorp">
