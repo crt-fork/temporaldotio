@@ -1,5 +1,5 @@
 
-export const Node = (
+export const TypeScript = (
   <pre className="p-4 inline-block" style="background-color: #292D3E"><code><span style="display:block"><span style="color: #676E95; font-style: italic">//</span><span style="color: #90EE90; font-style: italic"> workflows/remind-user.js</span></span>
     <span style="display:block"><span style="color: #C792EA">async</span><span style="color: #A6ACCD"> </span><span style="color: #C792EA">function</span><span style="color: #A6ACCD"> </span><span style="color: #82AAFF">main</span><span style="color: #89DDFF">(</span><span style="color: #A6ACCD">userId</span><span style="color: #89DDFF">,</span><span style="color: #A6ACCD"> intervals</span><span style="color: #89DDFF">)</span><span style="color: #A6ACCD"> </span><span style="color: #89DDFF">{"{"}</span></span>
     <span style="display:block"><span style="color: #89DDFF">  </span><span style="color: #676E95; font-style: italic">//</span><span style="color: #90EE90; font-style: italic"> Send reminder emails, e.g. after 1, 7, and 30 days</span></span>

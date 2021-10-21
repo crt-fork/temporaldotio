@@ -69,6 +69,11 @@
       "permanent": false
     },
     {
+      "source": "/typescript",
+      "destination": "https://docs.temporal.io/docs/typescript/introduction",
+      "permanent": false
+    },
+    {
       "source": "/react",
       "destination": "https://www.youtube.com/watch?v=Cxaf8E00GMM",
       "permanent": false
