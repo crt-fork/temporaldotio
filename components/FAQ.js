@@ -17,8 +17,8 @@ const faqs = [
       <span>
         Yes,{' '}
         <Link href="https://github.com/temporalio/temporal/blob/master/LICENSE">MIT licensed</Link>.
-        We have &gt;$X00b publicly listed companies using Temporal in production without paying us a
-        dime. You can:{' '}
+        We have &gt;$1000b publicly listed companies using Temporal in production without paying us
+        a dime. You can:{' '}
         <ul className="list-disc pl-4">
           <li className="ml-4">
             <Link href="https://github.com/temporalio/temporal">view our source here</Link> (give us

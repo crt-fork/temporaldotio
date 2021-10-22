@@ -99,6 +99,15 @@ export default function CareersPage() {
         </h3>
         <ul className="container list-disc rounded-lg my-8 sm:ml-16 space-y-4">
           <li>
+            <span className="font-bold text-xl uppercase">Airbyte</span>:{' '}
+            <a
+              href="https://jobs.lever.co/airbyte/11d4a6fe-a27e-4a1c-ac6c-7b7fe2b2a0fb"
+              className="underline text-blue-400 hover:text-blue-200">
+              Senior Software Engineer
+            </a>
+            , Platform <span className="text-sm text-gray-500">Remote</span>
+          </li>
+          <li>
             <span className="font-bold text-xl uppercase">Bolt</span>:{' '}
             <a
               href="https://www.bolt.com/careers/software-engineer-platforms/f193e0fa-7cf0-42aa-8837-8bdd4dca3e22/"

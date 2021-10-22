@@ -57,11 +57,12 @@ export const TypeScript = () => {
                 <span style={{ color: '#F07178' }}> </span>
                 <span style={{ color: '#82AAFF' }}>sleep</span>
                 <span style={{ color: '#F07178' }}>(</span>
+                <span style={{ color: '#89DDFF' }}>`$</span>
+                <span style={{ color: '#89DDFF' }}>{'{'}</span>
                 <span style={{ color: '#A6ACCD' }}>interval</span>
-                <span style={{ color: '#F07178' }}> </span>
-                <span style={{ color: '#89DDFF' }}>*</span>
-                <span style={{ color: '#F07178' }}> </span>
-                <span style={{ color: '#A6ACCD' }}>DAYS</span>
+                <span style={{ color: '#89DDFF' }}>{'}'}</span>
+                <span style={{ color: '#C3E88D' }}> days</span>
+                <span style={{ color: '#89DDFF' }}>`</span>
                 <span style={{ color: '#F07178' }}>)</span>
                 <span style={{ color: '#89DDFF' }}>;</span>
               </div>

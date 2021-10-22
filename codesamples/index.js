@@ -31,7 +31,7 @@ let data = {};
   fs.writeFileSync(
     path.join(__dirname, `HeroSamples.js`),
     `
-      export const Node = (
+      export const TypeScript = (
         ${data['js']}
       )
     
