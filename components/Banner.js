@@ -15,11 +15,11 @@ export function Banner() {
         led by Sequoia! 🎉
       </span>
     </a> */}
-      <a className=" hover:text-blue-800" href="https://lu.ma/temporalintro">
-        📆 Join our Intro to Temporal with Java Workshop{' '}
-        <span role="img" aria-label="Celebration" className="hidden md:inline">
+      <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
+        🎂 Join our 2 year anniversary meetup!
+        {/* <span role="img" aria-label="Celebration" className="hidden md:inline">
           to ask your questions
-        </span>
+        </span> */}
         !
       </a>
       <button onClick={() => setOpen(false)}>
