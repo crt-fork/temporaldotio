@@ -12,13 +12,54 @@ export default function JoinUs() {
         <h2 className="text-4xl leading-48 sm:text-60 sm:leading-60 mb-8 max-w-xl mx-auto">
           We are hiring
         </h2>
-        <p className="text-lg">We've got experience at the largest scale.</p>
-        <p className="text-lg">Backing from the greatest investors.</p>
-        <p>
-          <span className="text-lg text-temporalblue">We just need you.</span> Come help build the
-          most mission critical platform on Earth.
-        </p>
-        <ul className="list-disc pl-4 mx-auto sm:px-16 my-4">
+        <div className="mx-auto max-w-lg space-y-3">
+          <div className="flex space-x-3 items-start">
+            <svg
+              className="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p className="text-lg">We've got experience at the largest scale.</p>
+          </div>
+          <div className="flex space-x-3 items-start">
+            <svg
+              className="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p className=" text-lg">Backing from the greatest investors.</p>
+          </div>
+          <div className="flex space-x-3 items-start">
+            <svg
+              className="w-8 h-8 "
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                fillRule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <p className="text-lg">
+              <span className="text-lg text-temporalblue">We just need you.</span> Come help build
+              the most mission critical platform on Earth.
+            </p>
+          </div>
+        </div>
+        <ul className="list-disc pl-4 mx-auto space-y-3 sm:px-16 my-4">
           <li>
             <strong className="font-bold">Engineering</strong>: Cloud Security, Infrastructure,
             Language Runtime, Backend
@@ -33,7 +74,7 @@ export default function JoinUs() {
           </li>
         </ul>
         <div className="inline-flex flex-col items-center">
-          <DirectionalControl className="mb-4" href="/careers">
+          <DirectionalControl className="mb-6" href="/careers">
             Join Us
           </DirectionalControl>
           <p className="text-lg inline">Even our users are hiring Temporal developers!</p>
