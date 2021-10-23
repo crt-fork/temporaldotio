@@ -16,10 +16,10 @@ export function Banner() {
       </span>
     </a> */}
       <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
-        🎂 Join our 2 year anniversary meetup!
-        {/* <span role="img" aria-label="Celebration" className="hidden md:inline">
-          to ask your questions
-        </span> */}
+        🎂 Join our 2 year anniversary meetup
+        <span role="img" aria-label="Celebration" className="hidden md:inline">
+          (featuring Stripe)
+        </span>
         !
       </a>
       <button onClick={() => setOpen(false)}>
