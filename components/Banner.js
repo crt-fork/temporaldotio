@@ -18,7 +18,8 @@ export function Banner() {
       <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
         🎂 Join our 2 year anniversary meetup
         <span role="img" aria-label="Celebration" className="hidden md:inline">
-          (featuring Stripe)
+          {' '}
+          ft. Stripe
         </span>
         !
       </a>
