@@ -61,8 +61,11 @@ export default function CareersPage() {
             describing your dream job.
           </h2>
         </div>
-        <div className="container sm:p-8 rounded-lg my-16 sm:ml-16">
+        <div className="container sm:p-8 rounded-lg mt-16 sm:ml-16">
           <div id="lever-jobs-container">Loading... (contact us if this message persists)</div>
+        </div>
+        <div className="container sm:p-4 rounded-lg my-8 sm:ml-16">
+          If the jobs aren't loading, your adblocker may be blocking <code>api.lever.co</code>
         </div>
       </div>
       <hr />

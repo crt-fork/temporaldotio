@@ -19,7 +19,7 @@ export function Banner() {
         🎂 Join our 2 year anniversary meetup
         <span role="img" aria-label="Celebration" className="hidden md:inline">
           {' '}
-          ft. Stripe
+          on Oct 26 ft. Stripe
         </span>
         !
       </a>
