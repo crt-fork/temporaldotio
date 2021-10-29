@@ -92,6 +92,16 @@
       "source": "/university",
       "destination": "https://lu.ma/temporaluniversity",
       "permanent": false
+    },
+    {
+      "source": "/stripe",
+      "destination": "https://stripe.com/jobs/listing/infrastructure-engineer-developer-productivity-workflow-engine/2964407",
+      "permanent": false
+    },
+    {
+      "source": "/workshop",
+      "destination": "https://lu.ma/temporalintro",
+      "permanent": false
     }
   ]
 }
