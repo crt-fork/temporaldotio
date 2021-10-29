@@ -16,10 +16,10 @@ export function Banner() {
       </span>
     </a> */}
       <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
-        🎂 Join our 2 year anniversary meetup
+        🎂 Join our TypeScript Beta meetup
         <span role="img" aria-label="Celebration" className="hidden md:inline">
           {' '}
-          on Oct 26 ft. Stripe
+          on Nov 23 ft. Datadog
         </span>
         !
       </a>
