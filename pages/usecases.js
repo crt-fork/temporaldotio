@@ -225,7 +225,7 @@ function Header({ id, children, extra }) {
   return (
     <div
       className="self-start sticky top-0
-    bg-spaceblack w-full mb-4 py-4 pt-10
+    w-full mb-4 py-4 pt-10
  border-t-2 border-temporalblue md:min-h-[300px]
     ">
       <div>
