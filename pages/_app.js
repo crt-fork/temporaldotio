@@ -5,8 +5,7 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
-
-import StarCanvas from '../components/StarCanvas';
+// import StarCanvas from '../components/StarCanvas';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -76,7 +75,7 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </Head>
-      <StarCanvas />
+      {/* <StarCanvas /> */}
       <Component {...pageProps} />
     </div>
   );
