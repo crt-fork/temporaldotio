@@ -27,7 +27,7 @@ module.exports = {
       },
       colors: {
         offwhite: '#F2F2F2',
-        temporalblue: '#B2E7EA',
+        temporalblue: '#3B82F6',
         temporalbrightblue: '#127AE5',
         temporalpurple: '#B8B4DC',
         temporalbrightpurple: '#8F86DA',
