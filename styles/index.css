@@ -27,10 +27,10 @@
 
 @layer components {
   .btn-primary {
-    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 text-spaceblack bg-temporalblue hover:text-temporalblue hover:bg-spaceblack border border-temporalblue;
+    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 text-white bg-temporalblue hover:text-temporalblue hover:bg-white border border-temporalblue;
   }
   .btn-secondary {
-    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 border hover:bg-white hover:text-spaceblack;
+    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 border hover:bg-white hover:text-white;
   }
   .nav-link {
     @apply hover:text-temporalblue transition-colors relative;
@@ -51,12 +51,12 @@
 }
 
 .dir-control {
-  --buttonColor: var(--temporal-blue);
-  --backdrop: var(--temporal-blue);
-  --slideColor: var(--space-black);
-  --bg: var(--temporal-blue);
+  --buttonColor: var(--space-black);
+  --backdrop: var(--space-black);
+  --slideColor: white;
+  --bg: var(--space-black);
   --borderWidth: 2;
-  --textColor: var(--space-black);
+  --textColor: white;
   border-color: var(--buttonColor, var(--bg));
   color: var(--textColor, var(--buttonColor));
   background: var(--backdrop);
@@ -136,9 +136,9 @@
 .dir-control--secondary {
   --bg: var(--space-black);
   --backdrop: transparent;
-  --buttonColor: var(--off-white);
+  --buttonColor: var(--space-black);
   --slideColor: var(--off-white);
-  --textColor: var(--off-white);
+  --textColor: var(--space-black);
 }
 
 /* Nav link pseudos */
@@ -152,7 +152,7 @@
   position: absolute;
   transition: transform 150ms;
   height: 2px;
-  background: var(--temporal-blue);
+  background: var(--space-black);
   transform: scale(var(--nav-scale, 0));
 }
 
@@ -175,8 +175,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: var(--space-black);
-  border: 2px solid var(--off-white);
+  /* background: var(--space-black); */
+  /* border: 2px solid var(--space-black); */
   top: 0;
   left: 0;
   z-index: -1;
@@ -230,8 +230,6 @@ html {
 }
 
 body {
-  background: #141414;
-  color: var(--off-white);
   font-family: 'Aeonik', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
@@ -253,6 +251,7 @@ body {
 /* temporal design colors https://www.notion.so/temporalio/Color-Palette-62829d945d30440eaffd410dbbb6689f */
 html {
   /* primary */
+  --black: #26272b;
   --space-black: #141414;
   --off-white: #f2f2f2;
   /* secondary */
@@ -268,19 +267,7 @@ html {
   --orange-2: #ff7065;
 }
 
-/*
-  CUSTOM SCROLLBARS! https://css-tricks.com/the-current-state-of-styling-scrollbars/
-  */
-body::-webkit-scrollbar-track {
-  background-color: var(--space-black);
-}
-body::-webkit-scrollbar {
-  width: clamp(5px, 1vw, 20px);
-}
-body::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--temporal-blue), var(--scroll-white));
-  border-radius: 2px;
-}
+/*  */
 
 .react-tabs {
   -webkit-tap-highlight-color: transparent;
@@ -350,9 +337,22 @@ body::-webkit-scrollbar-thumb {
   opacity: 60%;
 }
 
-.tippy-box[data-theme~='dark'] {
-  @apply text-offwhite bg-spaceblack font-mono p-2 rounded-lg shadow-temporalblue;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-.tippy-box[data-theme~='dark'][data-placement^='left'] > .tippy-arrow::before {
-  @apply border-l-spaceblack;
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.bg-svg {
+  position: relative;
+  margin-left: -33.33%;
+  margin-right: -33.33%;
+  @apply pt-10 pb-4;
+  z-index: -1;
+  /* background: url(https://prisma.io/images/globe.svg) center -50px / cover no-repeat; */
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d1d5db' fill-opacity='0.25'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
