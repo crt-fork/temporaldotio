@@ -28,7 +28,7 @@ export function Nav() {
         <li className="hidden md:block">
           <Link href="/">
             <a href="/" className="text-blue-500 no-underline">
-              <img src="/logo-with-text-white-nobg.svg" alt="Temporal logo"></img>
+              <img src="/logo-with-text.svg" alt="Temporal logo"></img>
             </a>
           </Link>
         </li>
