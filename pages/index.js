@@ -5,8 +5,9 @@ import LargeQuote from '../components/LargeQuote';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import StackedUseCases from '../components/StackedUseCases';
-
+import { TemporalServer } from '../components/TemporalServer';
 import FAQ from '../components/FAQ';
+import { TemporalSystemTools } from '../components/TemporalSystemTools';
 
 export default function IndexPage() {
   return (
@@ -16,12 +17,14 @@ export default function IndexPage() {
       </Head>
       <Hero />
       <div className="bg-spaceblack">
-        <StackedUseCases />
-        <LargeQuote />
-        <Testimonials />
-        <JoinUs />
-        <FAQ />
+        <TemporalServer />
+        <TemporalSystemTools />
       </div>
+      <StackedUseCases />
+      <LargeQuote />
+      <Testimonials />
+      <JoinUs />
+      <FAQ />
       <Footer />
     </div>
   );
