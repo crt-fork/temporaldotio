@@ -39,6 +39,8 @@
     "postcss": "^8.2.15",
     "preact": "^10.5.15",
     "preact-render-to-string": "^5.1.19",
+    "prism-react-renderer": "^1.2.1",
+    "prismjs": "^1.25.0",
     "react": "npm:@preact/compat@^17.0.2",
     "react-dom": "npm:@preact/compat@^17.0.2",
     "react-image-lightbox": "^5.1.1",
