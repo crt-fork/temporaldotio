@@ -36,17 +36,17 @@ const sites = [
 export default function Companies() {
   return (
     <div>
-      <p className="text-center text-2xl mt-10 mb-3 capitalize font-bold tracking-wide">
+      <p className="text-center text-2xl mt-10 capitalize font-bold tracking-wide text-gray-700">
         Trusted by
       </p>
       <div className="flex flex-wrap md:space-x-5 font-bold items-center justify-center">
         {sites.map((site, i) => (
           <a
-            className="md:mt-4 flex hover:scale-110 transform transition-transform"
+            className="md:mt-4 flex hover:scale-110 transform transition-transform "
             key={i}
             href={site.url}>
             <img
-              className="w-32 h-32 md:w-44 md:h-44 hover:text-temporalblue"
+              className="w-32 h-32 md:w-44 md:h-44 transition duration-300 ease-in-out transform scale-75 md:scale-100 filter saturate-0 hover:saturate-100 brightness-50 opacity-60 hover:opacity-100 hover:-translate-y-sm hover:brightness-100"
               src={site.src}
               key={site.src}
               alt={site.alt}
