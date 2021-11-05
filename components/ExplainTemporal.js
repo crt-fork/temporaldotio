@@ -17,24 +17,13 @@ export default function ExplainTemporal() {
       <button className="flex items-center justify-center space-x-3" onClick={openModal}>
         <svg
           className="w-12 h-12 transform transition duration-300 hover:scale-110"
-          viewBox="0 0 24 24"
-          fill="none"
+          fill="currentColor"
+          viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg">
           <path
-            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-            fill="#C7EDEF"
-            stroke="#C7EDEF"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <path
-            d="M10 8L16 12L10 16V8Z"
-            fill="black"
-            stroke="black"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+            clipRule="evenodd"
           />
         </svg>
         <div className="text-left">
