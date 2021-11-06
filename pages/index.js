@@ -1,4 +1,6 @@
+import { Banner } from '../components/Banner';
 import Hero from '../components/Hero';
+import { Nav } from '../components/Nav';
 import Testimonials from '../components/Testimonials';
 import JoinUs from '../components/JoinUs';
 import LargeQuote from '../components/LargeQuote';
@@ -14,8 +16,10 @@ export default function IndexPage() {
       <Head>
         <title>Temporal.io | Home</title>
       </Head>
-      <Hero />
-      <div className="bg-spaceblack">
+      <Banner />
+      <Nav />
+      <div>
+        <Hero />
         <StackedUseCases />
         <LargeQuote />
         <Testimonials />
