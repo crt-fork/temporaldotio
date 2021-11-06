@@ -55,7 +55,9 @@ export default function CareersPage() {
           </h1>
           <h2 className="text-xl leading-tight italic">
             If none of these positions are a fit, email{' '}
-            <a href="careers@temporal.io" className="underline text-blue-400 hover:text-blue-200">
+            <a
+              href="mailto:careers@temporal.io"
+              className="underline text-blue-400 hover:text-blue-200">
               careers@temporal.io
             </a>{' '}
             describing your dream job.
