@@ -84,6 +84,13 @@ export default function Page() {
                 <li>
                   <a
                     className="text-blue-300 hover:text-blue-200"
+                    href="https://www.youtube.com/watch?v=Crkcr1S-NSc">
+                    Stripe
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-blue-300 hover:text-blue-200"
                     href="https://doordash.engineering/2020/08/14/workflows-cadence-event-driven-processing/">
                     Doordash
                   </a>
@@ -129,6 +136,13 @@ export default function Page() {
                     className="text-blue-300 hover:text-blue-200"
                     href="https://docs.temporal.io/blog/reliable-crypto-transactions-at-coinbase/">
                     Coinbase
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-blue-300 hover:text-blue-200"
+                    href="https://www.youtube.com/watch?v=LliBP7YMGyA">
+                    Netflix
                   </a>
                 </li>
                 <li>
