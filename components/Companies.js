@@ -62,6 +62,10 @@ export default function Companies() {
           Snap
         </a>
         ,{' '}
+        <a className="nav-link" href="https://www.youtube.com/watch?v=Crkcr1S-NSc">
+          Stripe
+        </a>
+        ,{' '}
         <a className="nav-link" href="https://www.youtube.com/watch?v=LliBP7YMGyA">
           Netflix
         </a>
