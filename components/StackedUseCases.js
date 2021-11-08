@@ -8,7 +8,7 @@ const Stack = ({ content, link, title }) => (
         <div className="stack__content transition-all h-full w-full p-4 bg-black rounded-lg relative border-2 flex flex-col">
           <h2 className="text-2xl tracking-wide font-bold">{title}</h2>
           <p className="flex-grow font-light my-4 text-lg">{content}</p>
-          <a className="nav-link text-center text-temporalblue">Learn More</a>
+          <div className="nav-link text-center text-temporalblue">Learn More</div>
         </div>
       </a>
     </Link>

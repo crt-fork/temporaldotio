@@ -10,7 +10,7 @@ const links = [
 
 export function Nav() {
   return (
-    <nav>
+    <nav className="container mx-auto pt-4 px-4">
       <style jsx>{`
         @media (min-width: 640px) {
           img {
@@ -24,14 +24,14 @@ export function Nav() {
           object-fit: contain;
         }
       `}</style>
-      <ul className="flex items-center justify-around md:justify-between py-4">
-        <li className="hidden md:block">
+      <div className="flex items-center justify-around md:justify-between pt-4">
+        <div className="hidden md:block">
           <Link href="/">
             <a href="/" className="text-blue-500 no-underline">
               <img src="/logo-with-text-white-nobg.svg" alt="Temporal logo"></img>
             </a>
           </Link>
-        </li>
+        </div>
         <ul className="items-center justify-between flex md:text-xl space-x-4">
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
@@ -41,7 +41,7 @@ export function Nav() {
             </li>
           ))}
         </ul>
-      </ul>
+      </div>
     </nav>
   );
 }

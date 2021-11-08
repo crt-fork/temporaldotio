@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Layout from '../usecases/_mdxprovider';
 import { Nav } from '../components/Nav';
 import { Banner } from '../components/Banner';
@@ -13,10 +14,11 @@ import Footer from '../components/Footer';
 export default function Page() {
   return (
     <Layout>
+      <Head>
+        <title>Temporal.io | Use Cases</title>
+      </Head>
       <Banner />
-      <section id="usecases-group" className={`container mx-auto justify-evenly px-8 py-16`}>
-        <Nav />
-      </section>
+      <Nav />
       <section
         id="usecases-group"
         className={`container mx-auto justify-evenly px-8 py-16 max-w-[75ch]`}>
@@ -253,7 +255,7 @@ function Header({ id, children, extra }) {
         {extra}
       </div>
       <a
-        className="font-italic hover:underline text-blue-600 hover:text-blue-500"
+        className="font-italic hover:underline text-blue-500 hover:text-blue-500"
         href="#usecases-group">
         back to top
       </a>
