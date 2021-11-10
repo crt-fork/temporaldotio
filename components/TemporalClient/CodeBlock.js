@@ -9,9 +9,9 @@ require('prismjs/components/prism-java');
 require('prismjs/components/prism-php');
 
 const diffSymbols = {
-  '+': '#064E3B',
-  '-': '#530000',
-  '*': '#1E3A8A'
+  '+': '#133929',
+  '-': '#541b1f',
+  '*': '#0f7bfe40'
 };
 
 export const CodeBlock = ({ code, lang }) => {
@@ -19,7 +19,7 @@ export const CodeBlock = ({ code, lang }) => {
     <Highlight {...defaultProps} code={code} language={lang} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={`p-5 rounded-lg shadow-xl overflow-x-scroll hide-scrollbar ${className} text-sm leading-relaxed`}
+          className={`p-5 rounded-b-lg shadow-xl overflow-x-scroll hide-scrollbar ${className} text-sm leading-relaxed`}
           style={style}>
           <code>
             {tokens.map((line, i) => {
@@ -43,7 +43,8 @@ export const CodeBlock = ({ code, lang }) => {
                   line[0] && line[0].content.length ? line[0].content[0] : line[1].content;
                 lineClass = {
                   backgroundColor: diffSymbols[diffSymbol],
-                  padding: '0.2rem 0.5rem'
+                  padding: '0.2rem 0.5rem',
+                  borderRadius: '0.5rem'
                 };
 
                 if (
@@ -70,7 +71,7 @@ export const CodeBlock = ({ code, lang }) => {
 
               return (
                 <div key={i}>
-                  <span className="mr-4 text-sm text-gray-400">{i + 1}</span>
+                  {/* <span className="ml-1 mr-4 text-sm text-gray-200">{i + 1}</span> */}
                   <span {...lineProps}>
                     {line.map((token, key) => {
                       return <span key={key} {...getTokenProps({ token, key })} />;

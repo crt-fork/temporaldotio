@@ -1,7 +1,7 @@
 export const features = [
   {
     index: 0,
-    language: 'Go',
+    language: 'go',
     links: [
       { label: 'timeouts', href: '/docs/go/timeouts' },
       { label: 'retries', href: '/docs/go/retries/' },
@@ -26,7 +26,7 @@ export const features = [
   },
   {
     index: 2,
-    language: 'Java',
+    language: 'java',
     links: [
       { label: 'timeouts', href: '/docs/java/timeouts' },
       { label: 'retries', href: '/docs/java/retries/' },
@@ -51,7 +51,7 @@ export const features = [
   },
   {
     index: 1,
-    language: 'PHP',
+    language: 'php',
     links: [
       { label: 'timeouts', href: '/docs/php/timeouts' },
       { label: 'retries', href: '/docs/php/retries/' },
@@ -76,7 +76,7 @@ export const features = [
   },
   {
     index: 3,
-    language: 'TypeScript',
+    language: 'typescript',
     links: [
       { label: 'timeouts', href: '/docs/typescript/timeouts' },
       { label: 'retries', href: '/docs/typescript/retries/' },
