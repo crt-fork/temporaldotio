@@ -40,14 +40,14 @@ export const HX =
 export const A = ({ href, children }) => {
   if (href.includes('temporal.io')) {
     return (
-      <a href={href} className="hover:underline text-blue-800 hover:text-blue-500">
+      <a href={href} className="hover:underline text-blue-200 hover:text-blue-100">
         {children}
       </a>
     );
   }
   return (
     <ExternalLinkWithSVGIcon
-      className="hover:underline text-blue-300 hover:text-blue-200"
+      className="hover:underline text-blue-200 hover:text-blue-100"
       url={href}>
       {children}
     </ExternalLinkWithSVGIcon>
