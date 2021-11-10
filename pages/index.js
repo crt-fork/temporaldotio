@@ -2,10 +2,9 @@ import Hero from '../components/Hero';
 import Testimonials from '../components/Testimonials';
 import JoinUs from '../components/JoinUs';
 import LargeQuote from '../components/LargeQuote';
-import Footer from '../components/Footer';
 import Head from 'next/head';
 import StackedUseCases from '../components/StackedUseCases';
-import { TemporalServer } from '../components/TemporalServer';
+import { TemporalCluster } from '../components/TemporalCluster';
 import FAQ from '../components/FAQ';
 import { TemporalSystemTools } from '../components/TemporalSystemTools';
 
@@ -16,16 +15,13 @@ export default function IndexPage() {
         <title>Temporal.io | Home</title>
       </Head>
       <Hero />
-      <div className="bg-spaceblack">
-        <TemporalServer />
-        <TemporalSystemTools />
-      </div>
+      <TemporalCluster />
+      <TemporalSystemTools />
       <StackedUseCases />
       <LargeQuote />
       <Testimonials />
       <JoinUs />
       <FAQ />
-      <Footer />
     </div>
   );
 }

@@ -1,34 +1,41 @@
+/* eslint-disable react/display-name */
 import { ExternalLinkWithSVGIcon } from './shared';
 
-export const H1 = (slugPrefix = '') => ({ children }) => {
-  let slug = slugify(children);
-  slug = slugPrefix ? `${slugPrefix}-${slug}` : slug;
-  return (
-    <h1 className="text-xl my-8 uppercase font-bold" id={slug}>
-      <a href={`#${slug}`}>{children}</a>
-    </h1>
-  );
-};
-export const H2 = (slugPrefix = '') => ({ children }) => {
-  let slug = slugify(children);
-  slug = slugPrefix ? `${slugPrefix}-${slug}` : slug;
-  return (
-    <h2
-      className="text-md mt-8 md:mt-12 mb-4 uppercase font-bold hover:text-temporalblue"
-      id={slug}>
-      <a href={`#${slug}`}>{children}</a>
-    </h2>
-  );
-};
-export const HX = (slugPrefix = '') => ({ children }) => {
-  let slug = slugify(children);
-  slug = slugPrefix ? `${slugPrefix}-${slug}` : slug;
-  return (
-    <h3 className="text-md mt-6 mb-4 font-bold hover:text-temporalblue" id={slug}>
-      <a href={`#${slug}`}>{children}</a>
-    </h3>
-  );
-};
+export const H1 =
+  (slugPrefix = '') =>
+  ({ children }) => {
+    let slug = slugify(children);
+    slug = slugPrefix ? `${slugPrefix}-${slug}` : slug;
+    return (
+      <h1 className="text-xl my-8 uppercase font-bold" id={slug}>
+        <a href={`#${slug}`}>{children}</a>
+      </h1>
+    );
+  };
+export const H2 =
+  (slugPrefix = '') =>
+  ({ children }) => {
+    let slug = slugify(children);
+    slug = slugPrefix ? `${slugPrefix}-${slug}` : slug;
+    return (
+      <h2
+        className="text-md mt-8 md:mt-12 mb-4 uppercase font-bold hover:text-temporalblue"
+        id={slug}>
+        <a href={`#${slug}`}>{children}</a>
+      </h2>
+    );
+  };
+export const HX =
+  (slugPrefix = '') =>
+  ({ children }) => {
+    let slug = slugify(children);
+    slug = slugPrefix ? `${slugPrefix}-${slug}` : slug;
+    return (
+      <h3 className="text-md mt-6 mb-4 font-bold hover:text-temporalblue" id={slug}>
+        <a href={`#${slug}`}>{children}</a>
+      </h3>
+    );
+  };
 
 export const A = ({ href, children }) => {
   if (href.includes('temporal.io')) {

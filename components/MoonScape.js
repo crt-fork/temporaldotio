@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { useRef } from 'react';
 
 const MoonScape = () => {
   const footerRef = useRef(null);
