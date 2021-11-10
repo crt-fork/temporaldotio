@@ -173,7 +173,7 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="sm:mb-28 border-t border-spaceblack">
+    <section className="sm:mb-28 border-t border-gray-100">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:py-28 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-center text-3xl font-bold sm:text-6xl" id="FAQ">

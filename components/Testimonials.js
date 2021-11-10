@@ -6,9 +6,9 @@ const QUOTES = [
     img: 'https://avatars1.githubusercontent.com/u/114386',
     quote: (
       <span>
-        <span className="text-blue-500">Developer happiness has increased</span>. Thinking in terms
-        of workflows and activities has <span className="text-blue-500">clarified our product</span>{' '}
-        and allowed us to <span className="text-blue-500">share workflow components</span> with
+        <span className="text-blue-200">Developer happiness has increased</span>. Thinking in terms
+        of workflows and activities has <span className="text-blue-200">clarified our product</span>{' '}
+        and allowed us to <span className="text-blue-200">share workflow components</span> with
         different teams.
       </span>
     ),
@@ -22,8 +22,8 @@ const QUOTES = [
     img: 'https://avatars.githubusercontent.com/u/2502591?v=4',
     quote: (
       <span>
-        A <span className="text-blue-500">game changing</span> revelation - Temporal gave us{' '}
-        <span className="text-blue-500">the ability to test our workflows</span> with unit tests.
+        A <span className="text-blue-200">game changing</span> revelation - Temporal gave us{' '}
+        <span className="text-blue-200">the ability to test our workflows</span> with unit tests.
         JSON or YAML are completely untestable!
       </span>
     ),
@@ -37,8 +37,8 @@ const QUOTES = [
     img: 'https://pbs.twimg.com/profile_images/943640175/new_photo_400x400.jpg',
     quote: (
       <span>
-        Temporal maintains <span className="text-blue-500">high reliability</span> while providing{' '}
-        <span className="text-blue-500">tremendous visibility</span>. Things we thought to be much
+        Temporal maintains <span className="text-blue-200">high reliability</span> while providing{' '}
+        <span className="text-blue-200">tremendous visibility</span>. Things we thought to be much
         more complex... feel much easier!
       </span>
     ),
@@ -53,7 +53,7 @@ const QUOTES = [
     quote: (
       <span>
         The API gives you this{' '}
-        <span className="text-blue-500">illusion of single threaded execution</span>
+        <span className="text-blue-200">illusion of single threaded execution</span>
         ... It's amazing.
       </span>
     ),
@@ -82,7 +82,7 @@ const Testimonials = () => {
         ))}
       </div>
       <div className="mt-24 flex justify-center">
-        <DirectionalControl href="https://docs.temporal.io/blog/tags/case-study">
+        <DirectionalControl secondary href="https://docs.temporal.io/blog/tags/case-study">
           View Case Studies
         </DirectionalControl>
       </div>
@@ -98,7 +98,7 @@ const Quote = ({ quote, name, title, img, logo, logoAlt }) => (
         <div className="flex -space-x-3 items-center">
           <img className="rounded-full shadow-md w-10 h-10" src={img} alt={`${name}`} />
           <img
-            className="z-10 rounded-full w-12 h-12 border-solid border-4 border-white"
+            className="z-10 rounded-full w-12 h-12 border-solid border-4 border-gray-900"
             src={logo}
             alt={logoAlt}
           />
