@@ -1,5 +1,3 @@
-import { Nav } from '../components/Nav';
-import Footer from '../components/Footer';
 import React from 'react';
 import Head from 'next/head';
 
@@ -7,7 +5,6 @@ export default function CareersPage() {
   return (
     <div>
       <div className="mx-4 sm:mx-16">
-        <Nav />
         <div>
           <Head>
             <title>Temporal.io Careers</title>
@@ -259,7 +256,6 @@ export default function CareersPage() {
           </li>
         </ul>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,6 +1,4 @@
 import Layout from '../usecases/_mdxprovider';
-import { Nav } from '../components/Nav';
-import { Banner } from '../components/Banner';
 import Orchestration from '../usecases/orchestration.mdx';
 import Transactions from '../usecases/transactions.mdx';
 import Provisioning from '../usecases/provisioning.mdx';
@@ -9,14 +7,13 @@ import Pipelines from '../usecases/pipelines.mdx';
 import Processes from '../usecases/long-running-processes.mdx';
 import DSL from '../usecases/dsl.mdx';
 import Actors from '../usecases/actors.mdx';
-import Footer from '../components/Footer';
+
 export default function Page() {
   return (
     <Layout>
-      <Banner />
-      <section id="usecases-group" className={`container mx-auto justify-evenly px-8 py-16`}>
-        <Nav />
-      </section>
+      <section
+        id="usecases-group"
+        className={`container mx-auto justify-evenly px-8 py-16`}></section>
       <section
         id="usecases-group"
         className={`container mx-auto justify-evenly px-8 py-16 max-w-[75ch]`}>
@@ -216,7 +213,6 @@ export default function Page() {
           </div>
         </section>
       </section>
-      <Footer />
     </Layout>
   );
 }

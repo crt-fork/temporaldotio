@@ -1,11 +1,11 @@
-import DirectionalControl from './DirectionalControl';
-import MoonScape from './MoonScape';
+import DirectionalControl from '../DirectionalControl';
+import MoonScape from '../MoonScape';
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <footer
       id="footer"
-      className={`bg-gray-50
+      className={`bg-spaceblack
       overflow-hidden
     flex flex-col-reverse sm:flex-row
     `}>
@@ -18,14 +18,16 @@ export default function Footer() {
           <p className="w-56 lg:w-700 mb-8">
             Temporal Cloud is a fully managed cloud offering of the open-source Server.{' '}
             <a
-              className="hover:underline text-blue-400 hover:text-blue-300"
+              className="hover:underline text-blue-100 hover:text-blue-200"
               href="https://docs.temporal.io/#cloud">
               See features
             </a>{' '}
             and sign up for the waitlist.
           </p>
           <div className="mt-4 flex">
-            <DirectionalControl href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
+            <DirectionalControl
+              secondary
+              href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
               Book your place
             </DirectionalControl>
           </div>
@@ -167,4 +169,4 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};

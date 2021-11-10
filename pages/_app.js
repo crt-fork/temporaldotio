@@ -4,8 +4,8 @@ import 'react-image-lightbox/style.css';
 import Head from 'next/head';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
+import { Layout } from '../components/layout';
 import * as gtag from '../lib/gtag';
-// import StarCanvas from '../components/StarCanvas';
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -75,8 +75,10 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </Head>
-      {/* <StarCanvas /> */}
-      <Component {...pageProps} />
+
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </div>
   );
 }

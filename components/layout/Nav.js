@@ -10,25 +10,12 @@ const links = [
 
 export function Nav() {
   return (
-    <nav>
-      <style jsx>{`
-        @media (min-width: 640px) {
-          img {
-            width: 225px !important;
-            height: 56px !important;
-          }
-        }
-        img {
-          width: 180px;
-          height: 45px;
-          object-fit: contain;
-        }
-      `}</style>
+    <nav className="container mx-auto p-4">
       <ul className="flex items-center justify-around md:justify-between py-4">
         <li className="hidden md:block">
           <Link href="/">
-            <a href="/" className="text-blue-500 no-underline">
-              <img src="/logo-with-text.svg" alt="Temporal logo"></img>
+            <a href="/" className="text-blue-500 no-underline ">
+              <img src="/logo-with-text.svg" className="w-36 h-w-36" alt="Temporal logo" />
             </a>
           </Link>
         </li>
