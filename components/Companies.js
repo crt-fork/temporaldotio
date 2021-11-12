@@ -60,7 +60,11 @@ export default function Companies() {
           Snap
         </a>
         ,{' '}
-        <a className="nav-link" href="https://www.youtube.com/watch?v=LliBP7YMGyA">
+        <a className="nav-link" href="https://temporal.io/stripe">
+          Stripe
+        </a>
+        ,{' '}
+        <a className="nav-link" href="https://temporal.io/netflix">
           Netflix
         </a>
         ,{' '}

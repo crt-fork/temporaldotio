@@ -24,8 +24,9 @@ const USE_CASES = [
     link: '/usecases#orchestration',
     content: (
       <div>
-        Define <span className="">retries, rollbacks, cleanup, and even human-in-the-loop</span>{' '}
-        steps in the case of failure. With end to end visibility across multiple services.
+        Tame your exploding Microservices Hairball. Standardize{' '}
+        <span className="">retries, timeouts, and cancellation</span> and test/version the same way
+        you write all your other software! Examples: Snapchat, Checkr, Doordash
       </div>
     ),
     title: 'Microservices Orchestration'
@@ -34,26 +35,25 @@ const USE_CASES = [
     icon: '/icons/icon-sharding.svg',
     content: (
       <div>
-        <span className="">
-          Reliability, consistency, failure compensation, long running operations, and distributed
-          transactions
-        </span>{' '}
-        for your most critical financial operations.
+        No more double spends or dropped payments. Reliability, consistency, failure compensation,
+        long running operations, and distributed transactions for your most critical transfers.
+        Examples: Coinbase, Box.
       </div>
     ),
     link: '/usecases#transactions',
-    title: 'Financial Transactions'
+    title: 'Distributed Transactions'
   },
   {
     icon: '/icons/icon-streaming.svg',
     content: (
       <div>
-        When ad-hoc provisioning doesn't scale and Kubernetes or Fargate doesn't give you enough
-        control, <span className="">write your own control plane</span> in languages you know best.
+        Whether you are implementing CI/CD pipelines or creating managed clouds,{' '}
+        <span className="">write your own control plane</span> in languages you know best. Examples:
+        HashiCorp, Datadog, Stripe.
       </div>
     ),
     link: '/usecases#provisioning',
-    title: 'Resource Provisioning'
+    title: 'Infrastructure Provisioning'
   },
   {
     icon: '/icons/icon-storage.svg',
@@ -64,32 +64,31 @@ const USE_CASES = [
         failure.
       </div>
     ),
-    link: '/usecases#monitoring',
+    link: '/usecases#Monitoring',
     title: 'Monitoring'
   },
   {
     icon: '/icons/icon-storage.svg',
     content: (
       <div>
-        Reliable polling that is as simple or sophisticated as you need, at massive scale. Imagine{' '}
-        <span className="">100s of millions parallel cron jobs</span> that survive any machine
-        failure.
+        Distributed Cron, at massive scale. Reliable polling that is as simple or sophisticated as
+        you need. Run 100s of millions parallel cron jobs that survive any machine failure.
       </div>
     ),
-    link: '/usecases#monitoring',
+    link: '/usecases#Processes',
     title: 'Long Running Processes'
   },
   {
     icon: '/icons/icon-storage.svg',
     content: (
       <div>
-        Reliable polling that is as simple or sophisticated as you need, at massive scale. Imagine{' '}
-        <span className="">100s of millions parallel cron jobs</span> that survive any machine
-        failure.
+        Run millions of data processing jobs in parallel. Track to their individual statuses, easily
+        scale up and down workers, and decimate downtime. Examples: Descript, Zebra Medical Vision,
+        Airbyte
       </div>
     ),
-    link: '/usecases#monitoring',
-    title: 'Distributed Transactions'
+    link: '/usecases#Pipelines',
+    title: 'Data Pipelines'
   }
 ];
 
@@ -118,7 +117,7 @@ const StackedUseCases = () => (
         </div>
         <div className="mt-16 flex justify-center">
           <DirectionalControl secondary href="/usecases">
-            Learn more
+            Read more
           </DirectionalControl>
         </div>
       </div>

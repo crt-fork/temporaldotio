@@ -1,22 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CodeSwitcher } from './CodeSwitcher';
 
 export const TemporalClient = () => {
+  // const [lang, setLang] = useLocalStorage('preferredLang', null);
+  const [lang, setLang] = useState(null);
+  const link =
+    {
+      Go: 'https://docs.temporal.io/docs/go/getting-started',
+      Java: 'https://docs.temporal.io/docs/java/introduction',
+      PHP: 'https://docs.temporal.io/docs/php/introduction',
+      TypeScript: 'https://docs.temporal.io/docs/typescript/introduction'
+    }[lang] || 'https://docs.temporal.io';
   return (
     <section className="mt-12 mb-28 rounded-lg md:shadow-blue container mx-auto p-4 bg-gray-800">
       <div className="md:p-10 max-w-screen-2xl w-full mx-auto">
-        <h2 className="text-xl mb-3 text-gray-100">Temporal Client</h2>
-        <h3 className="text-4xl md:text-5xl font-bold">
-          Microservice orchestration,
-          <br /> without the pain
-        </h3>
+        <h2 className="text-xl mb-3 text-gray-100">Temporal SDKs</h2>
+        <h3 className="text-4xl md:text-5xl font-bold">No more JSON or YAML</h3>
         <p className="my-5 max-w-2xl text-lg md:text-xl">
-          Seamless and fault tolerant application state tracking, automatic retries, timeouts,
-          rollbacks due to process failures, and more. Seamless and fault tolerant application state
-          tracking, automatic retries, timeouts, rollbacks due to process failures, and more.
+          Easily write, reuse, test, version, and migrate dynamic asynchronous logic with idiomatic
+          APIs. Use software engineering best practices, whether you are writing Infra Provisioning
+          automation, wrangling a Data pipeline, or even building a domain specific Workflow Engine!
         </p>
-        <a href="https://docs.temporal.io" className="text-blue-100 text-lg hover:underline">
-          Learn more
+        <a href={link} className="text-blue-100 text-lg hover:underline">
+          See {lang ?? 'Language'} SDK docs
         </a>
         <div className="mt-12 gap-10 grid grid-cols-1 lg:grid-cols-12 place-items-end">
           <div className="lg:col-span-5 space-y-3">
@@ -31,9 +37,46 @@ export const TemporalClient = () => {
               Activities have timeouts, and will be retried by default!
             </p>
           </div>
-          <CodeSwitcher />
+          <CodeSwitcher lang={lang} setLang={setLang} />
         </div>
       </div>
     </section>
   );
 };
+
+// function useLocalStorage(key, initialValue) {
+//   // State to store our value
+//   // Pass initial state function to useState so logic is only executed once
+//   const [storedValue, setStoredValue] = useState(() => {
+//     try {
+//       // Get from local storage by key
+//       if (typeof window !== 'undefined') {
+//         const item = window.localStorage.getItem(key);
+//         // Parse stored json or if none return initialValue
+//         return item ? JSON.parse(item) : initialValue;
+//       } else {
+//         return initialValue
+//       }
+//     } catch (error) {
+//       // If error also return initialValue
+//       console.log(error);
+//       return initialValue;
+//     }
+//   });
+//   // Return a wrapped version of useState's setter function that ...
+//   // ... persists the new value to localStorage.
+//   const setValue = (value) => {
+//     try {
+//       // Allow value to be a function so we have same API as useState
+//       const valueToStore = value instanceof Function ? value(storedValue) : value;
+//       // Save state
+//       setStoredValue(valueToStore);
+//       // Save to local storage
+//       window.localStorage.setItem(key, JSON.stringify(valueToStore));
+//     } catch (error) {
+//       // A more advanced implementation would handle the error case
+//       console.log(error);
+//     }
+//   };
+//   return [storedValue, setValue];
+// }

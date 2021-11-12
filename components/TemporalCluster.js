@@ -8,20 +8,20 @@ export const TemporalCluster = () => {
         <section className="max-w-screen-2xl mx-auto pt-20 pb-8 lg:ml-20 grid grid-cols-1 lg:grid-cols-12 items-center gap-12">
           <div className="col-span-1 md:col-span-5 px-8">
             <h2 className="text-xl mb-3 text-gray-50">Temporal Cluster</h2>
-            <h3 className="text-4xl font-bold mb-4 tracking-wide">Forget about tracking state</h3>
+            <h3 className="text-4xl font-bold mb-4 tracking-wide">Reliability on Rails</h3>
             <div className="text-lg">
               <p>
-                Open source service that scales from a single binary to fleets independently
-                scalable services. Pluggable persistence with PostgreSQL, MySQL, Cassandra, and
-                ElasticSearch.
+                Open source server that scales from a single Go binary to large clusters handling
+                hundreds of millions of concurrent Workflows. Run locally or provide as a platform
+                to your developers like Netflix, Stripe, and HashiCorp.
               </p>
             </div>
             <div className="flex space-x-5 mt-10">
               <DirectionalControl href="https://docs.temporal.io/docs/server/introduction">
-                Try with Docker
+                Quick Start
               </DirectionalControl>
               <DirectionalControl secondary href="https://temporal.io/cloud">
-                Talk to an expert
+                Host it for me
               </DirectionalControl>
             </div>
           </div>

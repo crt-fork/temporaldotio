@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+// import JoinUs from '../components/JoinUs';
 
 export default function CareersPage() {
   return (
@@ -47,6 +48,7 @@ export default function CareersPage() {
               type="text/javascript"
               src="https://andreasmb.github.io/lever-jobs-embed/index.js"></script>
           </Head>
+          {/* <JoinUs /> */}
           <h1 className="text-3xl sm:w-800 sm:mt-12 leading-lg sm:text-4xl sm:leading-4xl font-bold mb-4">
             Help us deliver a new way to build scalable and reliable applications!
           </h1>

@@ -223,6 +223,35 @@ const FAQ = () => {
           </dl>
         </div>
       </div>
+
+      <p className="text-center text-2xl mt-10 capitalize font-bold tracking-wide">Backed by</p>
+      <div className="flex-1 flex">
+        <div className="flex-1 flex items-center justify-center ">
+          <a href="https://amplifypartners.com/portfolio-news/our-investment-in-temporal/">
+            <img
+              style={{ filter: 'brightness(1.5) grayscale(1)' }}
+              className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain transform hover:scale-125 transition-transform"
+              src="/logos/logo-amplify.png"
+              alt="vc"></img>
+          </a>
+        </div>
+        <div className="flex-1 flex items-center justify-center ">
+          <a href="https://medium.com/sequoia-capital/temporal-the-promise-of-more-resilient-applications-87c46469d74a">
+            <img
+              style={{ filter: 'brightness(1.5) grayscale(1)' }}
+              className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain transform hover:scale-125 transition-transform"
+              src="/logos/logo-sequoia.png"
+              alt="vc"></img>
+          </a>
+        </div>
+        <div className="flex-1 flex items-center justify-center">
+          <img
+            style={{ filter: 'brightness(3.5) grayscale(1)' }}
+            className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain"
+            src="/logos/logo-madrona.png"
+            alt="vc"></img>
+        </div>
+      </div>
     </section>
   );
 };

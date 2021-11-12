@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import DirectionalControl from './DirectionalControl';
 
-export const TemporalSystemTools = () => {
+export const TemporalDevTools = () => {
   return (
     <>
       <div className="bg-gray-1000">
@@ -17,19 +17,20 @@ export const TemporalSystemTools = () => {
             />
           </div>
           <div className="col-span-1 md:col-span-5 px-8">
-            <h2 className="text-4xl font-bold mb-4 tracking-wide">Temporal System Tools</h2>
+            {/* <h2 className="text-4xl font-bold mb-4 tracking-wide">Temporal DevTools</h2> */}
+            <h2 className="text-xl mb-3 text-gray-50">Temporal DevTools</h2>
+            <h3 className="text-4xl font-bold mb-4 tracking-wide">Observability & Control</h3>
             <div className="text-lg">
-              <p>
-                Open source service that scales from a single binary to fleets independently
-                scalable services. Pluggable persistence with PostgreSQL, MySQL, Cassandra, and
-                ElasticSearch.
+              <p className="mb-3">
+                Make the "distributed systems murder mystery" as predictable as Scooby Doo, with a
+                Web UI that provides end-to-end visibility and metadata search, and a CLI to query
+                and administer your Cluster!
               </p>
-              <p>Try with Docker or let Temporal Cloud do it for you!</p>
             </div>
             <DirectionalControl
               className="w-48 mt-10"
-              href="https://docs.temporal.io/docs/server/introduction">
-              Learn more
+              href="https://docs.temporal.io/docs/system-tools/introduction">
+              Read docs
             </DirectionalControl>
           </div>
         </section>

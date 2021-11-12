@@ -5,10 +5,9 @@ export default function JoinUs() {
     <section
       id="join-us"
       className={`
-    border-t border-gray-100
     flex flex-col sm:flex-row 
     `}>
-      <div className="flex-1 flex flex-col justify-between sm:border-r border-gray-100 px-8 py-16">
+      <div className="flex-1 flex flex-col justify-between px-8 py-16">
         <h2 className="text-4xl leading-48 sm:text-60 sm:leading-60 mb-8 max-w-xl mx-auto">
           We are hiring
         </h2>
@@ -73,15 +72,15 @@ export default function JoinUs() {
             Developer Success
           </li>
         </ul>
-        <div className="inline-flex flex-col items-center">
+        {/* <div className="inline-flex flex-col items-center">
           <DirectionalControl secondary className="mb-6" href="/careers">
             Join Us
           </DirectionalControl>
           <p className="text-lg inline">Even our users are hiring Temporal developers!</p>
-        </div>
+        </div> */}
       </div>
-      <div className="flex flex-col flex-1 border-t sm:border-t-0 border-gray-100">
-        <div className="px-4 sm:px-8 py-4 sm:py-16 flex-1 border-b border-gray-100 flex items-center">
+      <div className="flex flex-col flex-1">
+        <div className="px-4 sm:px-8 py-4 sm:py-16 flex-1 flex items-center">
           <img
             className="rounded-full w-16 my-4 mr-8 shadow"
             src="/logos/photo-samar.png"
@@ -95,7 +94,7 @@ export default function JoinUs() {
             </div>
           </div>
         </div>
-        <div className="px-4 sm:px-8 py-4 sm:py-16  flex-1 border-b border-gray-100 flex items-center">
+        <div className="px-4 sm:px-8 py-4 sm:py-16  flex-1 flex items-center">
           <img
             className="rounded-full w-16 my-4 mr-8 shadow"
             src="/logos/photo-maxim.png"
@@ -110,7 +109,7 @@ export default function JoinUs() {
           </div>
         </div>
         <div className="flex-1 flex">
-          <div className="flex-1 flex items-center justify-center border-gray-100 border-r">
+          <div className="flex-1 flex items-center justify-center ">
             <a href="https://amplifypartners.com/portfolio-news/our-investment-in-temporal/">
               <img
                 style={{ filter: 'brightness(1.5) grayscale(1)' }}
@@ -119,7 +118,7 @@ export default function JoinUs() {
                 alt="vc"></img>
             </a>
           </div>
-          <div className="flex-1 flex items-center justify-center border-gray-100 border-r">
+          <div className="flex-1 flex items-center justify-center ">
             <a href="https://medium.com/sequoia-capital/temporal-the-promise-of-more-resilient-applications-87c46469d74a">
               <img
                 style={{ filter: 'brightness(1.5) grayscale(1)' }}

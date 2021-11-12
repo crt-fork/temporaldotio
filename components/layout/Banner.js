@@ -19,7 +19,7 @@ export const Banner = () => {
         <span role="img" aria-label="birthday cake">
           🎂
         </span>{' '}
-        Join our 2 year anniversary meetup!
+        Join our next meetup ft. Datadog and TypeScript SDK
         {/* <span role="img" aria-label="Celebration" className="hidden md:inline">
           to ask your questions
         </span> */}
