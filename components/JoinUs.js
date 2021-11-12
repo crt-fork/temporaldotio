@@ -1,4 +1,4 @@
-import DirectionalControl from './DirectionalControl';
+// import DirectionalControl from './DirectionalControl';
 
 export default function JoinUs() {
   return (
