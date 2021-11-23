@@ -104,6 +104,11 @@
       "permanent": false
     },
     {
+      "source": "/datadog",
+      "destination": "https://youtu.be/eWFpl-nzGsY?t=385",
+      "permanent": false
+    },
+    {
       "source": "/workshop",
       "destination": "https://lu.ma/temporalintro",
       "permanent": false
