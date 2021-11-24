@@ -1,7 +1,7 @@
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
 export function Banner() {
-  const [open, setOpen] = useLocalStorage('2yranniversary', true);
+  const [open, setOpen] = useLocalStorage('TSWorkshop', true);
   if (!open) return null;
   return (
     <header className="relative bg-temporalblue text-spaceblack text-center py-2" role="banner">
