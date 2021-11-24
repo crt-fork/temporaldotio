@@ -84,7 +84,7 @@ const faqs = [
           Learn more:
           <ul className="list-disc pl-4">
             <li>
-              <Link href="https://docs.temporal.io/docs/server-architecture">
+              <Link href="https://docs.temporal.io/docs/content/what-is-a-temporal-cluster">
                 Read our docs on Temporal's architecture
               </Link>
             </li>
