@@ -15,11 +15,11 @@ export function Banner() {
         led by Sequoia! 🎉
       </span>
     </a> */}
-      <a className=" hover:text-blue-800" href="https://temporal.io/meetup">
-        🎂 Join our TypeScript Beta meetup
+      <a className=" hover:text-blue-800" href="https://temporal.io/temporalintro">
+        Join our Temporal Intro with TypeScript workshop
         <span role="img" aria-label="Celebration" className="hidden md:inline">
           {' '}
-          on Nov 23 ft. Datadog
+          on Nov 30
         </span>
         !
       </a>
