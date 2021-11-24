@@ -15,7 +15,7 @@ export function Banner() {
         led by Sequoia! 🎉
       </span>
     </a> */}
-      <a className=" hover:text-blue-800" href="https://temporal.io/temporalintro">
+      <a className=" hover:text-blue-800" href="https://lu.ma/temporalintro">
         Join our Temporal Intro with TypeScript workshop
         <span role="img" aria-label="Celebration" className="hidden md:inline">
           {' '}
