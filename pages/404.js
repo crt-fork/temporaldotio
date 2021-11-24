@@ -9,8 +9,14 @@ export default function Custom404() {
         <title>Not Found - Temporal.io</title>
       </Head>
       <Nav />
-      <main className="min-h-[1080px] container mx-auto p-4 sm:p-4">
+      <main className="min-h-[1080px] container mx-auto p-4 sm:p-16">
         <h1 className="text-4xl font-bold my-8">404 - Page not found</h1>
+        <p className="mb-4">
+          If we have broken a link, please let us know at{' '}
+          <a className="text-temporalblue hover:text-white" href="mailto:support@temporal.io">
+            support@temporal.io
+          </a>
+        </p>
         <p className="mb-4">
           Check out our{' '}
           <a className="text-temporalblue hover:text-white" href="/blog">
@@ -25,12 +31,6 @@ export default function Custom404() {
             our landing page
           </a>
           !
-        </p>
-        <p>
-          If we have broken a link, please let us know at{' '}
-          <a className="text-temporalblue hover:text-white" href="mailto:support@temporal.io">
-            support@temporal.io
-          </a>
         </p>
       </main>
       <Footer />
