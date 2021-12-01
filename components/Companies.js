@@ -52,7 +52,7 @@ export default function Companies() {
           </a>
         ))}
       </div>
-      <p className="mt-5 text-xl text-center">
+      <p className="mt-5 text-xl text-center px-4">
         <span className="opacity-75">Check out more from</span>{' '}
         <a
           className="nav-link"
