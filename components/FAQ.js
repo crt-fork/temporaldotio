@@ -173,8 +173,8 @@ const faqs = [
 
 const FAQ = () => {
   return (
-    <section className="sm:mb-28 border-t border-gray-100">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:py-28 sm:px-6 lg:px-8">
+    <section className="sm:pb-28 bg-gray-700">
+      <div className="max-w-7xl mx-auto py-12 sm:py-28 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-center text-3xl font-bold sm:text-6xl" id="FAQ">
             Frequently Asked Questions
@@ -202,7 +202,9 @@ const FAQ = () => {
                               d="M19 9l-7 7-7-7"></path>
                           </svg>
                         </span>
-                        <span className="text-left text-2xl">{faq.question}</span>
+                        <span className="text-left text-lg font-semibold md:text-2xl">
+                          {faq.question}
+                        </span>
                       </Disclosure.Button>
                     </dt>
                     <Transition
@@ -213,7 +215,7 @@ const FAQ = () => {
                       leaveFrom="opacity-100"
                       leaveTo="opacity-0">
                       <Disclosure.Panel as="dd" className="mt-2">
-                        <p className="text-lg leading-8 pl-16">{faq.answer}</p>
+                        <p className="md:text-lg leading-8 pl-16">{faq.answer}</p>
                       </Disclosure.Panel>
                     </Transition>
                   </>
@@ -224,32 +226,34 @@ const FAQ = () => {
         </div>
       </div>
 
-      <p className="text-center text-2xl mt-10 capitalize font-bold tracking-wide">Backed by</p>
-      <div className="flex-1 flex">
-        <div className="flex-1 flex items-center justify-center ">
-          <a href="https://amplifypartners.com/portfolio-news/our-investment-in-temporal/">
+      <div className="py-10">
+        <p className="text-center text-2xl capitalize font-bold tracking-wide">Backed by</p>
+        <div className="flex-1 flex">
+          <div className="flex-1 flex items-center justify-center ">
+            <a href="https://amplifypartners.com/portfolio-news/our-investment-in-temporal/">
+              <img
+                style={{ filter: 'brightness(1.5) grayscale(1)' }}
+                className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain transform hover:scale-125 transition-transform"
+                src="/logos/logo-amplify.png"
+                alt="vc"></img>
+            </a>
+          </div>
+          <div className="flex-1 flex items-center justify-center ">
+            <a href="https://medium.com/sequoia-capital/temporal-the-promise-of-more-resilient-applications-87c46469d74a">
+              <img
+                style={{ filter: 'brightness(1.5) grayscale(1)' }}
+                className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain transform hover:scale-125 transition-transform"
+                src="/logos/logo-sequoia.png"
+                alt="vc"></img>
+            </a>
+          </div>
+          <div className="flex-1 flex items-center justify-center">
             <img
-              style={{ filter: 'brightness(1.5) grayscale(1)' }}
-              className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain transform hover:scale-125 transition-transform"
-              src="/logos/logo-amplify.png"
+              style={{ filter: 'brightness(3.5) grayscale(1)' }}
+              className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain"
+              src="/logos/logo-madrona.png"
               alt="vc"></img>
-          </a>
-        </div>
-        <div className="flex-1 flex items-center justify-center ">
-          <a href="https://medium.com/sequoia-capital/temporal-the-promise-of-more-resilient-applications-87c46469d74a">
-            <img
-              style={{ filter: 'brightness(1.5) grayscale(1)' }}
-              className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain transform hover:scale-125 transition-transform"
-              src="/logos/logo-sequoia.png"
-              alt="vc"></img>
-          </a>
-        </div>
-        <div className="flex-1 flex items-center justify-center">
-          <img
-            style={{ filter: 'brightness(3.5) grayscale(1)' }}
-            className="my-2 lg:my-8 h-24 w-24 lg:h-32 lg:w-32 object-contain"
-            src="/logos/logo-madrona.png"
-            alt="vc"></img>
+          </div>
         </div>
       </div>
     </section>
