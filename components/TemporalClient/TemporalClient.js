@@ -11,33 +11,49 @@ export const TemporalClient = () => {
       PHP: 'https://docs.temporal.io/docs/php/introduction',
       TypeScript: 'https://docs.temporal.io/docs/typescript/introduction'
     }[lang] || 'https://docs.temporal.io';
+
   return (
-    <section className="mt-12 mb-28 rounded-lg md:shadow-blue container mx-auto p-4 bg-gray-800">
+    <section className=" mb-28 rounded-lg md:shadow-blue container mx-auto p-4 bg-gray-800">
       <div className="md:p-10 max-w-screen-2xl w-full mx-auto">
         <h2 className="text-xl mb-3 text-gray-100">Temporal SDKs</h2>
         <h3 className="text-4xl md:text-5xl font-bold">No more JSON or YAML</h3>
-        <p className="my-5 max-w-2xl text-lg md:text-xl">
+        <p className="my-5 max-w-2xl text-lg md:text-xl md:leading-relaxed md:text-justify">
           Easily write, reuse, test, version, and migrate dynamic asynchronous logic with idiomatic
           APIs. Use software engineering best practices, whether you are writing Infra Provisioning
           automation, wrangling a Data pipeline, or even building a domain specific Workflow Engine!
         </p>
-        <a href={link} className="text-blue-100 text-lg hover:underline">
-          See {lang ?? 'Language'} SDK docs
-        </a>
-        <div className="mt-12 gap-10 grid grid-cols-1 lg:grid-cols-12 place-items-end">
-          <div className="lg:col-span-5 space-y-3">
-            <p className=" border-l-4 border-l-green-400 bg-green-500 p-5 rounded-lg">
-              Workflows orchestrate the execution of activities, which are particular tasks in your
-              business logic{' '}
-            </p>
-            <p className=" border-l-4 border-l-red-400 bg-red-500 p-5 rounded-lg">
-              Activities can sleep for days, and can continue right where they left off
-            </p>
-            <p className=" border-l-4 border-l-blue-400 bg-blue-500 p-5 rounded-lg">
-              Activities have timeouts, and will be retried by default!
-            </p>
-          </div>
+        <div className="mt-12 gap-10 grid grid-cols-1 lg:grid-cols-12 place-items-start">
           <CodeSwitcher lang={lang} setLang={setLang} />
+          <div className="lg:col-span-5 ">
+            <div className="space-y-3">
+              <p className=" border-l-4 border-l-blue-400 bg-blue-500 p-5 rounded-lg">
+                Workflows orchestrate the execution of activities, which are particular tasks in
+                your business logic{' '}
+              </p>
+              <p className=" border-l-4 border-l-green-400 bg-green-500 p-5 rounded-lg">
+                Activities can sleep for days, and can continue right where they left off
+              </p>
+              <p className=" border-l-4 border-l-purple-400 bg-purple-500 p-5 rounded-lg">
+                Activities have timeouts, and will be retried by default!
+              </p>
+            </div>
+            <a
+              className="mt-7 space-x-2 flex items-center text-xl text-blue-200 hover:underline"
+              href={link}>
+              <span>View {lang ?? 'Language'} SDK docs</span>
+              <svg
+                className="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fillRule="evenodd"
+                  d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
