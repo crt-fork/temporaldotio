@@ -66,7 +66,9 @@ const QUOTES = [
 
 const Testimonials = () => {
   return (
-    <section id="case-studies" className={`container mt-16 mb-28 mx-auto px-8 py-16 text-center `}>
+    <section
+      id="case-studies"
+      className="container mt-16 mb-28 mx-auto px-4 md:px-8 py-16 text-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {QUOTES.map((quote) => (
           <Quote
@@ -92,7 +94,7 @@ const Testimonials = () => {
 
 const Quote = ({ quote, name, title, img, logo, logoAlt }) => (
   <div>
-    <p className="mb-8 relative mx-auto text-xl sm:text-2xl leading-10">“ {quote} ”</p>
+    <p className="mb-8 relative mx-auto text-xl sm:text-2xl md:leading-10">“ {quote} ”</p>
     <div className="flex items-center justify-center mb-12">
       <div className="flex space-x-5">
         <div className="flex -space-x-3 items-center">
