@@ -6,6 +6,7 @@ import StackedUseCases from '../components/StackedUseCases';
 import { TemporalCluster } from '../components/TemporalCluster';
 import FAQ from '../components/FAQ';
 import { TemporalDevTools } from '../components/TemporalDevTools';
+import { Community } from '../components/Community';
 
 export default function IndexPage() {
   return (
@@ -14,11 +15,14 @@ export default function IndexPage() {
         <title>Temporal.io | Home</title>
       </Head>
       <Hero />
-      <TemporalCluster />
-      <TemporalDevTools />
+      <div className="container mx-auto px-4 md:px-8 pt-12 pb-28 gap-10 grid grid-cols-1 md:grid-cols-2 items-start justify-center">
+        <TemporalCluster />
+        <TemporalDevTools />
+      </div>
       <StackedUseCases />
       <LargeQuote />
       <Testimonials />
+      <Community />
       <FAQ />
     </div>
   );
