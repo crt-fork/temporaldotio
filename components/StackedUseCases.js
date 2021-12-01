@@ -6,10 +6,10 @@ const Stack = ({ content, link, title, icon }) => (
   <div className="stack after:transition-all  relative">
     <Link href={link}>
       <a>
-        <div className="stack__content transition-all h-full w-full rounded-lg relative flex flex-col items-start">
-          <div className="mb-3 rounded-lg bg-blue-300 p-2 w-12 h-12">
+        <div className="h-full w-full rounded-lg relative flex flex-col items-start">
+          {/* <div className="mb-3 rounded-lg bg-blue-300 p-2 w-12 h-12">
             <Image width="60" height="60" src={icon} alt={`${title} icon`} />
-          </div>
+          </div> */}
           <h2 className="text-2xl tracking-wide font-semibold">{title}</h2>
           <p className="flex-grow font-light my-4 text-lg">{content}</p>
         </div>
@@ -20,7 +20,7 @@ const Stack = ({ content, link, title, icon }) => (
 
 const USE_CASES = [
   {
-    icon: '/icons/icon-sharding.svg',
+    icon: '/icons/icon-orchestration.svg',
     link: '/usecases#orchestration',
     content: (
       <div>
@@ -56,7 +56,7 @@ const USE_CASES = [
     title: 'Infrastructure Provisioning'
   },
   {
-    icon: '/icons/icon-storage.svg',
+    icon: '/icons/icon-monitoring.svg',
     content: (
       <div>
         Reliable polling that is as simple or sophisticated as you need, at massive scale. Imagine{' '}
@@ -95,12 +95,8 @@ const USE_CASES = [
 const StackedUseCases = () => (
   <>
     <section id="use-cases" className="bg-gray-800 bg-svg">
-      <div
-        className={`
-    container mx-auto
-    px-8 py-36
-    `}>
-        <h3 className="text-4xl md:text-5xl font-bold mb-20">
+      <div className="container mx-auto px-8 py-36">
+        <h3 className="text-4xl md:text-5xl font-bold mb-20 md:leading-snug">
           Simple building blocks,
           <br /> hundreds of uses cases
         </h3>
@@ -117,7 +113,7 @@ const StackedUseCases = () => (
         </div>
         <div className="mt-16 flex justify-center">
           <DirectionalControl secondary href="/usecases">
-            Read more
+            Learn more
           </DirectionalControl>
         </div>
       </div>
