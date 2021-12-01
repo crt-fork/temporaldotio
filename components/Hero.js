@@ -8,30 +8,24 @@ export default function Hero() {
   return (
     <section>
       <div className="bg-svg">
-        <div className="my-12 md:mt-16 flex flex-col space-y-5 justify-center items-center">
-          <a
-            href="https://github.com/temporalio/temporal"
-            className="mb-5 rounded-full border-2 border-blue-300 text-blue-100 px-3 py-1 hover:bg-blue-300 hover:text-white">
-            Temporal on GitHub
-          </a>
+        <div className="my-12 md:mt-16 flex flex-col space-y-5 justify-center items-center px-2">
           <h1 className="text-60 leading-60 lg:text-8xl tracking-wide capitalize font-bold text-center">
             Build Invincible Apps
           </h1>
-          <p className="text-xl md:text-3xl max-w-screen-md text-center">
+          <p className="text-xl md:text-3xl max-w-screen-md text-center md:leading-normal">
             Temporal is the open source microservice orchestration platform for writing durable
             workflows as code.
           </p>
           <div className="py-4 text-lg font-medium flex flex-col justify-center sm:justify-start space-y-4 sm:space-y-0 sm:flex-row sm:space-x-14 items-center">
-            <DirectionalControl href="https://docs.temporal.io/">Show me Docs</DirectionalControl>
-
+            <DirectionalControl href="https://docs.temporal.io/">Start Building</DirectionalControl>
             <ExplainTemporal />
           </div>
         </div>
+        <div className="mt-20 mb-28">
+          <Companies />
+        </div>
       </div>
       <TemporalClient />
-      <div className="my-28">
-        <Companies />
-      </div>
     </section>
   );
 }
