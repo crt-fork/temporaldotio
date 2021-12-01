@@ -9,9 +9,9 @@ require('prismjs/components/prism-java');
 require('prismjs/components/prism-php');
 
 const diffSymbols = {
-  '+': '#133929',
-  '-': '#541b1f',
-  '*': '#0f7bfe40'
+  '-': '#133929',
+  '*': '#32275f',
+  '+': '#0f7bfe40'
 };
 
 export const CodeBlock = ({ code, lang }) => {
@@ -19,7 +19,7 @@ export const CodeBlock = ({ code, lang }) => {
     <Highlight {...defaultProps} code={code} language={lang} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
         <pre
-          className={`p-5 rounded-b-lg shadow-xl overflow-x-scroll hide-scrollbar ${className} text-sm leading-relaxed`}
+          className={`p-5 rounded-b-lg shadow-xl overflow-x-scroll hide-scrollbar ${className} text-sm leading-relaxed min-h-[275px]`}
           style={style}>
           <code>
             {tokens.map((line, i) => {
