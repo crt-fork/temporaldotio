@@ -43,7 +43,7 @@ export default function CareersPage({ allJobs }) {
         </div>
         <div className="mt-24">
           <div>
-            {Object.entries(allJobs).map(([team, jobs], i) => {
+            {Object.entries(allJobs).map(([team, jobs]) => {
               return (
                 <div key={team} className="mb-10">
                   <h3 className="mb-5 text-4xl font-semibold tracking-wide">{team}</h3>

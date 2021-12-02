@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Image from 'next/image';
+// import Image from 'next/image';
 import DirectionalControl from './DirectionalControl';
 
-const Stack = ({ content, link, title, icon }) => (
+const Stack = ({ content, link, title }) => (
   <div className="stack after:transition-all  relative">
     <Link href={link}>
       <a>
