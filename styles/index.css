@@ -313,3 +313,22 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   @apply bg-gray-400 rounded-sm;
 }
+
+.job-listings h2 {
+  @apply text-2xl font-semibold mb-3;
+}
+
+.job-listings ul {
+  @apply space-y-5 mb-5 text-lg list-disc;
+}
+
+.job-listings li {
+  @apply ml-5;
+}
+.job-listings a {
+  @apply text-blue-200 hover:underline;
+}
+
+.job-listings hr {
+  @apply my-6 border-dashed;
+}

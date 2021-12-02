@@ -1,263 +1,149 @@
 import React from 'react';
 import Head from 'next/head';
-// import JoinUs from '../components/JoinUs';
+import Careers from '../components/careers.mdx';
 
-export default function CareersPage() {
+export default function CareersPage({ allJobs }) {
   return (
-    <div>
-      <div className="mx-4 sm:mx-16">
-        <div>
-          <Head>
-            <title>Temporal.io Careers</title>
-            <meta property="title" content="Temporal.io Careers: Help Us Build Invincible Apps" />
-            <meta
-              property="og:title"
-              content="Temporal.io Careers: Help Us Build Invincible Apps"
-            />
-            <meta
-              property="description"
-              content="Temporal is the open source platform for mission critical code that interacts with unreliable, distributed services."
-            />
-            <meta
-              property="og:description"
-              content="Temporal is the open source platform for mission critical code that interacts with unreliable, distributed services."
-            />
-            <meta property="og:image" content="https://temporal.io/logo-font-straight-dark.svg" />
-            <meta property="og:url" content="http://temporal.io" />
-            <meta
-              property="twitter:title"
-              content="Temporal.io Careers: Help Us Build Invincible Apps"
-            />
-            <meta
-              property="twitter:description"
-              content="Temporal is the open source platform for mission critical code that interacts with unreliable, distributed services."
-            />
-            <meta
-              property="twitter:image"
-              content="https://temporal.io/logo-font-straight-dark.svg"
-            />
-            <meta property="twitter:card" content="summary_large_image" />
-            <meta name="twitter:site" content="@temporaltech" />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.leverJobsOptions = {accountName: 'temporal', includeCss: true};`
-              }}
-            />
-            <script
-              async
-              type="text/javascript"
-              src="https://andreasmb.github.io/lever-jobs-embed/index.js"></script>
-          </Head>
-          {/* <JoinUs /> */}
-          <h1 className="text-3xl sm:w-800 sm:mt-12 leading-lg sm:text-4xl sm:leading-4xl font-bold mb-4">
-            Help us deliver a new way to build scalable and reliable applications!
+    <div className="bg-gradient-to-l from-gray-800 to-gray-900">
+      <Head>
+        <title>Temporal.io Careers</title>
+        <meta property="title" content="Temporal.io Careers: Help Us Build Invincible Apps" />
+        <meta property="og:title" content="Temporal.io Careers: Help Us Build Invincible Apps" />
+        <meta
+          property="description"
+          content="Temporal is the open source platform for mission critical code that interacts with unreliable, distributed services."
+        />
+        <meta
+          property="og:description"
+          content="Temporal is the open source platform for mission critical code that interacts with unreliable, distributed services."
+        />
+        <meta property="og:image" content="https://temporal.io/logo-font-straight-dark.svg" />
+        <meta property="og:url" content="http://temporal.io" />
+        <meta
+          property="twitter:title"
+          content="Temporal.io Careers: Help Us Build Invincible Apps"
+        />
+        <meta
+          property="twitter:description"
+          content="Temporal is the open source platform for mission critical code that interacts with unreliable, distributed services."
+        />
+        <meta property="twitter:image" content="https://temporal.io/logo-font-straight-dark.svg" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@temporalio" />
+      </Head>
+
+      <section className="max-w-screen-lg px-8 p-10 mx-auto">
+        <div className="text-center">
+          <h1 className="text-2xl md:text-5xl  mt-12 leading-lg sm:text-4xl sm:leading-4xl md:font-bold mb-4">
+            Careers at Temporal
           </h1>
-          <h2 className="text-xl leading-tight italic">
-            If none of these positions are a fit, email{' '}
-            <a href="careers@temporal.io" className="underline text-blue-400 hover:text-blue-200">
+          <h2 className="text-xl md:text-2xl">
+            Help us deliver a new way to build scalable and reliable applications!
+          </h2>
+        </div>
+        <div className="mt-24">
+          <div>
+            {Object.entries(allJobs).map(([team, jobs], i) => {
+              return (
+                <div key={team} className="mb-10">
+                  <h3 className="mb-5 text-4xl font-semibold tracking-wide">{team}</h3>
+                  <div className="space-y-3">
+                    {jobs.map((job) => (
+                      <a
+                        href={job.hostedUrl}
+                        className="bg-gray-700 p-5 rounded-lg grid grid-cols-1 md:grid-cols-4 gap-3 hover:bg-gray-600"
+                        key={job.hostedUrl}>
+                        <p className="col-span-3 text-xl mr-5">{job.text}</p>
+                        <p className="col-span-1 flex items-center text-md space-x-2">
+                          <svg
+                            className="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              fillRule="evenodd"
+                              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                          <span>{job.location}</span>
+                        </p>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <h2 className="text-xl">
+            If none of these positions are a fit for you, email{' '}
+            <a
+              href="mailto:careers@temporal.io"
+              className="underline text-blue-100 hover:text-blue-200">
               careers@temporal.io
             </a>{' '}
             describing your dream job.
           </h2>
         </div>
-        <div className="container sm:p-8 rounded-lg my-16 sm:ml-16">
-          <div id="lever-jobs-container">Loading... (contact us if this message persists)</div>
-        </div>
-      </div>
-      <hr />
-      <div className="mx-4 sm:mx-16 mb-12 bg-black bg-opacity-10">
+      </section>
+      <section className="max-w-screen-lg p-10 pb-24 mx-auto">
         <h1
           id="external-jobs"
-          className="text-3xl sm:w-800 mt-12 leading-lg sm:text-4xl sm:leading-4xl font-bold mb-4">
+          className="text-3xl mt-12 leading-lg sm:text-4xl sm:leading-4xl font-bold mb-4">
           Temporal Users Who Are Hiring
         </h1>
-        <ul className="container rounded-lg">
-          <li className="test">
-            If you are a company that uses Temporal, you can{' '}
-            <a
-              href="mailto:careers@temporal.io"
-              className="underline text-blue-400 hover:text-blue-200">
-              email us to advertise a job here
-            </a>{' '}
-            for free.
-          </li>
-          <li className="test">
-            If you are a developer that loves Temporal, you can{' '}
-            <a
-              href="http://eepurl.com/hhcaaX"
-              className="underline text-blue-400 hover:text-blue-200">
-              sign up for our mailing list
-            </a>{' '}
-            to hear when jobs are advertised.
-          </li>
+        <h2 id="external-joblist" className="text-lg max-w-screen-lg leading-loose">
+          If you're a company that uses Temporal, you can{' '}
+          <a
+            href="mailto:careers@temporal.io"
+            className="underline text-blue-200 hover:text-blue-200">
+            email us to advertise a job here
+          </a>{' '}
+          for free. If you're a developer you can{' '}
+          <a
+            href="http://eepurl.com/hhcaaX"
+            className="underline text-blue-200 hover:text-blue-200">
+            sign up for our mailing list
+          </a>{' '}
+          to get notified
+        </h2>
+        <ul className="my-8 space-y-5">
+          <div className="job-listings">
+            <Careers />
+          </div>
         </ul>
-        <h3
-          id="external-joblist"
-          className="text-xl sm:w-800 mt-12 leading-lg sm:text-xl sm:leading-4xl font-bold">
-          Companies hiring Developers to work with Temporal:
-        </h3>
-        <ul className="container list-disc rounded-lg my-8 sm:ml-16 space-y-4">
-          <li>
-            <span className="font-bold text-xl uppercase">Airbyte</span>:{' '}
-            <a
-              href="https://jobs.lever.co/airbyte/11d4a6fe-a27e-4a1c-ac6c-7b7fe2b2a0fb"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer
-            </a>
-            , Platform <span className="text-sm text-gray-500">Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Bolt</span>:{' '}
-            <a
-              href="https://www.bolt.com/careers/software-engineer-platforms/f193e0fa-7cf0-42aa-8837-8bdd4dca3e22/"
-              className="underline text-blue-400 hover:text-blue-200">
-              Software Engineer
-            </a>{' '}
-            and{' '}
-            <a
-              href="https://www.bolt.com/careers/senior-software-engineer-platforms/ce0d1fe3-bb00-4b4a-99f0-848bbc5a87c3/"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer
-            </a>{' '}
-            - Platforms <span className="text-sm text-gray-500">San Francisco</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Datadog</span>:{' '}
-            <a
-              href="https://www.datadoghq.com/careers/detail/?gh_jid=1825853"
-              className="underline text-blue-400 hover:text-blue-200">
-              Software Engineer - Site Reliability
-            </a>{' '}
-            <span className="text-sm text-gray-500">NY/Paris Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Descript</span>:{' '}
-            <a
-              href="https://boards.greenhouse.io/descript/jobs/4310029003?gh_jid=4310029003"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer - Backend
-            </a>{' '}
-            <span className="text-sm text-gray-500">SF/Montreal/Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Fronted</span>:{' '}
-            <a
-              href="https://docs.google.com/document/d/1muUEnuSSROdKR8QMxOe1V-Y9qBTCCrifOV3jcr3835c"
-              className="underline text-blue-400 hover:text-blue-200">
-              Backend Engineer
-            </a>{' '}
-            <span className="text-sm text-gray-500">London</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Nylas</span>:{' '}
-            <a
-              href="https://jobs.lever.co/nylas/d8788060-ef4f-48ea-8b7b-787c31ec4e46"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer (Workflows)
-            </a>{' '}
-            <span className="text-sm text-gray-500">Toronto</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Nylas</span>:{' '}
-            <a
-              href="https://jobs.lever.co/nylas/50471019-fe86-4429-b857-98b17434d839"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer (Workflows)
-            </a>{' '}
-            <span className="text-sm text-gray-500">Vancouver</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Nightfall AI</span>:{' '}
-            <a
-              href="https://jobs.lever.co/nightfall/2284505f-49e4-48b6-a530-4e1869a68fe4"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Backend Engineer
-            </a>{' '}
-            <span className="text-sm text-gray-500">US & Canada Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Square</span>:{' '}
-            <a
-              href="https://www.linkedin.com/jobs/view/senior-software-engineer-cloud-database-infra-cash-app-at-cash-app-2315548952/"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer (Cloud Database Infra), Cash App
-            </a>{' '}
-            <span className="text-sm text-gray-500">US Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">SS&C Technologies</span>:{' '}
-            <a
-              href="https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies/job/Denver-CO/Staff-Software-Engineer---Private-Cloud_R3140"
-              className="underline text-blue-400 hover:text-blue-200">
-              Staff Software Engineer - Private Cloud
-            </a>{' '}
-            <span className="text-sm text-gray-500">Denver/US Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Stripe</span>:{' '}
-            <a
-              href="https://stripe.com/jobs/listing/infrastructure-engineer-developer-productivity-workflow-engine/2964407"
-              className="underline text-blue-400 hover:text-blue-200">
-              Infrastructure Engineer, Developer Productivity (Workflow Engine)
-            </a>{' '}
-            <span className="text-sm text-gray-500">North America Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Snap</span>:{' '}
-            <a
-              href="https://eng.snap.com/monolith-to-multicloud-microservices-snap-service-mesh"
-              className="underline text-blue-400 hover:text-blue-200">
-              General Engineering Hires
-            </a>{' '}
-            <span className="text-sm text-gray-500">Los Angeles, London, Israel</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Sureify</span>:{' '}
-            <a
-              href="https://apply.workable.com/sureify-1/j/EAF36BA284/"
-              className="underline text-blue-400 hover:text-blue-200">
-              Staff Software Engineer
-            </a>{' '}
-            <span className="text-sm text-gray-500">San Jose</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">Sureify</span>:{' '}
-            <a
-              href="https://apply.workable.com/sureify-1/j/8C8F075725/"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer
-            </a>{' '}
-            <span className="text-sm text-gray-500">San Jose</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">WELL Health</span>:{' '}
-            <a
-              href="https://arc.dev/remote-jobs/j/well-health-inc-senior-software-engineer-backend-cip35uvrrf"
-              className="underline text-blue-400 hover:text-blue-200">
-              Senior Software Engineer (Backend)
-            </a>{' '}
-            <span className="text-sm text-gray-500">Remote anywhere</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">WellHive</span>:{' '}
-            <a
-              href="https://www.wellhive.com/software-engineer-integrations"
-              className="underline text-blue-400 hover:text-blue-200">
-              Software Engineer - Integrations
-            </a>{' '}
-            <span className="text-sm text-gray-500">US Remote</span>
-          </li>
-          <li>
-            <span className="font-bold text-xl uppercase">WellHive</span>:{' '}
-            <a
-              href="https://www.wellhive.com/performance-test-engineer"
-              className="underline text-blue-400 hover:text-blue-200">
-              Performance Test Engineer
-            </a>{' '}
-            <span className="text-sm text-gray-500">US Remote</span>
-          </li>
-        </ul>
-      </div>
+      </section>
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const LEVER_API_URL = 'https://api.lever.co/v0/postings/temporal?mode=json';
+
+  const getJobPostings = async (url) => {
+    const res = await fetch(url);
+    return res.json();
+  };
+
+  const res = await getJobPostings(LEVER_API_URL);
+
+  const groupByKey = (list, key) =>
+    list.reduce((hash, obj) => ({ ...hash, [obj[key]]: (hash[obj[key]] || []).concat(obj) }), {});
+
+  const allJobs = res.map(({ text, hostedUrl, categories, id }) => {
+    return {
+      team: categories.team,
+      location: categories.location,
+      text,
+      hostedUrl,
+      id
+    };
+  });
+
+  return {
+    props: {
+      allJobs: groupByKey(allJobs, 'team')
+    },
+    revalidate: 60
+  };
+};
