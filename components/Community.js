@@ -5,7 +5,7 @@ export const Community = () => {
   return (
     <>
       <section className="mt-24 max-w-screen-2xl py-28 mx-auto flex flex-col items-center justify-center px-4 md:px-8">
-        <h2 className="text-center text-3xl font-bold sm:text-6xl mb-5 md:mb-16">
+        <h2 className="text-center text-3xl font-bold sm:text-6xl mb-5">
           Talks, Workshops, Tutorials
         </h2>
         <p className="mt-5 mb-16 text-center text-lg max-w-lg mx-auto">
