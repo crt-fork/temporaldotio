@@ -152,7 +152,7 @@ const faqs = [
         our open source community and paying Design Partners. We currently have{' '}
         <Link href="https://docs.temporal.io/application-development">Go, Java, and PHP SDKs</Link>,
         with TypeScript SDK in public alpha. All development is fully open source and trackable on
-        GitHub.
+        GitHub.{' '}
         <Link href="https://temporal.io/careers">We are actively hiring</Link> if you'd like to work
         on great open source!
       </span>
