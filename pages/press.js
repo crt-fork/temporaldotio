@@ -1,5 +1,3 @@
-import { Nav } from '../components/Nav';
-import Footer from '../components/Footer';
 import React from 'react';
 import Head from 'next/head';
 import Lightbox from 'react-image-lightbox';
@@ -8,7 +6,6 @@ export default function PressPage() {
   return (
     <div>
       <div className="container mx-auto p-4">
-        <Nav />
         <div>
           <Head>
             <title>Temporal.io Press</title>
@@ -210,7 +207,6 @@ export default function PressPage() {
           </ul>
         </section>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -1,5 +1,3 @@
-import { Nav } from '../components/Nav';
-import Footer from '../components/Footer';
 import Head from 'next/head';
 
 export default function Custom404() {
@@ -8,8 +6,7 @@ export default function Custom404() {
       <Head>
         <title>Not Found - Temporal.io</title>
       </Head>
-      <Nav />
-      <main className="min-h-[1080px] container mx-auto p-4 sm:p-16">
+      <main className="min-h-[1080px] container mx-auto p-4 sm:p-4">
         <h1 className="text-4xl font-bold my-8">404 - Page not found</h1>
         <p className="mb-4">
           If we have broken a link, please let us know at{' '}
@@ -33,7 +30,6 @@ export default function Custom404() {
           !
         </p>
       </main>
-      <Footer />
     </div>
   );
 }

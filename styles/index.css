@@ -27,16 +27,16 @@
 
 @layer components {
   .btn-primary {
-    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 text-spaceblack bg-temporalblue hover:text-temporalblue hover:bg-spaceblack border border-temporalblue;
+    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 text-white bg-temporalblue hover:text-temporalblue hover:bg-white border border-temporalblue;
   }
   .btn-secondary {
-    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 border hover:bg-white hover:text-spaceblack;
+    @apply transition rounded-full w-300 h-60 md:w-200 flex items-center justify-center lg:w-300 border hover:bg-white hover:text-white;
   }
   .nav-link {
-    @apply hover:text-temporalblue transition-colors relative;
+    @apply hover:text-blue-100 transition-colors relative;
   }
   .dir-control {
-    @apply w-300 h-60 md:w-200 lg:w-300 transition-all border-2 no-underline rounded-lg text-center cursor-pointer font-bold relative flex items-center justify-center text-xl;
+    @apply w-300 h-60 md:w-200 lg:w-300 transition-all border-2 no-underline rounded-lg text-center cursor-pointer font-semibold tracking-wide relative flex items-center justify-center text-xl;
   }
 }
 
@@ -51,12 +51,13 @@
 }
 
 .dir-control {
-  --buttonColor: var(--temporal-blue);
-  --backdrop: var(--temporal-blue);
-  --slideColor: var(--space-black);
-  --bg: var(--temporal-blue);
+  --buttonColor: #0f7bfe40;
+  --textColor: #ecedee;
+
+  --backdrop: #057eff98;
+  --slideColor: #0095fffa;
+  --bg: #ecedee;
   --borderWidth: 2;
-  --textColor: var(--space-black);
   border-color: var(--buttonColor, var(--bg));
   color: var(--textColor, var(--buttonColor));
   background: var(--backdrop);
@@ -135,10 +136,10 @@
 
 .dir-control--secondary {
   --bg: var(--space-black);
-  --backdrop: transparent;
-  --buttonColor: var(--off-white);
   --slideColor: var(--off-white);
-  --textColor: var(--off-white);
+  --backdrop: transparent;
+  --buttonColor: #ecedee;
+  --textColor: #ecedee;
 }
 
 /* Nav link pseudos */
@@ -152,7 +153,7 @@
   position: absolute;
   transition: transform 150ms;
   height: 2px;
-  background: var(--temporal-blue);
+  background: var(--space-black);
   transform: scale(var(--nav-scale, 0));
 }
 
@@ -175,8 +176,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background: var(--space-black);
-  border: 2px solid var(--off-white);
+  /* background: var(--space-black); */
+  /* border: 2px solid var(--space-black); */
   top: 0;
   left: 0;
   z-index: -1;
@@ -230,8 +231,6 @@ html {
 }
 
 body {
-  background: #141414;
-  color: var(--off-white);
   font-family: 'Aeonik', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', 'Noto Color Emoji';
@@ -253,8 +252,10 @@ body {
 /* temporal design colors https://www.notion.so/temporalio/Color-Palette-62829d945d30440eaffd410dbbb6689f */
 html {
   /* primary */
+  --black: #26272b;
   --space-black: #141414;
   --off-white: #f2f2f2;
+  --blue: #79cfea;
   /* secondary */
   --temporal-blue: #c7edef;
   --temporal-purple: #b8b4dc;
@@ -268,77 +269,13 @@ html {
   --orange-2: #ff7065;
 }
 
-/*
-  CUSTOM SCROLLBARS! https://css-tricks.com/the-current-state-of-styling-scrollbars/
-  */
-body::-webkit-scrollbar-track {
-  background-color: var(--space-black);
-}
-body::-webkit-scrollbar {
-  width: clamp(5px, 1vw, 20px);
-}
-body::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--temporal-blue), var(--scroll-white));
-  border-radius: 2px;
+/* CodeSwitcher Tabs */
+
+.tab[data-state='active'] {
+  @apply border-solid border-t-2 border-blue-300 bg-[#282C34] text-white;
 }
 
-.react-tabs {
-  -webkit-tap-highlight-color: transparent;
-}
-
-.react-tabs__tab-list {
-  border-bottom: 1px solid #aaa;
-  margin: 0 0 10px;
-  padding: 0;
-}
-
-.react-tabs__tab {
-  display: inline-block;
-  border: 1px solid transparent;
-  border-bottom: none;
-  bottom: -1px;
-  position: relative;
-  list-style: none;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-.react-tabs__tab--selected {
-  background: #fff;
-  border-color: #aaa;
-  color: black;
-  border-radius: 5px 5px 0 0;
-}
-
-.react-tabs__tab--disabled {
-  color: GrayText;
-  cursor: default;
-}
-
-.react-tabs__tab:focus {
-  box-shadow: 0 0 5px hsl(208, 99%, 50%);
-  border-color: hsl(208, 99%, 50%);
-  outline: none;
-}
-
-.react-tabs__tab:focus:after {
-  content: '';
-  position: absolute;
-  height: 5px;
-  left: -4px;
-  right: -4px;
-  bottom: -5px;
-  background: #fff;
-}
-
-.react-tabs__tab-panel {
-  display: none;
-}
-
-.react-tabs__tab-panel--selected {
-  display: block;
-}
-
+/* border-solid border-t-2 border-blue-200 */
 .line-numbers p {
   counter-increment: line;
 }
@@ -350,9 +287,48 @@ body::-webkit-scrollbar-thumb {
   opacity: 60%;
 }
 
-.tippy-box[data-theme~='dark'] {
-  @apply text-offwhite bg-spaceblack font-mono p-2 rounded-lg shadow-temporalblue;
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
 }
-.tippy-box[data-theme~='dark'][data-placement^='left'] > .tippy-arrow::before {
-  @apply border-l-spaceblack;
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.bg-svg {
+  @apply pt-10 pb-4;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ecedee' fill-opacity='0.021'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/*
+  CUSTOM SCROLLBARS! https://css-tricks.com/the-current-state-of-styling-scrollbars/
+  */
+body::-webkit-scrollbar-track {
+  background-color: var(--space-black);
+}
+body::-webkit-scrollbar {
+  width: clamp(5px, 1vw, 10px);
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-sm;
+}
+
+.job-listings h2 {
+  @apply text-2xl font-semibold mb-3;
+}
+
+.job-listings ul {
+  @apply space-y-5 mb-5 text-lg list-disc;
+}
+
+.job-listings li {
+  @apply ml-5;
+}
+.job-listings a {
+  @apply text-blue-200 hover:underline;
+}
+
+.job-listings hr {
+  @apply my-6 border-dashed;
 }

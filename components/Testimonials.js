@@ -6,10 +6,10 @@ const QUOTES = [
     img: 'https://avatars1.githubusercontent.com/u/114386',
     quote: (
       <span>
-        <span className="text-temporalblue">Developer happiness has increased</span>. Thinking in
-        terms of workflows and activities has{' '}
-        <span className="text-temporalblue">clarified our product</span> and allowed us to{' '}
-        <span className="text-temporalblue">share workflow components</span> with different teams.
+        <span className="text-blue-200">Developer happiness has increased</span>. Thinking in terms
+        of workflows and activities has <span className="text-blue-200">clarified our product</span>{' '}
+        and allowed us to <span className="text-blue-200">share workflow components</span> with
+        different teams.
       </span>
     ),
     name: 'Ben Jacobson',
@@ -22,9 +22,9 @@ const QUOTES = [
     img: 'https://avatars.githubusercontent.com/u/2502591?v=4',
     quote: (
       <span>
-        A <span className="text-temporalblue">game changing</span> revelation - Temporal gave us{' '}
-        <span className="text-temporalblue">the ability to test our workflows</span> with unit
-        tests. JSON or YAML are completely untestable!
+        A <span className="text-blue-200">game changing</span> revelation - Temporal gave us{' '}
+        <span className="text-blue-200">the ability to test our workflows</span> with unit tests.
+        JSON or YAML are completely untestable!
       </span>
     ),
     name: 'Nicolas Gere',
@@ -37,9 +37,9 @@ const QUOTES = [
     img: 'https://pbs.twimg.com/profile_images/943640175/new_photo_400x400.jpg',
     quote: (
       <span>
-        Temporal maintains <span className="text-temporalblue">high reliability</span> while
-        providing <span className="text-temporalblue">tremendous visibility</span>. Things we
-        thought to be much more complex... feel much easier!
+        Temporal maintains <span className="text-blue-200">high reliability</span> while providing{' '}
+        <span className="text-blue-200">tremendous visibility</span>. Things we thought to be much
+        more complex... feel much easier!
       </span>
     ),
     name: 'Anthony Dmitriyev',
@@ -53,7 +53,7 @@ const QUOTES = [
     quote: (
       <span>
         The API gives you this{' '}
-        <span className="text-temporalblue">illusion of single threaded execution</span>
+        <span className="text-blue-200">illusion of single threaded execution</span>
         ... It's amazing.
       </span>
     ),
@@ -66,7 +66,9 @@ const QUOTES = [
 
 const Testimonials = () => {
   return (
-    <section id="case-studies" className={`container my-16 mx-auto px-8 py-16 text-center `}>
+    <section
+      id="case-studies"
+      className="container mt-16 mb-28 mx-auto px-4 md:px-8 py-16 text-center">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {QUOTES.map((quote) => (
           <Quote
@@ -92,17 +94,13 @@ const Testimonials = () => {
 
 const Quote = ({ quote, name, title, img, logo, logoAlt }) => (
   <div>
-    <p className="mb-8 relative mx-auto text-xl sm:text-2xl text-white leading-10">“ {quote} ”</p>
+    <p className="mb-8 relative mx-auto text-xl sm:text-2xl md:leading-10">“ {quote} ”</p>
     <div className="flex items-center justify-center mb-12">
-      <div className="flex text-white space-x-5">
+      <div className="flex space-x-5">
         <div className="flex -space-x-3 items-center">
+          <img className="rounded-full shadow-md w-10 h-10" src={img} alt={`${name}`} />
           <img
-            className="filter grayscale hover:grayscale-0 rounded-full shadow-md w-10 h-10"
-            src={img}
-            alt={`${name}`}
-          />
-          <img
-            className="z-10 rounded-full shadow-md w-12 h-12 border-solid border-4 border-spaceblack"
+            className="z-10 rounded-full w-12 h-12 border-solid border-4 border-gray-900"
             src={logo}
             alt={logoAlt}
           />

@@ -1,4 +1,5 @@
 const withPrefresh = require('@prefresh/next');
+const preactPlugin = require('next-plugin-preact');
 const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/
 });
@@ -59,7 +60,7 @@ const MDXPlugin = withMDX({
   pageExtensions: ['js', 'jsx', 'mdx']
 });
 
-module.exports = withPlugins([prefreshPlugin, MDXPlugin]);
+module.exports = withPlugins([prefreshPlugin, MDXPlugin, preactPlugin]);
 // module.exports = {
 //   devIndicators: {
 //     autoPrerender: false,

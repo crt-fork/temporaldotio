@@ -1,14 +1,12 @@
-import { Banner } from '../components/Banner';
 import Hero from '../components/Hero';
-import { Nav } from '../components/Nav';
 import Testimonials from '../components/Testimonials';
-import JoinUs from '../components/JoinUs';
 import LargeQuote from '../components/LargeQuote';
-import Footer from '../components/Footer';
 import Head from 'next/head';
 import StackedUseCases from '../components/StackedUseCases';
-
+import { TemporalServer } from '../components/TemporalServer';
 import FAQ from '../components/FAQ';
+import { TemporalDevTools } from '../components/TemporalDevTools';
+import { Community } from '../components/Community';
 
 export default function IndexPage() {
   return (
@@ -16,17 +14,16 @@ export default function IndexPage() {
       <Head>
         <title>Temporal.io | Home</title>
       </Head>
-      <Banner />
-      <Nav />
-      <div>
-        <Hero />
-        <StackedUseCases />
-        <LargeQuote />
-        <Testimonials />
-        <JoinUs />
-        <FAQ />
+      <Hero />
+      <div className="container mx-auto px-4 md:px-8 pt-12 pb-28 gap-10 grid grid-cols-1 md:grid-cols-2 items-start justify-center">
+        <TemporalServer />
+        <TemporalDevTools />
       </div>
-      <Footer />
+      <StackedUseCases />
+      <LargeQuote />
+      <Testimonials />
+      <Community />
+      <FAQ />
     </div>
   );
 }

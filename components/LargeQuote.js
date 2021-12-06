@@ -1,9 +1,9 @@
 export default function LargeQuote() {
   return (
-    <section className="mx-4">
+    <section className="mx-4 mt-20">
       <div
         id="final-quote"
-        className="shadow-temporalblue w-full max-w-screen-lg mx-auto rounded-lg">
+        className="shadow-xl w-full max-w-screen-lg mx-auto rounded-lg bg-gray-700">
         <blockquote className="text-xl sm:text-2xl sm:leading-9 px-8  pt-8 pb-2">
           <p className="mb-4">
             “HashiCorp needed to build long-running, reliable, fault-tolerant tasks for the

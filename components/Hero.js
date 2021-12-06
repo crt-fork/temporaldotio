@@ -1,49 +1,31 @@
 import React from 'react';
 import DirectionalControl from './DirectionalControl';
-import { CodeSwitcher } from './CodeSwitcher/CodeSwitcher';
 import Companies from './Companies';
 import ExplainTemporal from './ExplainTemporal';
+import { TemporalSDKs } from './TemporalSDKs';
 
 export default function Hero() {
   return (
-    <div>
-      <section className="container mx-auto p-4">
-        <div className="my-12 md:my-14 flex flex-col space-y-5 justify-center items-center">
+    <section>
+      <div className="bg-svg">
+        <div className="my-12 md:mt-16 flex flex-col space-y-5 justify-center items-center px-2">
           <h1 className="text-60 leading-60 lg:text-8xl tracking-wide capitalize font-bold text-center">
             Build Invincible Apps
           </h1>
-          <p className="text-xl md:text-2xl max-w-screen-md text-center">
+          <p className="text-xl md:text-3xl max-w-screen-md text-center md:leading-normal">
             Temporal is the open source microservice orchestration platform for writing durable
             workflows as code.
           </p>
           <div className="py-4 text-lg font-medium flex flex-col justify-center sm:justify-start space-y-4 sm:space-y-0 sm:flex-row sm:space-x-14 items-center">
-            <DirectionalControl href="https://docs.temporal.io/">Get Started</DirectionalControl>
+            <DirectionalControl href="https://docs.temporal.io/">Start Building</DirectionalControl>
             <ExplainTemporal />
           </div>
-          <div className="flex space-x-2 items-center md:text-lg ">
-            <img className="w-5 h-5" src="/icons/icon-github.svg" alt="GitHub Icon" />
-            <p>
-              <a
-                className="hover:text-temporalblue hover:underline"
-                href="https://github.com/temporalio/temporal"
-                rel="noreferrer"
-                target="_blank"
-              >
-                View Source and give us a star!
-              </a>
-            </p>
-            <div className="flex space-x-2 items-center text-lg">
-              <img className="w-5 h-5" src="/icons/icon-star.svg" alt="GitHub Icon" />
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <CodeSwitcher />
-          </div>
-          <div className="py-10">
-            <Companies />
-          </div>
         </div>
-      </section>
-    </div>
+        <div className="mt-20 mb-28">
+          <Companies />
+        </div>
+      </div>
+      <TemporalSDKs />
+    </section>
   );
 }
