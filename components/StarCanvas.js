@@ -153,7 +153,13 @@ const StarCanvas = () => {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="h-full w-full fixed inset-0 bg-spaceblack -z-1" />;
+  return (
+    <canvas
+      aria-hidden="true"
+      ref={canvasRef}
+      className="h-full w-full fixed inset-0 bg-spaceblack -z-1"
+    />
+  );
 };
 
 export default StarCanvas;

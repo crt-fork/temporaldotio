@@ -84,7 +84,7 @@ const faqs = [
           Learn more:
           <ul className="list-disc pl-4">
             <li>
-              <Link href="https://docs.temporal.io/docs/server-architecture">
+              <Link href="https://docs.temporal.io/docs/content/what-is-a-temporal-cluster">
                 Read our docs on Temporal's architecture
               </Link>
             </li>
@@ -152,9 +152,8 @@ const faqs = [
         our open source community and paying Design Partners. We currently have{' '}
         <Link href="https://docs.temporal.io/application-development">Go, Java, and PHP SDKs</Link>,
         with TypeScript SDK in public alpha. All development is fully open source and trackable on
-        GitHub.
-        <Link href="https://temporal.io/careers">We are actively hiring</Link> if you'd like to work
-        on great open source!
+        GitHub. <Link href="https://temporal.io/careers">We are actively hiring</Link> if you'd like
+        to work on great open source!
       </span>
     )
   },

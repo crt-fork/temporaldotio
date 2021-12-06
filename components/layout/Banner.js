@@ -4,7 +4,7 @@ export const Banner = () => {
   const [open, setOpen] = useLocalStorage('2yranniversary', true);
   if (!open) return null;
   return (
-    <div className="relative bg-gradient-to-r to-blue-100 from-blue-400 text-gray-100 text-center tracking-wide py-2">
+    <header className="relative bg-gradient-to-r to-blue-100 from-blue-400 text-gray-100 text-center tracking-wide py-2">
       {/* <a className=" hover:text-blue-800" href="https://docs.temporal.io/blog/funding-announcement">
       <span role="img" aria-label="Celebration" className="hidden md:inline">
         🎉
@@ -25,7 +25,10 @@ export const Banner = () => {
         </span> */}
         !
       </a>
-      <button onClick={() => setOpen(false)}>
+      <button
+        className="absolute right-0 top-0 mr-2 mt-3 md:mt-2 w-5 sm:w-6 h-5 sm:h-6 text-spaceblack"
+        aria-label="Close banner"
+        onClick={() => setOpen(false)}>
         <svg
           className="absolute right-0 top-0 mr-2 mt-3 md:mt-2 w-5 sm:w-6 h-5 sm:h-6 text-gray-100"
           xmlns="http://www.w3.org/2000/svg"
@@ -40,6 +43,6 @@ export const Banner = () => {
           />
         </svg>
       </button>
-    </div>
+    </header>
   );
 };
