@@ -1,15 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
 
+import DirectionalControl from './DirectionalControl';
 export const Community = () => {
   return (
     <>
       <section className="mt-24 max-w-screen-2xl py-28 mx-auto flex flex-col items-center justify-center px-4 md:px-8">
         <h2 className="text-center text-3xl font-bold sm:text-6xl mb-5">
-          Talks, Workshops, Tutorials
+          Meetups, Workshops, Tutorials
         </h2>
-        <p className="mt-5 mb-16 text-center text-lg max-w-lg mx-auto">
-          Make sure to subscribe to our YouTube channel to not miss out on new content!
+        <p className="mt-5 mb-16 text-center text-lg max-w-md mx-auto">
+          Join{' '}
+          <a
+            href="https://temporal.io/meetup"
+            className="text-blue-200 hover:text-blue-100 hover:underline">
+            our meetups live
+          </a>{' '}
+          (they are lots of fun!) or catch up async on{' '}
+          <a
+            href="https://temporal.io/youtube"
+            className="text-blue-200 hover:text-blue-100 hover:underline">
+            our YouTube channel
+          </a>
+          !
         </p>
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
           <a
@@ -45,6 +58,11 @@ export const Community = () => {
             />
             <p className="text-lg text-center mt-5">Temporal Intro Workshop with Java</p>
           </a>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <DirectionalControl secondary href="https://temporal.io/youtube">
+            More on YouTube
+          </DirectionalControl>
         </div>
       </section>
       <section className="max-w-screen-2xl py-28 mx-auto flex flex-col items-center justify-center px-4 md:px-8">
@@ -139,9 +157,7 @@ export const Community = () => {
           <div className="p-6 rounded-lg bg-gray-700 w-full flex flex-wrap items-center md:space-x-5">
             <div className="max-w-md">
               <h3 className="text-2xl font-semibold mb-2">Subscribe to the newsletter</h3>
-              <p className="mb-5 text-lg">
-                Stay up to date with the latest features and updates to Temporal
-              </p>
+              <p className="mb-5 text-lg">Keep up with the latest features and news on Temporal!</p>
             </div>
             <form
               action="https://temporal.us17.list-manage.com/subscribe/post?u=2334a0f23e55fd1840613755d&amp;id=bbbbd4709f"
@@ -160,7 +176,7 @@ export const Community = () => {
                 id="mce-EMAIL"
                 required="true"
                 autoComplete="email"
-                className="px-5 py-3 text-gray-100 rounded-md border-gray-300 placeholder-gray-200 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full sm:max-w-xs bg-gray-400"
+                className="px-5 py-3 text-gray-100 rounded-md border-gray-300 placeholder-yellow-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 w-full sm:max-w-xs bg-gray-400"
                 placeholder="Enter your email"
               />
               <span className="cta_text" style="display:none">

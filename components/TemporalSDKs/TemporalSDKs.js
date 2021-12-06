@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { CodeSwitcher } from './CodeSwitcher';
 
-export const TemporalClient = () => {
+export const TemporalSDKs = () => {
   // const [lang, setLang] = useLocalStorage('preferredLang', null);
   const [lang, setLang] = useState(null);
   const link =
     {
       Go: 'https://docs.temporal.io/docs/go/getting-started',
       Java: 'https://docs.temporal.io/docs/java/introduction',
-      PHP: 'https://docs.temporal.io/docs/php/introduction',
-      TypeScript: 'https://docs.temporal.io/docs/typescript/introduction'
+      TypeScript: 'https://docs.temporal.io/docs/typescript/introduction',
+      PHP: 'https://docs.temporal.io/docs/php/introduction'
     }[lang] || 'https://docs.temporal.io';
 
   return (
@@ -19,8 +19,9 @@ export const TemporalClient = () => {
         <h3 className="text-4xl md:text-5xl font-bold">No more JSON or YAML</h3>
         <p className="my-5 max-w-2xl text-lg md:text-xl md:leading-relaxed md:text-justify">
           Easily write, reuse, test, version, and migrate dynamic asynchronous logic with idiomatic
-          APIs. Use software engineering best practices, whether you are writing Infra Provisioning
-          automation, wrangling a Data pipeline, or even building a domain specific Workflow Engine!
+          SDKs (Go, Java, TS, PHP). Use software engineering best practices, whether you are writing
+          Infra Provisioning automation, wrangling a Data pipeline, or even building a domain
+          specific Workflow Engine!
         </p>
         <div className="mt-12 gap-10 grid grid-cols-1 lg:grid-cols-12 place-items-start">
           <CodeSwitcher lang={lang} setLang={setLang} />

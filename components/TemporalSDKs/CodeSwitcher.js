@@ -24,7 +24,7 @@ export const CodeSwitcher = ({
               src="/logos/languages/go.svg"
               alt="go lang logo"
             />
-            <p>workflow.go</p>
+            <p>Go</p>
           </div>
         </Tabs.Trigger>
         <Tabs.Trigger
@@ -36,19 +36,7 @@ export const CodeSwitcher = ({
               src="/logos/languages/java.svg"
               alt="java lang logo"
             />
-            <p>workflow.java</p>
-          </div>
-        </Tabs.Trigger>
-        <Tabs.Trigger
-          value={'PHP'}
-          className="text-sm bg-gray-600 text-gray-200 py-1 px-4 tab flex-shrink-0">
-          <div className="flex items-center space-x-2">
-            <img
-              className="filter grayscale w-7 h-7"
-              src="/logos/languages/php.svg"
-              alt="php lang logo"
-            />
-            <p>workflow.php</p>
+            <p>Java</p>
           </div>
         </Tabs.Trigger>
         <Tabs.Trigger
@@ -60,7 +48,19 @@ export const CodeSwitcher = ({
               src="/logos/languages/typescript.svg"
               alt="TypeScript logo"
             />
-            <p>workflow.ts</p>
+            <p>TypeScript</p>
+          </div>
+        </Tabs.Trigger>
+        <Tabs.Trigger
+          value={'PHP'}
+          className="text-sm bg-gray-600 text-gray-200 py-1 px-4 tab flex-shrink-0">
+          <div className="flex items-center space-x-2">
+            <img
+              className="filter grayscale w-7 h-7"
+              src="/logos/languages/php.svg"
+              alt="php lang logo"
+            />
+            <p>PHP</p>
           </div>
         </Tabs.Trigger>
       </Tabs.List>

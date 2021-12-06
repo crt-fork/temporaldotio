@@ -1,19 +1,19 @@
 import React from 'react';
 
-export const TemporalCluster = () => {
+export const TemporalServer = () => {
   return (
     <>
       <div className="p-8 max-w-xl bg-gray-700 rounded-lg">
-        <h2 className="text-xl mb-3 text-gray-50">Temporal Cluster</h2>
+        <h2 className="text-xl mb-3 text-gray-50">Temporal Server</h2>
         <h3 className="text-4xl font-bold mb-4 tracking-wide">Reliability on Rails</h3>
         <p className="text-lg leading-relaxed mb-3">
           Open source server that scales from a single Go binary to large clusters handling hundreds
-          of millions of concurrent Workflows. Run locally or provide as a platform to your
-          developers like Netflix, Stripe, and HashiCorp.
+          of millions of Workflows. Pluggable persistence with MySQL, PostgreSQL, and Cassandra. Run
+          locally, provide as an internal platform, or use Temporal Cloud!
         </p>
         <div className="flex items-center space-x-2 mt-10 text-xl text-blue-200">
           <a className="hover:underline" href="https://docs.temporal.io/docs/server/introduction">
-            Temporal Cluster docs
+            Temporal Server docs
           </a>
           <svg
             className="w-6 h-6"

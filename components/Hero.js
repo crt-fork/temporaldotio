@@ -2,7 +2,7 @@ import React from 'react';
 import DirectionalControl from './DirectionalControl';
 import Companies from './Companies';
 import ExplainTemporal from './ExplainTemporal';
-import { TemporalClient } from './TemporalClient';
+import { TemporalSDKs } from './TemporalSDKs';
 
 export default function Hero() {
   return (
@@ -25,7 +25,7 @@ export default function Hero() {
           <Companies />
         </div>
       </div>
-      <TemporalClient />
+      <TemporalSDKs />
     </section>
   );
 }
