@@ -14,7 +14,9 @@ export default function ExplainTemporal() {
   }
   return (
     <>
-      <button className="flex items-center justify-center space-x-3" onClick={openModal}>
+      <button
+        className="flex items-center justify-center space-x-3 hover:scale-110 transform transition-transform"
+        onClick={openModal}>
         <svg
           className="w-12 h-12 transform transition duration-300 hover:scale-110 text-blue-300"
           width="20"
