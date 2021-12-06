@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Layout from '../usecases/_mdxprovider';
 import Orchestration from '../usecases/orchestration.mdx';
 import Transactions from '../usecases/transactions.mdx';
