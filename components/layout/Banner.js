@@ -15,15 +15,15 @@ export const Banner = () => {
         led by Sequoia! 🎉
       </span>
     </a> */}
-      <a className=" hover:underline" href="https://temporal.io/meetup">
+      {/* <a className=" hover:underline" href="https://temporal.io/meetup">
         <span role="img" aria-label="birthday cake">
           🎂
         </span>{' '}
-        Join our next meetup ft. Datadog and TypeScript SDK
-        {/* <span role="img" aria-label="Celebration" className="hidden md:inline">
-          to ask your questions
-        </span> */}
-        !
+        Join our next meetup ft. Datadog and TypeScript SDK!
+      </a> */}
+      <a className=" hover:underline" href="https://lu.ma/temporaljava">
+        Join our Temporal Java SDK 102 workshop
+        <span className="hidden md:inline"> on Dec 21</span>!
       </a>
       <button
         className="absolute right-0 top-0 mr-2 mt-3 md:mt-2 w-5 sm:w-6 h-5 sm:h-6 text-spaceblack"
