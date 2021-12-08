@@ -34,6 +34,11 @@
       "permanent": false
     },
     {
+      "source": "/jobs",
+      "destination": "/careers",
+      "permanent": false
+    },
+    {
       "source": "/tos",
       "destination": "https://docs.temporal.io/pdf/temporal-tos-2021-07-24.pdf",
       "permanent": false

@@ -18,10 +18,10 @@ export const TemporalSDKs = () => {
         <h2 className="text-xl mb-3 text-gray-100">Temporal SDKs</h2>
         <h3 className="text-4xl md:text-5xl font-bold">No more JSON or YAML</h3>
         <p className="my-5 max-w-2xl text-lg md:text-xl md:leading-relaxed md:text-justify">
-          Easily write, reuse, test, and migrate dynamic asynchronous logic with idiomatic SDKs
-          (Go, Java, TS, PHP). Use software engineering best practices, whether you are writing
-          Infra Provisioning automation, wrangling a Data pipeline, or even creating an SDK or DSL
-          to offer Workflows on your own platform!
+          Easily write, reuse, test, and migrate dynamic asynchronous logic with idiomatic SDKs (Go,
+          Java, TS, PHP). Use software engineering best practices, whether you are writing Infra
+          Provisioning automation, wrangling a Data pipeline, or even creating an SDK or DSL to
+          offer Workflows on your own platform!
         </p>
         <div className="mt-12 gap-10 grid grid-cols-1 lg:grid-cols-12 place-items-start">
           <CodeSwitcher lang={lang} setLang={setLang} />
