@@ -7,9 +7,9 @@ export const TemporalDevTools = () => {
         <h2 className="text-xl mb-3 text-gray-50">Temporal DevTools</h2>
         <h3 className="text-4xl font-bold mb-4 tracking-wide">Observability & Control</h3>
         <p className="text-lg leading-relaxed mb-3">
-          Make the "distributed systems murder mystery" as predictable as Scooby Doo, with a Web UI
-          that provides end-to-end visibility and metadata search, and a CLI to query and administer
-          your Cluster!
+          Temporal Web UI provides end-to-end observability and metadata search. Temporal CLI (tctl)
+          lets you query and administer your Cluster. Make the "distributed systems murder mystery"
+          boring again!
         </p>
         <div className="text-blue-200 flex items-center space-x-2 mt-10 text-xl ">
           <a className=" hover:underline" href="https://docs.temporal.io/docs/server/introduction">

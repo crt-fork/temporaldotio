@@ -16,30 +16,31 @@ export const TemporalSDKs = () => {
     <section className=" mb-28 rounded-lg md:shadow-blue container mx-auto p-4 bg-gray-800">
       <div className="md:p-10 max-w-screen-2xl w-full mx-auto">
         <h2 className="text-xl mb-3 text-gray-100">Temporal SDKs</h2>
-        <h3 className="text-4xl md:text-5xl font-bold">No more JSON or YAML</h3>
+        <h3 className="text-4xl md:text-5xl font-bold">Workflows as Code. Not YAML.</h3>
         <p className="my-5 max-w-2xl text-lg md:text-xl md:leading-relaxed md:text-justify">
-          Easily write, reuse, test, and migrate dynamic asynchronous logic with idiomatic SDKs (Go,
-          Java, TS, PHP). Use software engineering best practices, whether you are writing Infra
-          Provisioning automation, wrangling a Data pipeline, or even creating an SDK or DSL to
-          offer Workflows on your own platform!
+          Write, reuse, test, and migrate dynamic asynchronous logic with idiomatic SDKs. Use
+          software engineering best practices, whether you are automating Infra Provisioning,
+          wrangling a Data pipeline, or even creating an SDK or DSL to offer Workflows on your own
+          platform!
         </p>
         <div className="mt-12 gap-10 grid grid-cols-1 lg:grid-cols-12 place-items-start">
           <CodeSwitcher lang={lang} setLang={setLang} />
           <div className="lg:col-span-5 ">
             <div className="space-y-3">
               <p className=" border-l-4 border-l-blue-400 bg-blue-500 p-5 rounded-lg">
-                Workflows orchestrate the execution of activities, which are particular tasks in
-                your business logic{' '}
+                Workflows orchestrate the execution of Activities, persisting every state change and
+                executed on a scalable fleet of Workers!
               </p>
               <p className=" border-l-4 border-l-green-400 bg-green-500 p-5 rounded-lg">
-                Activities can sleep for days, and can continue right where they left off
+                Workflows can block for any length of time, condition, or human signal and
+                seamlessly resume from any failure!
               </p>
               <p className=" border-l-4 border-l-purple-400 bg-purple-500 p-5 rounded-lg">
-                Activities have timeouts, and will be retried by default!
+                Activities have durable timeouts and retries by default!
               </p>
             </div>
             <a
-              className="mt-7 space-x-2 flex items-center text-xl text-blue-200 hover:underline"
+              className="mt-4 space-x-2 flex items-center text-xl text-blue-200 hover:underline"
               href={link}>
               <span>View {lang ?? 'Language'} SDK docs</span>
               <svg

@@ -1,7 +1,7 @@
-export const TypeScript = `+async function main(userId, intervals){
+export const TypeScript = `+async function remindUserWorkflow(userId: string, intervals: number[]) {
   // Send reminder emails, e.g. after 1, 7, and 30 days
   for (const interval of intervals) {
--   await sleep(\`${`intervals`} days\`);
+-   await wf.sleep(interval + " days");
 *   await activities.sendEmail(interval, userId);
   } 
   // Easily cancelled when user unsubscribes
@@ -22,7 +22,7 @@ export const PHP = `+class RemindUserWorkflow implements RemindUserWorkflowInter
   public function emailUser($userID, $intervals) {
     // Send reminder emails, e.g. after 1, 7, and 30 days
     foreach ($intervals as &$interval) {
--     yield Workflow::timer($interval * DAYS);
+-     yield Workflow::timer(CarbonInterval::days($interval));
 *     yield $this->userActivity->sendEmail($interval, $userID);
     } // Easily cancelled when user unsubscribes
   } 

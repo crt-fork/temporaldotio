@@ -51,8 +51,10 @@ const faqs = [
       <div>
         <p>
           The Temporal “System” consists of <span className="font-bold">Temporal Server</span> (run
-          by Temporal Cloud, or self-hosted) and a fleet of{' '}
-          <span className="font-bold">Workers</span> (operated by application developers).
+          by Temporal Cloud, or self-hosted) orchestrating work with a fleet of{' '}
+          <span className="font-bold">Temporal Workers</span> (operated by application developers)
+          and <span className="font-bold">Temporal Clients</span> (embedded in applications), over
+          gRPC.
         </p>
         <ul className="list-disc my-4 pl-8">
           <li>
@@ -70,7 +72,7 @@ const faqs = [
             visibility.
           </li>
           <li>
-            <Link href="https://docs.temporal.io/docs/concepts/workers">Workers</Link> host
+            <Link href="https://docs.temporal.io/docs/concepts/workers">Temporal Workers</Link> host
             application code consisting of 'fault oblivious'{' '}
             <Link href="https://docs.temporal.io/docs/concepts/workflows">Workflows</Link> that
             orchestrate idempotent{' '}
@@ -78,6 +80,11 @@ const faqs = [
             written using polyglot{' '}
             <Link href="https://docs.temporal.io/application-development/">Temporal SDKs</Link>{' '}
             which persist and replay Workflow state in all failure and retry scenarios.
+          </li>
+          <li>
+            <Link href="https://docs.temporal.io/docs/concepts/clients">Temporal Clients</Link>{' '}
+            embedded within your app (route handlers or serverless functions) and can start, cancel,
+            signal, and query individual Workflow Executions.
           </li>
         </ul>
         <p>
@@ -94,9 +101,19 @@ const faqs = [
               </Link>
             </li>
             <li>
-              <Link href="https://www.youtube.com/watch?v=taKrIWt6KMY">
-                Watch our Head of Product's 22 minute live code demo
+              Watch live code demos of our{' '}
+              <Link href="https://www.youtube.com/playlist?list=PLl9kRkvFJrlRYHYaTPnsvE46szyMIZLdk">
+                Go
               </Link>
+              ,{' '}
+              <Link href="https://www.youtube.com/playlist?list=PLl9kRkvFJrlQ8KsM6m9cFfCeQegq_B8x4">
+                Java
+              </Link>
+              , and{' '}
+              <Link href="https://www.youtube.com/playlist?list=PLl9kRkvFJrlTavecydpk9r6cF7qBmQJvb">
+                TypeScript
+              </Link>{' '}
+              SDKs.
             </li>
             <li>
               <Link href="https://temporal.io/meetup">Ask questions at our monthly meetup</Link>
