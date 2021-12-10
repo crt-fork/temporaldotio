@@ -7,7 +7,7 @@ export const Banner = () => {
     <header className="relative bg-gradient-to-r to-blue-100 from-blue-400">
       <div className="max-w-7xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
         <div className="pr-8 font-medium tracking-wide text-center sm:px-16">
-          <a className="hover:underline" href="https://lu.ma/temporaljava">
+          <a className="hover:underline" href="https://lu.ma/temporalintro">
             Join our Temporal Java SDK 102 workshop
             <span className="hidden md:inline"> on Dec 21</span>!
           </a>
