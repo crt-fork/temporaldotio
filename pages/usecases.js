@@ -231,7 +231,7 @@ function Header({ id, children, extra }) {
         </h2>
         {extra}
       </div>
-      <a className="font-italic underline hover:text-blue-200" href="#usecases-group">
+      <a className="font-italic underline hover:text-blue-200 ml-1" href="#usecases-group">
         back to top
       </a>
     </div>
