@@ -7,6 +7,7 @@ import { TemporalServer } from '../components/TemporalServer';
 import FAQ from '../components/FAQ';
 import { TemporalDevTools } from '../components/TemporalDevTools';
 import { Community } from '../components/Community';
+import { Cloud } from '../components/Cloud';
 
 export default function IndexPage() {
   return (
@@ -19,6 +20,7 @@ export default function IndexPage() {
         <TemporalServer />
         <TemporalDevTools />
       </div>
+      <Cloud />
       <StackedUseCases />
       <LargeQuote />
       <Testimonials />
