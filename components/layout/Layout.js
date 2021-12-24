@@ -6,7 +6,7 @@ import { Banner } from './Banner';
 export const Layout = ({ children }) => {
   return (
     <div className="bg-gray-900 text-gray-100">
-      <Banner />
+      {/* <Banner />  temporarily comment out, no workshop */}
       <Nav />
       <main>{children}</main>
       <Footer />
