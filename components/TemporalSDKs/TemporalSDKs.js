@@ -16,7 +16,7 @@ export const TemporalSDKs = () => {
     <section className=" mb-28 rounded-lg md:shadow-blue container mx-auto p-4 bg-gray-800">
       <div className="md:p-10 max-w-screen-2xl w-full mx-auto">
         <h2 className="text-xl mb-3 text-gray-100">Temporal SDKs</h2>
-        <h3 className="text-4xl md:text-5xl font-bold">Workflows as Code. Not YAML.</h3>
+        <h3 className="text-4xl md:text-5xl font-bold">Workflows as Code.</h3>
         <p className="my-5 max-w-2xl text-lg md:text-xl md:leading-relaxed md:text-justify">
           Write, reuse, test, and migrate dynamic asynchronous logic with idiomatic SDKs. Use
           software engineering best practices, whether you are automating Infra Provisioning,
