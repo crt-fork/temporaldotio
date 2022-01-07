@@ -104,7 +104,7 @@ export default function Page() {
                   <a
                     className="hover:text-blue-200"
                     href="https://www.youtube.com/watch?v=kDlrM6sgk2k&t=1188s&ab_channel=HashiCorp">
-                    Hashicorp
+                    HashiCorp
                   </a>
                 </li>
               </ul>
