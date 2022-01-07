@@ -29,7 +29,7 @@ export default function FinalQuote() {
           alt="Mitchell Hashimoto"
         />
         <span className="font-bold mr-1">Mitchell Hashimoto / </span>
-        <span className="font-light">Co-founder, Hashicorp</span>
+        <span className="font-light">Co-founder, HashiCorp</span>
       </div>
     </section>
   );
