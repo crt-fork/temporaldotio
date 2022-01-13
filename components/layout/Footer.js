@@ -13,22 +13,17 @@ export const Footer = () => {
         <MoonScape />
       </div>
       <div className="flex-1 flex flex-col ">
-        <div className="p-8 sm:p-16">
+        <div className="p-8 sm:p-16" id="cloud">
           <h2 className="text-3xl font-bold mb-4">Temporal Cloud</h2>
           <p className="w-56 lg:w-700 mb-8">
-            Temporal Cloud is a fully managed cloud offering of the open-source Server.{' '}
-            <a
-              className="hover:underline text-blue-100 hover:text-blue-200"
-              href="https://docs.temporal.io/#cloud">
-              See features
-            </a>{' '}
-            and sign up for the waitlist.
+            Temporal Cloud is a fully managed cloud offering of the open-source Server. Sign up for
+            the waitlist!
           </p>
           <div className="mt-4 flex">
             <DirectionalControl
               secondary
               href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a">
-              Book your place
+              Contact Us
             </DirectionalControl>
           </div>
         </div>

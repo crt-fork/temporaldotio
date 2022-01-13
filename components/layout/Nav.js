@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
 const links = [
+  { href: '/#cloud', label: 'Cloud' },
   { href: '/usecases', label: 'Use Cases' },
   { href: '/careers', label: 'Careers' },
-  { href: 'https://docs.temporal.io/blog', label: 'Blog' },
   { href: 'https://docs.temporal.io/', label: 'Docs' },
   { href: 'https://temporal.io/meetup', label: 'Meetup' }
 ];
