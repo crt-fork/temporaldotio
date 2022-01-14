@@ -1,7 +1,10 @@
 import Link from 'next/link';
 
 const links = [
-  { href: '/#cloud', label: 'Cloud' },
+  {
+    href: 'https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a',
+    label: 'Contact Us'
+  },
   { href: '/usecases', label: 'Use Cases' },
   { href: '/careers', label: 'Careers' },
   { href: 'https://docs.temporal.io/', label: 'Docs' },
