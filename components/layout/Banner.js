@@ -1,15 +1,18 @@
 import { useLocalStorage } from '../../hooks/useLocalStorage';
 
 export const Banner = () => {
-  const [open, setOpen] = useLocalStorage('2yranniversary', true);
+  const [open, setOpen] = useLocalStorage('temporalts', true);
   if (!open) return null;
   return (
     <header className="relative bg-gradient-to-r to-blue-100 from-blue-400">
       <div className="max-w-7xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
         <div className="pr-8 font-medium tracking-wide text-center sm:px-16">
-          <a className="hover:underline" href="https://lu.ma/temporal">
+          {/* <a className="hover:underline" href="https://lu.ma/temporal">
             Join our next Community Meetup (ft. Chronosphere)
             <span className="hidden md:inline"> on Jan 25</span>!
+          </a> */}
+          <a className="hover:underline" href="https://lu.ma/temporal-ts">
+            Join our TypeScript SDK Office Hours!
           </a>
         </div>
         <div className="absolute inset-y-0 right-0  pr-1 flex items-center sm:pr-2 sm:items-start">
