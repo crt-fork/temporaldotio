@@ -89,17 +89,12 @@
       "permanent": false
     },
     {
-      "source": "/happy-hour",
-      "destination": "https://lu.ma/temporalkubecon",
-      "permanent": false
-    },
-    {
-      "source": "/university",
-      "destination": "https://lu.ma/temporaluniversity",
-      "permanent": false
-    },
-    {
       "source": "/snap",
+      "destination": "https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap",
+      "permanent": false
+    },
+    {
+      "source": "/snapchat",
       "destination": "https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap",
       "permanent": false
     },
@@ -125,7 +120,7 @@
     },
     {
       "source": "/flightcontrol",
-      "destination": "https://docs.google.com/presentation/d/16gIDSelOn0Te9SBe9MRhSgJowxZxpya-jh8CSaqoXtw/edit#slide=id.g1f88252dc4_0_662",
+      "destination": "https://youtu.be/mHifpzMn6kA",
       "permanent": false
     },
     {
