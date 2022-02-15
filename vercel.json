@@ -110,7 +110,7 @@
     },
     {
       "source": "/datadog",
-      "destination": "https://youtu.be/eWFpl-nzGsY?t=385",
+      "destination": "https://docs.temporal.io/blog/how-datadog-ensures-database-reliability-with-temporal",
       "permanent": false
     },
     {
