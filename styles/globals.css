@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .square {
+    aspect-ratio: 1 / 1;
+  }
+  .masonry {
+      gap: 1.5rem;
+      column-count: 1;
+  }
+  .masonry-2 {
+    gap: 1.5rem;
+    column-count: 2;
+  }
+  .masonry-3 {
+    gap: 1.5rem;
+    column-count: 3;
+  }
+  .break-inside {
+    break-inside: avoid;
+  }
+}
+
+@layer components {
+  .inline-link {
+    @apply inline text-black hover:text-blue-700 underline;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: rgb(17, 24, 39);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Custom utility classes */
+.card-shadow {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.bottom-shadow {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.linebreak-space span {
+  padding-bottom: 1rem;
+}
+
+
+/* Count module custom styles */
+.count-background {
+  position: relative;
+  mix-blend-mode: darken;
+  background-color: white;
+}
+.count-background::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/images/count-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+}
+.count-numbers {
+  display: block;
+  background: white;
+}
+
+.draw-point--1::after {
+  content: '';
+  background-image: url('/images/icons/drawpoint-left-1.svg');
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  position: absolute;
+  right: -90px;
+  top: 0;
+  height: 50%;
+  width: 90px;
+}
+
+/* Bootstrap Dropdown */
+.dropdown-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 10rem;
+  padding: 1.25rem 1.5rem;
+  margin: 4px 0;
+  font-size: 1rem;
+  color: white;
+  background-color: #111827;
+  text-align: left;
+  list-style: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 8px;
+  margin:
+}
+.dropdown-menu.show {
+  display: block;
+}
+.dropdown.show .dropdown-chevron {
+  /* transform: rotate(180deg); */
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  clear: both;
+  font-weight: 400;
+  color: white;
+  text-align: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.dropdown-item:hover {
+  color: #BFDBFE;
+}
+
+
+/* Bootstrap Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1055;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+  max-width: 1005px;
+  margin: 1.75rem auto;
+}
+.modal.fade .modal-dialog {
+  transition: transform .3s ease-out;
+  transform: translateY(-50px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.fade {
+  transition: opacity .15s linear;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop.show {
+  opacity: .5;
+}
