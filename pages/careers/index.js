@@ -1,6 +1,6 @@
 Careers.title = 'Careers | Temporal';
 Careers.description =
-  'Come work with us. We’re on a mission to change the way we build applications. We want you to be a part of this journey';
+  'Come work with us. We’re on a mission to change the way we build applications. We want you to be a part of this journey.';
 
 export default function Careers({ allJobs }) {
   return (
