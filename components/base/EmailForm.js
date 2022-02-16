@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import MailchimpSubscribe from 'react-mailchimp-subscribe';
 
 export default function EmailForm({ data }) {
-  const MAIL_CHIMP_URL = `${process.env.MAIL_CHIMP_HOST}/subscribe/post?u=${process.env.MAIL_CHIMP_USER}&amp;id=${process.env.MAIL_CHIMP_ID}`;
+  const MAIL_CHIMP_URL = `${process.env.MAIL_CHIMP_HOST}/subscribe/post?u=2334a0f23e55fd1840613755d&amp;id=bbbbd4709f`;
 
   const Message = ({ status, message, className }) => (
     <p role='alert'
