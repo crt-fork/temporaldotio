@@ -1,17 +1,25 @@
-import React from 'react';
+import React from "react";
 
-export default function Video({ copy = {}, url, poster, breakpoints, autoPlay, isMuted }) {
+export default function Video({
+  copy = {},
+  url,
+  poster,
+  breakpoints,
+  autoPlay,
+  isMuted,
+}) {
   return (
     <div className="mt-8">
       <video
         poster={poster}
-        className='w-full max-w-screen-lg mx-auto'
+        className="w-full max-w-screen-lg mx-auto"
         autoplay="autoplay"
-        muted={isMuted || false}>
+        muted={isMuted || false}
+        loop
+      >
         <source src={url} type="video/mp4" />
         {copy.unsupported}
       </video>
     </div>
   );
 }
-

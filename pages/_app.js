@@ -37,12 +37,12 @@ library.add(
 
 const GLOBAL_DATA = {
   announcement: {
-    showAnnouncement: false,
-    copy: 'Temporal raises $100 million Series B at a $1.5 billion valuation.',
-    link: {
-      href: '',
-      copy: 'Read the article'
-    }
+    showAnnouncement: true,
+    copy: 'Temporal.io raises $100 Million Series B to invest in open source and developer communities.',
+    // link: {
+    //   href: '',
+    //   copy: 'Read the article'
+    // }
   },
   nav: {
     icon: {
@@ -201,10 +201,12 @@ function MyApp({ Component, pageProps }) {
         closeFn={closeAnnouncementBar}>
         <p>
           {data.announcement.copy}{' '}
+          { data?.announcement?.link &&
           <a className="text-blue-200 underline whitespace-pre"
             href={data.announcement.link.href}>
             {data.announcement.link.copy}
           </a>
+          }
         </p>
       </BaseLayout.AlertBar>
       <BaseLayout data={data}>
