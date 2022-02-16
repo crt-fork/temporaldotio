@@ -46,7 +46,7 @@ export default function Community({ heading = '' }) {
               backgroundStyle: 'light',
               headline: "Temporal Flagship Community Meetup",
               date: "Last Tuesday of every month!",
-              body: "​We'd especially love to take your questions live!  Our community meetup events will be recorded and shared on YouTube and Twitter.",
+              body: "​We'd especially love to take your questions live.  Our community meetup events are be recorded and shared on YouTube and Twitter.",
               linkCopy: "Register for Free",
               linkUrl: "https://lu.ma/temporal",
             },
@@ -67,8 +67,8 @@ export default function Community({ heading = '' }) {
       <section>
         <CallOut
           copy={{
-            headline: "Great community with incredible speakers and Live Q&A",
-            subhead: "Hundreds of developers come to our meetups for key user presentations, updates from Temporal, and code demo walkthroughs. Too good to be true? Check out our past talks! "
+            headline: "Great community with incredible speakers and live Q&A",
+            subhead: "Hundreds of developers come to our meetups for user presentations, updates from Temporal, and code demo walkthroughs. Too good to be true? Check out our past talks! "
           }}
           textAlign='center'
           className="pt-32 md:pt-40 lg:pt-64 xl:pt-96 pb-10 lg:pb-16"

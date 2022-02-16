@@ -27,7 +27,7 @@ export default function Home() {
           copy={{
             title: 'index',
             headline: "Less plumbing, more coding.",
-            subhead: <>Temporal is the simple, scalable open source way<br /> to write and run reliable cloud applications.</>
+            subhead: <>Temporal is the simple, scalable, open-source way<br /> to write and run reliable cloud applications.</>
           }}
           officeHours={OfficeHours}
           ctas={[
@@ -95,7 +95,7 @@ export default function Home() {
           key={`no-assembly-needed`}
           textAlign='center'
           copy={{
-          headline: `Everything you  need in one place.`,
+          headline: `Everything you need  in one place.`,
           subhead: 'With Temporal your application will be durable, reliable, and scalable out of the box.'
         }}/>
       </section>
@@ -229,14 +229,14 @@ export default function Home() {
               alt: 'wrench icon',
               super: "Complex & difficult to fix",
               headline: "Easy to troubleshoot & repair",
-              subhead: "The Temporal Web UI provides clear visibility into your Workflow Execution Events loop, where all failures, retries, and statuses are logged. Want this in CLI? No problem."
+              subhead: "The Temporal Web UI provides clear visibility into your Workflow Execution Events, where all failures, retries, and statuses are logged. Want a CLI instead? No problem."
             },
             {
               icon: "/images/icons/brackets.svg",
               alt: 'code brackets icon',
               super: "Cumbersome to develop",
               headline: "Fast to develop",
-              subhead: "With Client, Server, and Workers, Temporal offers the best tradeoff of simple abstraction and infinitely scalable application."
+              subhead: "With Client, Server, and Workers, Temporal offers the best tradeoff between simple abstraction and infinite scalability."
             }
           ]}
 
@@ -261,7 +261,7 @@ export default function Home() {
           textAlign='center'
           copy={{
             headline: "Take it from  these legends.",
-            subhead: "Some of the best distributed systems developers hang out in our Forum, Slack and monthly Meetups. Come join us and share your lessons! Check out our ",
+            subhead: "Some of the best distributed systems developers hang out in our Forum, Slack, and monthly Meetups. Come join us and share your lessons! Check out our ",
             subheadLinkCopy: "Use Cases.",
             subheadLinkUrl: "/use-cases"
           }}

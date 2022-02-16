@@ -58,7 +58,7 @@ export default function Users() {
           textAlign='center'
           copy={{
           headline: "Built with Temporal.",
-          subhead: <>Temporal is the simple, scalable open source way<br/> to write and run reliable cloud applications. </>
+          subhead: <>Temporal is the simple, scalable, open-source way<br/> to write and run reliable cloud applications. </>
         }}/>
       </section>
       <section
@@ -68,7 +68,7 @@ export default function Users() {
           textAlign='center'
           copy={{
           headline: 'Business Transactions.',
-          subhead: 'No more double spends or dropped payments. Reliability, consistency, failure compensation, long running operations, and Business Transactions for your most critical transfers.'
+          subhead: 'No more double spends or dropped payments. Reliability, consistency, failure compensation, long-running operations, and business transactions for your most critical transfers.'
         }}>
           {/* TODO: TO MAKE CMS READY, Make RichText Capable w/ dangerouslySetInnerHTML */}
           {/* <Expander
@@ -149,7 +149,7 @@ export default function Users() {
             <span className='text-left'>
               <p className='mb-10'>
                 Business process applications and async services commonly need to keep track
-                of state across sessions, batch processes, offline user actions and
+                of state across sessions, batch processes, offline user actions, and
                 schedules.
               </p>
               <p className='mb-10'>
@@ -158,8 +158,8 @@ export default function Users() {
                 and ensures correctness regardless of what’s failing.
               </p>
               <p className='mb-10'>
-                Distributed Cron, at massive scale. Reliable polling that is as simple or
-                sophisticated as you need. Run 100s of millions parallel cron jobs that
+                Distributed cron, at massive scale. Reliable polling that is as simple or
+                sophisticated as you need. Run hundreds of millions of parallel cron jobs that
                 survive any machine failure.
               </p>
             </span>
