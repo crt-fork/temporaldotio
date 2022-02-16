@@ -392,6 +392,7 @@ function MyApp({ Component, pageProps }) {
                   };
                 g._v = '1.3.0';
               })(window, document, window['_fs_namespace'], 'script', 'user');
+              console.log('Full Story', 'Loaded');
             `,
             }}
           />
