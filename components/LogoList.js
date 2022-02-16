@@ -1,14 +1,14 @@
 import React from "react";
 
 export default function LogoList({ copy = {} }) {
-  const classy = "h-6 sm:h-14 lg:h-12 xl:h-14 mx-auto"
+  const classy = "h-6 sm:h-14 lg:h-12 xl:h-14 2xl:h-16 mx-auto"
   return (
     <div className="mb-32 md:mb-48 container mx-auto px-10">
       <p className="text-center text-slate-400 mb-6">Used by</p>
 
       {/* flex flex-wrap md:space-x-5 font-bold items-center justify-center gap-10 */}
 
-      <div className="gap-3 sm:gap-4 lg:gap-6 xl:gap-10 flex flex-wrap justify-center items-center">
+      <div className="gap-3 sm:gap-4 lg:gap-6 xl:gap-10 2xl:gap-14 flex flex-wrap justify-center items-center">
         <img
           src="/images/logos/homepage/snap.svg"
           alt="Snap logo"
