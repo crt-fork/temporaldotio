@@ -9,6 +9,11 @@ module.exports = {
   async redirects() {
     return [
       {
+        "source": "/usecases",
+        "destination": "/use-cases",
+        "permanent": false
+      },
+      {
         "source": "/careers",
         "destination": "https://jobs.lever.co/temporal",
         "permanent": false
