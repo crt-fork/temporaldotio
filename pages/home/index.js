@@ -4,7 +4,6 @@ import CallOut from '@/components/CallOut';
 import SplitCard from '@/components/base/SplitCard';
 import Image from '@/components/Image';
 import FeatureCards from '@/components/FeatureCards';
-import Video from '@/components/Video';
 import VideoCards from '@/components/VideoCards';
 import PointsLogo from '@/components/PointsLogo';
 import Count from '@/components/Count';
