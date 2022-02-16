@@ -282,11 +282,10 @@ export default function Users() {
           cards = {[
             {
               image: "/images/logos/logo-Datadog.svg",
-              alt: 'How Datadog uses Temporal video',
+              alt: 'How Datadog Ensures Database Reliability with Temporal',
               backgroundColor: '#632BA6',
-              headline: "How Datadog uses Temporal",
-              play: 'dark',
-              link: "https://www.youtube.com/watch?v=eWFpl-nzGsY",
+              headline: "How Datadog Ensures Database Reliability with Temporal",
+              link: "https://docs.temporal.io/blog/how-datadog-ensures-database-reliability-with-temporal/",
               newTab: true
             },
             {
@@ -549,8 +548,8 @@ export default function Users() {
             {
               company: "Coinbase",
               quote: "Temporal maintains high reliability while providing tremendous visibility. Things we thought to be much more complex... feel much easier!",
-              name: "Ben Jacobson",
-              title: 'Staff Software Engineer, Checkr'
+              name: "Anthony Dmitriyev",
+              title: 'Software Engineer, Coinbase'
             },
             {
               company: "Descript",
