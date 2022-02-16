@@ -327,7 +327,7 @@ function MyApp({ Component, pageProps }) {
           __html: `window.dataLayer = window.dataLayer || [];
         function gtag() { window.dataLayer.push(arguments) }
         gtag('js', new Date());
-        gtag('config', 'UA-163137879-1'); console.log('GA');`,
+        gtag('config', 'UA-163137879-1');`,
         }}
       ></script>
       <script
@@ -354,9 +354,7 @@ function MyApp({ Component, pageProps }) {
                 g._w={};y='XMLHttpRequest';g._w[y]=m[y];y='fetch';g._w[y]=m[y];
                 if(m[y])m[y]=function(){return g._w[y].apply(this,arguments)};
                 g._v="1.3.0";
-            })(window,document,window['_fs_namespace'],'script','user');
-
-            console.log('FS');`,
+            })(window,document,window['_fs_namespace'],'script','user');`,
         }}
       ></script>
     </SSRProvider>

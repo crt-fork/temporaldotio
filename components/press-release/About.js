@@ -10,7 +10,7 @@ export default function About({ copy = {}, contacts = [], className}) {
 
         <div className='sm:flex sm:justify-between pb-20 lg:pb-48'>
           {contacts.map(contact => (
-            <div className='pb-6 sm:pb-0 xl:w-6/12'>
+            <div className='pb-6 sm:pb-0 xl:w-6/12' key={contact.email}>
               <h3 className='font-bold text-lg md:text-2xl'>{contact.title}</h3>
               <p className='text-lg	md:text-2xl' >{contact.name} </p>
               <p className='text-lg md:text-2xl' >{contact.company} </p>

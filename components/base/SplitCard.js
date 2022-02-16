@@ -12,7 +12,7 @@ export default function SplitCard({ icon, iconAttributes, alt, color, headline, 
       )}>
       <img className='mb-36' src={`${icon}`} alt={alt} {...iconAttributes}/>
       <h3 className='text-3xl mb-4 font-bold linebreak-space'>{lineBreak(headline)}</h3>
-      <p className='text-sm lg:text-lg'>{copy}</p>
+      <div className='text-sm lg:text-lg'>{copy}</div>
     </div>
   );
 }
