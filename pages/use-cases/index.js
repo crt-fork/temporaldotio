@@ -282,11 +282,10 @@ export default function Users() {
           cards = {[
             {
               image: "/images/logos/logo-Datadog.svg",
-              alt: 'How Datadog uses Temporal video',
+              alt: 'How Datadog Ensures Database Reliability with Temporal',
               backgroundColor: '#632BA6',
-              headline: "How Datadog uses Temporal",
-              play: 'dark',
-              link: "https://www.youtube.com/watch?v=Hz7ZZzafBoE",
+              headline: "How Datadog Ensures Database Reliability with Temporal",
+              link: "https://docs.temporal.io/blog/how-datadog-ensures-database-reliability-with-temporal/",
               newTab: true
             },
             {
