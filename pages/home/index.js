@@ -104,7 +104,7 @@ export default function Home() {
           }}
         />
       </section>
-      <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
+      <section className="mt-10 sm:mt-10 lg:mt-32 xxl:mt-32">
         <PointsLogo
           copyPoints={[
             {
@@ -179,10 +179,10 @@ export default function Home() {
               copy={
                 <>
                   <p>
-                    Our flagship product. The most fully featured platform to
-                    write & run your stateful applications with the largest user
-                    community. Years of maturation across hundreds of high scale
-                    applications. MIT license.
+                    The most fully featured platform to write & run your
+                    stateful applications with the largest user community. Years
+                    of maturation across hundreds of high scale applications.
+                    MIT license.
                   </p>
                   <a
                     className="underline mt-5 inline-block"
@@ -212,9 +212,10 @@ export default function Home() {
               copy={
                 <>
                   <p>
-                    Outsource the configuration, infrastructure, operations and
-                    maintenance of Temporal to us. Pay only for what you use.
-                    100% compatible with open source Temporal.
+                    Focus on your application and outsource the operations,
+                    scale, configuration, infrastructure and maintenance of
+                    Temporal to us. Pay only for what you use. 100% compatible
+                    with open source Temporal.
                   </p>
                   <a
                     className="underline mt-5 inline-block"
@@ -240,7 +241,7 @@ export default function Home() {
           className="py-40 lg:pt-96"
         />
       </section>
-      <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
+      <section className="mt-20 sm:mt-32 lg:mt-48 xxl:mt-48">
         <CallOut
           textAlign="center"
           key={'theRightAnswer'}
@@ -296,7 +297,7 @@ export default function Home() {
           className="pt-32"
         />
       </section>
-      <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
+      <section className="mt-20 sm:mt-32 lg:mt-48 xxl:mt-48">
         <CallOut
           key={'coolCompanies'}
           textAlign="center"
@@ -311,6 +312,7 @@ export default function Home() {
         ></CallOut>
 
         <VideoCards
+          className="mb-20"
           cards={[
             {
               image: '/images/logos/stripe.svg',
