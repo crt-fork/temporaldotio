@@ -40,10 +40,10 @@ const GLOBAL_DATA = {
   announcement: {
     showAnnouncement: true,
     copy: 'Temporal raises $100 Million Series B to invest in open source and developer communities.',
-    // link: {
-    //   href: '',
-    //   copy: 'Read the article'
-    // }
+    link: {
+      href: 'https://docs.temporal.io/blog/series-b-announcement-open-letter/',
+      copy: 'Read more.',
+    },
   },
   nav: {
     icon: {
