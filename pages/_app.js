@@ -21,6 +21,8 @@ import {
   faMinus as farMinus,
 } from '@fortawesome/pro-regular-svg-icons';
 import { SSRProvider } from 'react-bootstrap';
+import "../public/prism/prism"
+import "../public/prism/prism.css"
 
 config.autoAddCss = false;
 library.add(
