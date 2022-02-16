@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import '@/styles/globals.css';
 import BaseLayout from '@/layouts/BaseLayout';
 import Head from 'next/head';
-import Script from 'next/script';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import {
@@ -207,8 +206,7 @@ const GLOBAL_DATA = {
         links: [
           {
             copy: "We're hiring",
-            target: '_blank',
-            href: 'https://jobs.lever.co/temporal',
+            href: '/careers',
           },
         ],
       },
