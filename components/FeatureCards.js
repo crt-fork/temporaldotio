@@ -6,7 +6,7 @@ export default function FeatureCards({ cards = [], className}) {
       <div className='container mx-auto px-10 lg:flex'>
         <div className='mx-auto lg:flex'>
           {cards.map((card, i) => (
-            <>
+
             <div
             className='py-14 px-8 md:px-10 rounded-2xl mx-auto lg:mx-3  lg:max-w-sm  border-4	border-gray-100	card-shadow mb-6'
             key={`feat-card-${i}`}>
@@ -17,7 +17,7 @@ export default function FeatureCards({ cards = [], className}) {
                 <p className='text-2xl lg:text-lg'>{card.subhead} </p>
               </div>
             </div>
-          </>
+
           ))}
         </div>
       </div>
