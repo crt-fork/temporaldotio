@@ -24,6 +24,11 @@ module.exports = {
         permanent: false,
       },
       {
+        "source": "/intros",
+        "destination": "https://calendly.com/community-temporal",
+        "permanent": false
+      },
+      {
         source: '/slack',
         destination:
           'https://join.slack.com/t/temporalio/shared_invite/zt-onhti57l-J0bl~Tr7MqSUnIc1upjRkw',

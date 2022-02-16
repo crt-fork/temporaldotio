@@ -185,7 +185,7 @@ export default function Home() {
                     applications. MIT license.
                   </p>
                   <a
-                    class="underline mt-5 inline-block"
+                    className="underline mt-5 inline-block"
                     href="https://docs.temporal.io/"
                   >
                     Get Started
@@ -217,7 +217,7 @@ export default function Home() {
                     100% compatible with open source Temporal.
                   </p>
                   <a
-                    class="underline mt-5 inline-block"
+                    className="underline mt-5 inline-block"
                     target="_blank"
                     href="https://us17.list-manage.com/survey?u=2334a0f23e55fd1840613755d&id=f1895b6f4a"
                   >
