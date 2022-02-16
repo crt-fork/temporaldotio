@@ -2,8 +2,8 @@
 const lineBreak = (string) => {
   let modified = []
   modified = string.split('  ')
-  return modified.map(e => {
-    return <span className='block' dangerouslySetInnerHTML={{ __html: e }}/>
+  return modified.map((e,i) => {
+    return <span className='block' key={e+i} dangerouslySetInnerHTML={{ __html: e }}/>
   })
 }
 
