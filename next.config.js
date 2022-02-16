@@ -19,6 +19,11 @@ module.exports = {
         "permanent": false
       },
       {
+        "source": "/intros",
+        "destination": "https://calendly.com/community-temporal",
+        "permanent": false
+      },
+      {
         "source": "/youtube",
         "destination": "https://www.youtube.com/channel/UCGovZyy8OfFPNlNV0i1fI1g",
         "permanent": false
