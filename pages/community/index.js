@@ -46,7 +46,7 @@ export default function Community({ heading = '' }) {
               backgroundStyle: 'light',
               headline: "Temporal Flagship Community Meetup",
               date: "Last Tuesday of every month!",
-              body: "​We'd especially love to take your questions live.  Our community meetup events are be recorded and shared on YouTube and Twitter.",
+              body: "​We'd especially love to take your questions live.  Our community meetup events are recorded and shared on YouTube and Twitter.",
               linkCopy: "Register for Free",
               linkUrl: "https://lu.ma/temporal",
             },
