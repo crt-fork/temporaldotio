@@ -3,7 +3,7 @@ import React from "react";
 export default function LogoList({ copy = {} }) {
   return (
     <div className="mb-32 md:mb-48 container mx-auto px-10">
-      <p className="text-center text-slate-400">Used by</p>
+      <p className="text-center text-slate-400 mb-6">Used by</p>
 
       {/* flex flex-wrap md:space-x-5 font-bold items-center justify-center gap-10 */}
 
