@@ -95,7 +95,7 @@ export default function Home() {
           key={`no-assembly-needed`}
           textAlign='center'
           copy={{
-          headline: `Everything you need  in one place.`,
+          headline: `Everything you  need in one place.`,
           subhead: 'With Temporal, your application will be durable, reliable, and scalable out of the box.'
         }}/>
       </section>
