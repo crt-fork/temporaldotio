@@ -206,7 +206,7 @@ export default function Home() {
               alt: 'php SDK logo icon',
             },
             {
-              src: '/images/logos/java.svg',
+              src: '/images/logos/java.png',
               alt: 'java SDK logo icon',
             },
           ]}
