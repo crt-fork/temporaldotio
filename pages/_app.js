@@ -318,10 +318,7 @@ function MyApp({ Component, pageProps }) {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800&display=swap"
             rel="stylesheet"
           />
-          <Script
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{
-              __html: `
+          <script>
               window['_fs_debug'] = false;
               window['_fs_host'] = 'fullstory.com';
               window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
@@ -393,29 +390,21 @@ function MyApp({ Component, pageProps }) {
                 g._v = '1.3.0';
               })(window, document, window['_fs_namespace'], 'script', 'user');
               console.log('Full Story', 'Loaded');
-            `,
-            }}
-          />
+          </script>
         </Head>
         <Component {...pageProps} />
       </BaseLayout>
-      <Script
-        strategy="afterInteractive"
+      <script
         src="https://www.googletagmanager.com/gtag/js?id=UA-163137879-1"
-      />
-      <Script
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
+      ></script>
+      <script>
           window.dataLayer = window.dataLayer || [];
           function gtag() {
             window.dataLayer.push(arguments);
           }
           gtag('js', new Date());
           gtag('config', 'UA-163137879-1');
-        `,
-        }}
-      />
+      </script>
     </SSRProvider>
   );
 }
