@@ -96,7 +96,7 @@ export default function Home() {
           textAlign='center'
           copy={{
           headline: `Everything you need  in one place.`,
-          subhead: 'With Temporal your application will be durable, reliable, and scalable out of the box.'
+          subhead: 'With Temporal, your application will be durable, reliable, and scalable out of the box.'
         }}/>
       </section>
       <section className='mt-20 sm:mt-32 lg:mt-64 xxl:mt-96'>
@@ -211,7 +211,7 @@ export default function Home() {
           key={'theRightAnswer'}
           copy={{
             headline: "What’s holding you back?",
-            subhead: "With Temporal your application transforms."
+            subhead: "With Temporal, your application transforms."
           }}
           className="text-center pt-32 pb-10 lg:pb-14"
         />
