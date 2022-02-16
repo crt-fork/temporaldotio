@@ -73,7 +73,7 @@ export default function Community({ heading = '' }) {
           textAlign='center'
           className="pt-32 md:pt-40 lg:pt-64 xl:pt-96 pb-10 lg:pb-16"
         />
-        <VideoCards
+      <VideoCards
           cards={[
             {
               image: "/images/logos/stripe.svg",
@@ -237,8 +237,8 @@ export default function Community({ heading = '' }) {
             {
               company: "Coinbase",
               quote: "Temporal maintains high reliability while providing tremendous visibility. Things we thought to be much more complex... feel much easier!",
-              name: "Ben Jacobson",
-              title: 'Staff Software Engineer, Checkr'
+              name: "Anthony Dmitriyev",
+              title: 'Software Engineer, Coinbase'
             },
             {
               company: "Descript",

@@ -549,8 +549,8 @@ export default function Users() {
             {
               company: "Coinbase",
               quote: "Temporal maintains high reliability while providing tremendous visibility. Things we thought to be much more complex... feel much easier!",
-              name: "Ben Jacobson",
-              title: 'Staff Software Engineer, Checkr'
+              name: "Anthony Dmitriyev",
+              title: 'Software Engineer, Coinbase'
             },
             {
               company: "Descript",
