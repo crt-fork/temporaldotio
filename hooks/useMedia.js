@@ -1,17 +1,27 @@
-// https://www.30secondsofcode.org/react/s/use-media-query
-// example: const isMobile = useMediaQuery('(max-width: 768px)', true, false);
+// https://github.com/streamich/react-use/blob/master/src/useMedia.ts
+import { useState, useEffect } from 'react'
 
-export function useMediaQuery(query, whenTrue, whenFalse) {
-  if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') return whenFalse;
+export function useMedia(query, defaultState = false) {
+  const [state, setState] = useState(defaultState)
 
-  const mediaQuery = window.matchMedia(query);
-  const [match, setMatch] = React.useState(!!mediaQuery.matches);
+  useEffect(() => {
+    let mounted = true
+    const mql = window.matchMedia(query)
+    const onChange = () => {
+      if (!mounted) {
+        return
+      }
+      setState(!!mql.matches)
+    }
 
-  React.useEffect(() => {
-    const handler = () => setMatch(!!mediaQuery.matches);
-    mediaQuery.addListener(handler);
-    return () => mediaQuery.removeListener(handler);
-  }, []);
+    mql.addListener(onChange)
+    setState(mql.matches)
 
-  return match ? whenTrue : whenFalse;
+    return () => {
+      mounted = false
+      mql.removeListener(onChange)
+    }
+  }, [query])
+
+  return state
 }

@@ -1,31 +1,86 @@
-import React from 'react';
-import DirectionalControl from './DirectionalControl';
-import Companies from './Companies';
-import ExplainTemporal from './ExplainTemporal';
-import { TemporalSDKs } from './TemporalSDKs';
+import React, { useState } from "react";
+import clsx from "clsx";
+import Link from "next/link";
+import OfficeHoursCta from "@/components/base/OfficeHoursCta";
 
-export default function Hero() {
+export default function Hero({
+  copy = {},
+  ctas = [],
+  officeHours = false,
+  className,
+  children,
+}) {
+  const [show, setShow] = useState(false);
+  const [officeSession, setOfficeSession] = useState(undefined);
+  const handleClose = () => setShow(false);
+  const toggleShow = (val = false) => {
+    if (typeof val !== undefined) {
+      setShow(val);
+    }
+    setShow(!show);
+  };
+  const selectSession = (link = undefined) => {
+    if (!!link && link !== officeSession) {
+      setOfficeSession(link);
+      setShow(true);
+    }
+  };
   return (
-    <section>
-      <div className="bg-svg">
-        <div className="my-12 md:mt-16 flex flex-col space-y-5 justify-center items-center px-2">
-          <h1 className="text-60 leading-60 lg:text-8xl tracking-wide capitalize font-bold text-center">
-            Build Invincible Apps
-          </h1>
-          <p className="text-xl md:text-3xl max-w-screen-md text-center md:leading-normal">
-            Temporal is the open source microservice orchestration platform for writing durable
-            workflows as code.
-          </p>
-          <div className="py-4 text-lg font-medium flex flex-col justify-center sm:justify-start space-y-4 sm:space-y-0 sm:flex-row sm:space-x-14 items-center">
-            <DirectionalControl href="https://docs.temporal.io/">Start Building</DirectionalControl>
-            <ExplainTemporal />
-          </div>
+    <div
+      className={`flex flex-col items-center justify-center container mx-auto px-4  ${className}`}
+    >
+      <h1 className="text-slate-900 font-extrabold text-4xl sm:text-6xl md:7xl lg:text-[7.5rem] xl:text-[8.75rem] mb-6 md:mb-12 max-w-[75%] tracking-tight text-center dark:text-white">
+        {copy.headline}
+      </h1>
+
+      <p className="mb-10 md:mb-8 text-center text-2xl">{copy.subhead}</p>
+
+      {ctas && (
+        <div className="mb-4 md:mb-6 text-lg font-medium flex flex-col justify-center sm:justify-start sm:space-y-0 sm:flex-row sm:space-x-7 items-center">
+          {!!officeHours && officeHours.sessions && (
+            <OfficeHoursCta
+              btnCopy={officeHours.btnCopy}
+              sessions={officeHours.sessions}
+            />
+          )}
+          {ctas.map((cta, i) => (
+            <Link key={`hero-cta-${i}`} passHref={true} href={`${cta.url}`}>
+              <a
+                key={`hero-cta-${i}`}
+                className={clsx(
+                  `dark:bg-sky-500
+                  dark:highlight-white/20
+                  dark:hover:bg-sky-400
+                  flex
+                  focus:outline-none
+                  focus:ring-2
+                  focus:ring-offset-2
+                  focus:ring-offset-slate-50
+                  focus:ring-slate-400
+                  font-medium
+                  h-12
+                  items-center
+                  justify-center
+                  mb-10
+                  px-6
+                  rounded-lg
+                  sm:mb-0
+                  sm:w-auto
+                  transition
+                  w-full`,
+
+                  cta.style == "light"
+                    ? "hover:bg-slate-900 border-2 border-slate-900 hover:text-white"
+                    : "bg-slate-900 hover:bg-slate-700 text-white"
+                )}
+              >
+                {cta.copy}
+              </a>
+            </Link>
+          ))}
         </div>
-        <div className="mt-20 mb-28">
-          <Companies />
-        </div>
-      </div>
-      <TemporalSDKs />
-    </section>
+      )}
+      <div>{children}</div>
+    </div>
   );
 }

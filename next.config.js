@@ -1,68 +1,18 @@
-const withPrefresh = require('@prefresh/next');
-const preactPlugin = require('next-plugin-preact');
-const withMDX = require('@next/mdx')({
-  extension: /\.mdx?$/
-});
-
-const withPlugins = require('next-compose-plugins');
-
-const prefreshPlugin = withPrefresh({
-  webpack(config, { dev, isServer }) {
-    // Move Preact into the framework chunk instead of duplicating in routes:
-    const splitChunks = config.optimization && config.optimization.splitChunks;
-    if (splitChunks) {
-      const cacheGroups = splitChunks.cacheGroups;
-      const test =
-        /[\\/]node_modules[\\/](preact|preact-render-to-string|preact-context-provider)[\\/]/;
-      if (cacheGroups.framework) {
-        cacheGroups.preact = Object.assign({}, cacheGroups.framework, { test });
-        // if you want to merge the 2 small commons+framework chunks:
-        // cacheGroups.commons.name = 'framework';
-      }
-    }
-
-    if (isServer) {
-      // mark `preact` stuffs as external for server bundle to prevent duplicate copies of preact
-      config.externals.push(/^(preact|preact-render-to-string|preact-context-provider)([\\/]|$)/);
-    }
-
-    // Install webpack aliases:
-    const aliases = config.resolve.alias || (config.resolve.alias = {});
-    aliases.react = aliases['react-dom'] = 'preact/compat';
-
-    // Automatically inject Preact DevTools:
-    if (dev && !isServer) {
-      const entry = config.entry;
-      config.entry = () =>
-        entry().then((entries) => {
-          entries['main.js'] = ['preact/debug'].concat(entries['main.js'] || []);
-          return entries;
-        });
-    }
-
-    return config;
+module.exports = {
+  reactStrictMode: false,
+  async rewrites() {
+    return [{
+      source: '/',
+      destination: '/home'
+    }]
   },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY'
-          }
-        ]
-      }
-    ];
-  }
-});
-const MDXPlugin = withMDX({
-  pageExtensions: ['js', 'jsx', 'mdx']
-});
-
-module.exports = withPlugins([prefreshPlugin, MDXPlugin, preactPlugin]);
-// module.exports = {
-//   devIndicators: {
-//     autoPrerender: false,
-//   },
-// }
+  env: {
+    MAIL_CHIMP_HOST: process.env.MAIL_CHIMP_HOST,
+    MAIL_CHIMP_USER: process.env.MAIL_CHIMP_USER,
+    MAIL_CHIMP_ID: process.env.MAIL_CHIMP_ID
+  },
+  i18n: {
+    locales: ['en-US'],
+    defaultLocale: 'en-US',
+  },
+}
