@@ -206,7 +206,6 @@ const GLOBAL_DATA = {
         links: [
           {
             copy: "We're hiring",
-            target: '_blank',
             href: '/careers',
           },
         ],
