@@ -296,7 +296,7 @@ export default function Home() {
               alt:"Video for how Datadog uses Temporal",
               backgroundColor: '#632BA6',
               headline: "How Datadog uses Temporal",
-              link: "https://www.youtube.com/watch?v=eWFpl-nzGsY",
+              link: "https://www.youtube.com/watch?v=Hz7ZZzafBoE",
               play: "dark",
               isVideo: true,
               newTab: true

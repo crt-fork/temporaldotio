@@ -286,7 +286,7 @@ export default function Users() {
               backgroundColor: '#632BA6',
               headline: "How Datadog uses Temporal",
               play: 'dark',
-              link: "https://www.youtube.com/watch?v=eWFpl-nzGsY",
+              link: "https://www.youtube.com/watch?v=Hz7ZZzafBoE",
               newTab: true
             },
             {
