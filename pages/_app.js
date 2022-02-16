@@ -320,7 +320,7 @@ function MyApp({ Component, pageProps }) {
           />
           <Script
             strategy="afterInteractive"
-            onLoad={() => {
+            dangerouslySetInnerHTML={`
               window['_fs_debug'] = false;
               window['_fs_host'] = 'fullstory.com';
               window['_fs_script'] = 'edge.fullstory.com/s/fs.js';
@@ -391,7 +391,7 @@ function MyApp({ Component, pageProps }) {
                   };
                 g._v = '1.3.0';
               })(window, document, window['_fs_namespace'], 'script', 'user');
-            }}
+            `}
           />
         </Head>
         <Component {...pageProps} />
@@ -399,14 +399,17 @@ function MyApp({ Component, pageProps }) {
       <Script
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=UA-163137879-1"
-        onLoad={() => {
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={`
           window.dataLayer = window.dataLayer || [];
           function gtag() {
             window.dataLayer.push(arguments);
           }
           gtag('js', new Date());
           gtag('config', 'UA-163137879-1');
-        }}
+        `}
       />
     </SSRProvider>
   );
