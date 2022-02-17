@@ -118,6 +118,12 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/airbyte',
+        destination:
+          'https://docs.temporal.io/blog/airbyte-case-study',
+        permanent: false,
+      },
+      {
         source: '/stripe',
         destination: 'https://www.youtube.com/watch?v=Crkcr1S-NSc',
         permanent: false,
