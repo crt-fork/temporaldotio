@@ -13,10 +13,52 @@ import LogoList from '@/components/LogoList';
 import CodeIconList from '@/components/CodeIconList';
 import OfficeHours from '@/components/OfficeHours'
 import CalloutFooter from '@/components/base/Footer';
+import CodeSnippet from '@/components/CodeSnippets';
 
 Home.title = 'Homepage | Temporal';
 Home.keywords = 'Microservices, workflows, orchestration, backend, cloud architectures, distributed applications';
 Home.description = 'Introducing a new and infinitely better way to develop applications. Build durable apps with Temporal and never look back.';
+
+const goSnippet = `func RemindUserWorkflow(ctx workflow.Context, userID string, intervals []int) error {
+  // Send reminder emails, e.g. after 1, 7, and 30 days
+  for _, interval := range intervals {
+    _ = workflow.Sleep(ctx, days(interval)) // Sleep for days!
+    _ = workflow.ExecuteActivity(ctx, SendEmail, userID).Get(ctx, nil) 
+    // Activities have timeouts, and will be retried by default!
+  }
+  // ...
+}`
+
+const javaSnippet =`public class RemindUserWorkflowImpl implements RemindUserWorkflow {
+  public void EmailUser(String userId, int[] intervals) {
+    // Send reminder emails, e.g. after 1, 7, and 30 days
+    for (int interval : intervals) {   
+      Workflow.sleep(Duration.ofDays(interval)); // Sleep for days!
+      activities.sendEmail(interval, userId);    // Activities retried by default!
+    }
+    // Easily cancelled when user unsubscribes
+  }
+}`
+
+const phpSnippet = `class RemindUserWorkflow implements RemindUserWorkflowInterface {
+  public function emailUser($userID, $intervals) {
+    // Send reminder emails, e.g. after 1, 7, and 30 days
+    foreach ($intervals as &$interval) {
+        yield Workflow::timer($interval * DAYS);                  // Sleep for days!
+        yield $this->userActivity->sendEmail($interval, $userID); // Activities retried by default!
+    }
+    // Easily cancelled when user unsubscribes
+  }
+}`
+
+const typescriptSnippet = `async function remindUserWorkflow(userId: string, intervals: number[]) {
+  // Send reminder emails, e.g. after 1, 7, and 30 days
+  for (const interval of intervals) {
+    await sleep(\`\${interval} days\`); // Sleep for days!
+    await activities.sendEmail(interval, userId); // Activities retried by default!
+  }
+  // Easily cancelled when user unsubscribes
+}`
 
 export default function Home() {
   return (
@@ -85,12 +127,20 @@ export default function Home() {
           textAlign="center"
           className="text-center pt-20 pb-10"
         />
-        <Image
-          className=""
-          mobileSrc="/images/code-snippet-mobile.png"
-          wideSrc="/images/code-snippet.png"
-          alt="Code snippet example to illustrate streamlined workflows"
-        />
+        <CodeSnippet language={"go"} logoComponent={<img src={`/images/logos/go.svg`} alt={`Go SDK logo icon`} className='invert object-none' />}>
+          {goSnippet}
+        </CodeSnippet>
+        {/* <CodeSnippet language={"java"}>
+          {javaSnippet}
+        </CodeSnippet>
+        <CodeSnippet language={"php"}>
+          {phpSnippet}
+        </CodeSnippet>
+        <CodeSnippet language={"typescript"}>
+          {typescriptSnippet}
+        </CodeSnippet> */}
+
+     
       </section>
       <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
         <CallOut
@@ -156,7 +206,7 @@ export default function Home() {
               alt: 'php SDK logo icon',
             },
             {
-              src: '/images/logos/java.svg',
+              src: '/images/logos/java.png',
               alt: 'java SDK logo icon',
             },
           ]}
