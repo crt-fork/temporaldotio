@@ -13,7 +13,7 @@ export default function VideoCards({ cards = [], className, columns = 3 }) {
           <a key={`video-card-${i}`}
             href={`${card.link}`}
             target={` ${card.newTab ? "_blank": "_self"}`}
-            className={`block mx-auto lg:mx-3 rounded-2xl lg:max-w-sm card-shadow mb-6 transition hover:scale-105 focus:scale-105 ${(!card.image)&& "bg-gray-900 text-white max-w-xl lg:w-[30%]"}`}>
+            className={`block mx-auto lg:mx-3 border border-gray-300 rounded-2xl lg:max-w-sm mb-6 transition hover:scale-105 focus:scale-105 ${(!card.image)&& "bg-gray-900 text-white max-w-xl lg:w-[30%]"}`}>
             <div className={'flex items-center relative justify-center relative h-52 rounded-t-2xl'}
               style={{ background: card.backgroundColor }}>
               {card.image &&
@@ -30,7 +30,7 @@ export default function VideoCards({ cards = [], className, columns = 3 }) {
               )}
             </div>
 
-            <div className={`py-8 ${card.image ?"px-10":"px-8"}`}>
+            <div className={`py-8 ${card.image ?"px-10":"px-8"} border-t`}>
             { card.super &&
               <h3 className='text-3xl mb-4 line-through font-bold'>{card.super}</h3>
             }

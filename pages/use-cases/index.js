@@ -113,14 +113,14 @@ export default function Users() {
         <VideoCards
           cards = {[
             {
-              image: "/images/logos/coinbase-white.svg",
+              image: "/images/logos/usecases/coinbase.svg",
               alt: 'Coinbase logo',
-              backgroundColor: '#0646FF',
+              // backgroundColor: '#0646FF',
               headline: "Reliable crypto transactions at Coinbase",
               link: "https://docs.temporal.io/blog/reliable-crypto-transactions-at-coinbase/",
             },
             {
-              image: "/images/logos/logo-Doordash.svg",
+              image: "/images/logos/usecases/doordash.svg",
               alt: 'Doordash logo',
               backgroundColor: '#FFFFFF',
               headline: "Building Reliable Workflows: Cadence as a Fallback for Event-Driven Processing",
@@ -128,9 +128,9 @@ export default function Users() {
               newTab: true
             },
             {
-              image: "/images/logos/box-white.svg",
+              image: "/images/logos/usecases/box.svg",
               alt: 'Box logo',
-              backgroundColor: '#0646FF',
+              // backgroundColor: '#0646FF',
               headline: "Temporal: a central brain for Box",
               link: "https://docs.temporal.io/blog/temporal-a-central-brain-for-box/",
             }
@@ -197,38 +197,33 @@ export default function Users() {
           className={'mt-10 md:mt-14'}
           cards = {[
             {
-              image: "/images/logos/logo-Snapchat.svg",
+              image: "/images/logos/usecases/snap.png",
               alt: 'Snapchat logo',
-              backgroundColor: '#F5F70A',
               headline: "Build a Reliable System in a Microservices World at Snap",
               link: "https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap/ ",
               newTab: true
             },
             {
-              image: "/images/logos/airbyte-white.svg",
+              image: "/images/logos/usecases/airbyte.svg",
               alt: 'Airbyte logo',
-              backgroundColor: '#4F40FF',
               headline: "Durable, scalable EL(T) with OSS Airbyte and Temporal",
               link: "https://docs.temporal.io/blog/airbyte-case-study/",
             },
             {
-              image: "/images/logos/descript-white.svg",
+              image: "/images/logos/usecases/descript.svg",
               alt: 'Descript logo',
-              backgroundColor: '#0646FF',
               headline: "Revolutionizing Audio with Descript and Temporal",
               link: "https://docs.temporal.io/blog/descript-case-study/",
             },
             {
-              image: "/images/logos/checkr-white.svg",
+              image: "/images/logos/usecases/checkr.svg",
               alt: 'Checkr logo',
-              backgroundColor: '#082C81',
               headline: "How Temporal simplified Checkr workflows",
               link: "https://docs.temporal.io/blog/how-temporal-simplified-checkr-workflows/",
             },
             {
-              image: "/images/logos/zebramedicalvision.svg",
+              image: "/images/logos/usecases/zebra.svg",
               alt: 'Zebra Medical Vision logo',
-              backgroundColor: '#FFE90C',
               headline: "Medical diagnostics you can count on with Zebra Medical Vision and Temporal",
               link: "https://docs.temporal.io/blog/zebra-medical-case-study/",
             }
@@ -281,21 +276,24 @@ export default function Users() {
           columns={2}
           cards = {[
             {
-              image: "/images/logos/logo-Datadog.svg",
-              alt: 'How Datadog Ensures Database Reliability with Temporal',
-              backgroundColor: '#632BA6',
-              headline: "How Datadog Ensures Database Reliability with Temporal",
-              link: "https://docs.temporal.io/blog/how-datadog-ensures-database-reliability-with-temporal/",
-              newTab: true
+              image: '/images/logos/usecases/datadog.svg',
+              alt: 'How Datadog uses Temporal',
+              // backgroundColor: '#632BA6',
+              headline: 'How Datadog uses Temporal',
+              link: 'https://www.youtube.com/watch?v=Hz7ZZzafBoE',
+              play: 'dark',
+              isVideo: true,
+              newTab: true,
             },
             {
-              image: "/images/logos/netflix.svg",
+              image: '/images/logos/usecases/netflix.png',
               alt: 'How Netflix uses Temporal',
-              backgroundColor: '#000000',
-              headline: "How Netflix uses Temporal",
-              link: "https://www.youtube.com/watch?v=LliBP7YMGyA",
-              play: "light",
-              newTab: true
+              // backgroundColor: '#000000',
+              headline: 'How Netflix uses Temporal',
+              link: 'https://www.youtube.com/watch?v=LliBP7YMGyA',
+              play: 'dark',
+              isVideo: true,
+              newTab: true,
             },
             {
               image: "/images/logos/logo-Hashicorp.svg",
@@ -306,13 +304,14 @@ export default function Users() {
               newTab: true
             },
             {
-              image: "/images/logos/stripe.svg",
-              alt: 'How Stripe uses Temporal video',
-              backgroundColor: '#635BFF',
-              headline: "How Stripe uses Temporal",
-              link: "https://www.youtube.com/watch?v=Crkcr1S-NSc",
-              play: "dark",
-              newTab: true
+              image: '/images/logos/usecases/stripe.png',
+              alt: 'How Stripe uses Temporal',
+              // backgroundColor: '#665BFF',
+              headline: 'How Stripe uses Temporal',
+              link: 'https://www.youtube.com/watch?v=Crkcr1S-NSc',
+              play: 'dark',
+              isVideo: false,
+              newTab: true,
             },
           ]}
         />

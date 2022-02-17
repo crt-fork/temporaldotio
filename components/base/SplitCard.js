@@ -4,7 +4,7 @@ import lineBreak from '@/utilities/lineBreak';
 export default function SplitCard({ icon, iconAttributes, alt, color, headline, copy, className }) {
   return (
     <div className={clsx(
-      'py-14 px-8 md:px-4 lg:px-10 rounded-2xl lg:max-w-md lg:min-h-[440px] card-shadow border-4 border-solid border-grey-100',
+      'py-14 px-8 md:px-4 lg:px-10 rounded-2xl lg:max-w-md lg:min-h-[440px] border border-solid border-grey-300',
       className,
       (color == 'dark')
         ? 'bg-gray-900 text-white'
