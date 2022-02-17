@@ -103,14 +103,16 @@ const FriendJobs = {
   ],
   Nylas: [
     {
-      hostedUrl: "https://ats.comparably.com/api/v1/lvr/nylas/581530b3-f77a-497c-a9a5-656ec9628847",
+      hostedUrl:
+        "https://ats.comparably.com/api/v1/lvr/nylas/581530b3-f77a-497c-a9a5-656ec9628847",
       id: "",
       location: "Toronto",
       team: "",
       text: "Senior Software Engineer (Workflows)",
     },
     {
-      hostedUrl: "https://ats.comparably.com/api/v1/lvr/nylas/c5e19918-ecd3-4c51-a184-8f8d97b1337b",
+      hostedUrl:
+        "https://ats.comparably.com/api/v1/lvr/nylas/c5e19918-ecd3-4c51-a184-8f8d97b1337b",
       id: "",
       location: "Remote US",
       team: "",
@@ -119,7 +121,8 @@ const FriendJobs = {
   ],
   "Nightfall AI": [
     {
-      hostedUrl: "https://jobs.lever.co/nightfall/2284505f-49e4-48b6-a530-4e1869a68fe4",
+      hostedUrl:
+        "https://jobs.lever.co/nightfall/2284505f-49e4-48b6-a530-4e1869a68fe4",
       id: "",
       location: "US & Canada Remote",
       team: "",
@@ -128,7 +131,8 @@ const FriendJobs = {
   ],
   Outreach: [
     {
-      hostedUrl: "https://jobs.lever.co/outreach/b7069d4d-5fc4-4b4b-a70f-5fd676818cae",
+      hostedUrl:
+        "https://jobs.lever.co/outreach/b7069d4d-5fc4-4b4b-a70f-5fd676818cae",
       id: "",
       location: "Seattle, WA",
       team: "",
@@ -137,7 +141,8 @@ const FriendJobs = {
   ],
   "Cash App - Square": [
     {
-      hostedUrl: "https://www.linkedin.com/jobs/view/senior-software-engineer-cloud-database-infra-cash-app-at-cash-app-2315548952/",
+      hostedUrl:
+        "https://www.linkedin.com/jobs/view/senior-software-engineer-cloud-database-infra-cash-app-at-cash-app-2315548952/",
       id: "",
       location: "US Remote",
       team: "",
@@ -146,7 +151,8 @@ const FriendJobs = {
   ],
   "SS & C Technologies": [
     {
-      hostedUrl: "https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies/job/Denver-CO/Staff-Software-Engineer---Private-Cloud_R3140",
+      hostedUrl:
+        "https://wd1.myworkdaysite.com/en-US/recruiting/ssctech/SSCTechnologies/job/Denver-CO/Staff-Software-Engineer---Private-Cloud_R3140",
       id: "",
       location: "Denver, US Remote",
       team: "",
@@ -155,7 +161,8 @@ const FriendJobs = {
   ],
   Stripe: [
     {
-      hostedUrl: "https://stripe.com/jobs/listing/infrastructure-engineer-developer-productivity-workflow-engine/2964407",
+      hostedUrl:
+        "https://stripe.com/jobs/listing/infrastructure-engineer-developer-productivity-workflow-engine/2964407",
       id: "",
       location: "North America Remote",
       team: "",
@@ -164,7 +171,8 @@ const FriendJobs = {
   ],
   Snap: [
     {
-      hostedUrl: "https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap",
+      hostedUrl:
+        "https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap",
       id: "",
       location: "Los Angeles, London, Israel",
       team: "",
@@ -189,7 +197,8 @@ const FriendJobs = {
   ],
   "Well Health": [
     {
-      hostedUrl: "https://temporal.io/careers#:~:text=Senior%20Software%20Engineer%20(Backend)",
+      hostedUrl:
+        "https://temporal.io/careers#:~:text=Senior%20Software%20Engineer%20(Backend)",
       id: "",
       location: "Remote anywhere",
       team: "",
@@ -198,7 +207,8 @@ const FriendJobs = {
   ],
   Wellhive: [
     {
-      hostedUrl: "https://boards.greenhouse.io/wellhealthinc/jobs/5550724002?source=incluzion",
+      hostedUrl:
+        "https://boards.greenhouse.io/wellhealthinc/jobs/5550724002?source=incluzion",
       id: "",
       location: "US Remote",
       team: "",
@@ -275,43 +285,38 @@ export default function Careers({ allJobs }) {
             {Object.entries(FriendJobs).map(([team, jobs]) => {
               console.log(team, jobs);
               return (
-                <div key={team} className="mb-10">
-                  <h3 className="mb-5 text-4xl font-semibold tracking-wide">
-                    {team}
-                  </h3>
-                  <div className="space-y-3">
-                    {jobs.map((job) => (
-                      <a
-                        href={job.hostedUrl}
-                        className="p-5 rounded-lg grid grid-cols-1 md:grid-cols-4 gap-3 hover:bg-gray-100"
-                        key={job.hostedUrl}
-                        target="_blank"
-                      >
-                        <p className="col-span-3 text-xl mr-5">{team} - {job.text}</p>
-                        <p className="col-span-1 flex items-center text-md space-x-2">
-                          <svg
-                            className="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          <span>{job.location}</span>
-                        </p>
-                      </a>
-                    ))}
-                  </div>
+                <div className="space-y-3">
+                  {jobs.map((job) => (
+                    <a
+                      href={job.hostedUrl}
+                      className="p-5 rounded-lg grid grid-cols-1 md:grid-cols-4 gap-3 hover:bg-gray-100"
+                      key={job.hostedUrl}
+                      target="_blank"
+                    >
+                      <p className="col-span-3 text-xl mr-5">
+                        {team} - {job.text}
+                      </p>
+                      <p className="col-span-1 flex items-center text-md space-x-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        <span>{job.location}</span>
+                      </p>
+                    </a>
+                  ))}
                 </div>
               );
             })}
           </div>
-
-         
         </div>
       </section>
     </div>
