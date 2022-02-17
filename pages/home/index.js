@@ -134,7 +134,7 @@ export default function Home() {
           textAlign="center"
           className="text-center pt-20 pb-10"
         />
-        <CodeSnippet language={"go"} logoComponent={<img src={`/images/logos/go.svg`} alt={`Go SDK logo icon`} className='invert object-none' />}>
+        <CodeSnippet language={"go"} logoComponent={<img src={`/images/logos/go.png`} alt={`Go SDK logo icon`} className='invert object-none' />}>
           {goSnippet}
         </CodeSnippet>
         {/* <CodeSnippet language={"java"}>
@@ -178,15 +178,15 @@ export default function Home() {
           className="mt-4 lg:mt-6 mb-10 lg:mb-14"
           icons={[
             {
-              src: '/images/logos/go.svg',
+              src: '/images/logos/go.png',
               alt: 'Go SDK logo icon',
             },
             {
-              src: '/images/logos/ts.svg',
+              src: '/images/logos/ts.png',
               alt: 'TypeScript SDK logo icon',
             },
             {
-              src: '/images/logos/php.svg',
+              src: '/images/logos/php.png',
               alt: 'php SDK logo icon',
             },
             {
