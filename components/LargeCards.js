@@ -10,7 +10,7 @@ export default function LargeCards({ cards = [], className}) {
         <div
           key={`large-cards-${index}`}
           className="lg:flex">
-          <div className={`py-14 px-8 md:px-10 lg:pb-20 rounded-2xl mb-10 lg:mb-0 mx-auto lg:max-w-lg lg:mx-5 border-4	border-gray-100	card-shadow lg:min-h-[615px] lg:flex lg:flex-wrap lg:content-between ${(card.backgroundStyle == "dark") ? "bg-gray-900 text-white " : "bg-white" } `}>
+          <div className={`py-14 px-8 md:px-10 lg:pb-20 rounded-2xl mb-10 lg:mb-0 mx-auto lg:max-w-lg lg:mx-5 border	border-gray-300	 lg:min-h-[615px] lg:flex lg:flex-wrap lg:content-between ${(card.backgroundStyle == "dark") ? "bg-gray-900 text-white " : "bg-white" } `}>
             <div className=''>
               <img className='mb-16 lg:mb-20' src={`${card.icon}`} alt="icon" />
               <h3 className='text-3xl mb-4 lg:mb-20 font-bold'>{card.headline}</h3>

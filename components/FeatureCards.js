@@ -8,7 +8,7 @@ export default function FeatureCards({ cards = [], className}) {
           {cards.map((card, i) => (
 
             <div
-            className='py-14 px-8 md:px-10 rounded-2xl mx-auto lg:mx-3  lg:max-w-sm  border-4	border-gray-100	card-shadow mb-6'
+            className='py-14 px-8 md:px-10 rounded-2xl mx-auto lg:mx-3  lg:max-w-sm  border	border-gray-300	 mb-6'
             key={`feat-card-${i}`}>
               <img className='mb-14' src={`${card.icon}`} alt={card.alt} />
               <div className='lg:flex lg:flex-wrap lg:content-end lg:h-4/5'>
