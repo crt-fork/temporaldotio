@@ -259,7 +259,15 @@ export default function Careers({ allJobs }) {
             })}
           </div>
 
-          <h2 className="text-2xl md:text-5xl  mt-12 leading-lg sm:text-4xl sm:leading-4xl md:font-bold mb-4">
+          <h2 className="text-xl">
+            If none of these positions are a fit for you, email{" "}
+            <a href="mailto:careers@temporal.io" className="underline">
+              careers@temporal.io
+            </a>{" "}
+            describing your dream job.
+          </h2>
+
+          <h2 className="text-2xl md:text-5xl  mt-12 leading-lg sm:text-4xl sm:leading-4xl md:font-bold mb-10">
             Check out these job postings from our friends.
           </h2>
 
@@ -303,13 +311,7 @@ export default function Careers({ allJobs }) {
             })}
           </div>
 
-          <h2 className="text-xl">
-            If none of these positions are a fit for you, email{" "}
-            <a href="mailto:careers@temporal.io" className="underline">
-              careers@temporal.io
-            </a>{" "}
-            describing your dream job.
-          </h2>
+         
         </div>
       </section>
     </div>
