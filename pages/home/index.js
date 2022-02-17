@@ -161,30 +161,7 @@ export default function Home() {
         />
       </section>
       <section className="mt-10 sm:mt-10 lg:mt-32 xxl:mt-32">
-        <PointsLogo
-          copyPoints={[
-            {
-              heading: 'Durable',
-              copy: 'Your code will run forever and everrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.',
-            },
-            {
-              heading: 'Reliable',
-              copy: (
-                <>
-                  Your code will run <br /> despite failures!
-                </>
-              ),
-            },
-            {
-              heading: 'Scalable',
-              copy: (
-                <>
-                  Your code can scale up <br /> or down on command!
-                </>
-              ),
-            },
-          ]}
-        />
+        <PointsLogo />
       </section>
 
       <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
