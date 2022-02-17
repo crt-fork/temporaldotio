@@ -279,7 +279,7 @@ export default function Careers({ allJobs }) {
                         key={job.hostedUrl}
                         target="_blank"
                       >
-                        <p className="col-span-3 text-xl mr-5">{job.text}</p>
+                        <p className="col-span-3 text-xl mr-5">{team} - {job.text}</p>
                         <p className="col-span-1 flex items-center text-md space-x-2">
                           <svg
                             className="w-5 h-5"
