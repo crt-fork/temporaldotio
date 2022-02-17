@@ -2,6 +2,17 @@ import React from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import EmailForm from '@/components/base/EmailForm';
+import PropTypes from 'prop-types';
+
+Footer.propTypes = {
+  footer: PropTypes.shape({
+    signUp: PropTypes.object,
+    socials: PropTypes.array,
+    linkColumns: PropTypes.array.isRequired,
+    legalItems: PropTypes.array.isRequired,
+    partners: PropTypes.array
+  })
+}
 
 export default function Footer({ footer }) {
   const {

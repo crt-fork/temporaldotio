@@ -1,5 +1,11 @@
 import clsx from 'clsx'
 import React from 'react'
+import PropTypes from 'prop-types';
+
+CodeIconList.propTypes = {
+  icons: PropTypes.array,
+  className: PropTypes.string
+}
 
 export default function CodeIconList({ icons = [], className = '' }) {
   return (

@@ -1,9 +1,17 @@
 import React from 'react';
 import clsx from 'clsx';
+import PropTypes from 'prop-types';
 
-export default function CopyGrid({rows = undefined, columns = 4, children, classNames}) {
+CopyGrid.propTypes = {
+  rows: PropTypes.number,
+  columns: PropTypes.number,
+  children: PropTypes.any,
+  className: PropTypes.className
+}
+
+export default function CopyGrid({rows = undefined, columns = 4, children, className}) {
   return (
-    <div className={clsx(classNames)}>
+    <div className={clsx(className)}>
       {/* TODO: why is dynamic grid-cols-X css not being applied? */}
       <div className={clsx(
         'mx-auto',

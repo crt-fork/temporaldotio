@@ -1,8 +1,17 @@
-import clsx from "clsx";
-import React from "react";
-import OfficeHoursCta from "@/components/base/OfficeHoursCta";
-import lineBreak from "../utilities/lineBreak";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import clsx from 'clsx';
+import React from 'react';
+import OfficeHoursCta from '@/components/base/OfficeHoursCta';
+import lineBreak from '../utilities/lineBreak'
+import PropTypes from 'prop-types';
+
+CallOut.propTypes = {
+  copy: PropTypes.object,
+  textAlign: PropTypes.string,
+  desktopLayout: PropTypes.string,
+  className: PropTypes.string,
+  officeHours: PropTypes.object,
+  children: PropTypes.any
+}
 
 export default function CallOut({
   copy = {},
