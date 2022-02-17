@@ -108,6 +108,9 @@ export default function PointsLogo() {
     <>
       <div className=" sm:block ml-10 sm:ml-auto mx-auto sm:w-[220px] md:w-[320px] lg:w-[600px] relative">
         <div className="w-52 
+        mb-7
+        sm:mb-0
+        
         sm:absolute 
         sm:text-right
         
@@ -129,7 +132,10 @@ export default function PointsLogo() {
           </p>
         </div>
 
-        <div className="w-52 
+        <div className="w-52
+        mb-7
+        sm:mb-0
+
         sm:absolute 
         lg:-right-[160px]
         lg:-top-[10px]
@@ -149,6 +155,8 @@ export default function PointsLogo() {
         </div>
 
         <div className="w-52 
+        mb-7
+        sm:mb-0
 
         sm:absolute 
         lg:-right-[220px] 
