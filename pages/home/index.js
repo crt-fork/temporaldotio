@@ -98,11 +98,18 @@ export default function Home() {
           }}
         />
         <div className="mb-32">
-          <Image
-            mobileSrc={'/images/video.gif'}
-            wideSrc={'/images/video.gif'}
-            alt="Simplify architecture with Temporal"
-          />
+           <div className="mt-8">
+            <video
+              // poster={poster}
+              className="w-full max-w-screen-lg mx-auto"
+              autoplay="autoplay"
+              muted
+              loop
+            >
+              <source src={"/videos/TemporalIntro.webm"} type="video/webm" />
+              <source src={"/videos/TemporalIntro.mp4"} type="video/mp4" />
+            </video>
+          </div>
         </div>
       </section>
       <section>
