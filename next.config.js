@@ -128,6 +128,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/descript',
+        destination: 'https://docs.temporal.io/blog/descript-case-study',
+        permanent: false,
+      },
+      {
         source: '/datadog',
         destination:
           'https://docs.temporal.io/blog/how-datadog-ensures-database-reliability-with-temporal',
