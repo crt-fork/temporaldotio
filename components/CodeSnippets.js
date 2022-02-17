@@ -4,7 +4,6 @@ export const CodeSnippet = ({ children, language, logoComponent }) => {
   const highlighter = useRef(null);
   
   useEffect(() => {
-    console.log(highlighter)
     if (highlighter.current) {
       window.Prism.highlightElement(highlighter.current);
     }
