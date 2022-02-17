@@ -283,7 +283,7 @@ export default function Careers({ allJobs }) {
 
           <div>
             {Object.entries(FriendJobs).map(([team, jobs]) => {
-              console.log(team, jobs);
+
               return (
                 <div className="space-y-3">
                   {jobs.map((job) => (
