@@ -72,12 +72,12 @@ module.exports = {
       },
       {
         source: '/go',
-        destination: 'https://docs.temporal.io/docs/go/introduction',
+        destination: 'https://docs.temporal.io/docs/go',
         permanent: false,
       },
       {
         source: '/java',
-        destination: 'https://docs.temporal.io/docs/java/introduction',
+        destination: 'https://docs.temporal.io/docs/java/',
         permanent: false,
       },
       {
@@ -87,7 +87,7 @@ module.exports = {
       },
       {
         source: '/node',
-        destination: 'https://docs.temporal.io/docs/node/introduction',
+        destination: 'https://docs.temporal.io/docs/typescript/introduction',
         permanent: false,
       },
       {
@@ -115,6 +115,12 @@ module.exports = {
         source: '/snapchat',
         destination:
           'https://eng.snap.com/build_a_reliable_system_in_a_microservices_world_at_snap',
+        permanent: false,
+      },
+      {
+        source: '/airbyte',
+        destination:
+          'https://docs.temporal.io/blog/airbyte-case-study',
         permanent: false,
       },
       {
