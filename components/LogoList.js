@@ -40,11 +40,6 @@ export default function LogoList({ copy = {} }) {
           className={classy}
         />
       
-        <img
-          src="/images/logos/homepage/box.png"
-          alt="Box logo"
-          className={classy}
-        />
 
         <img
           src="/images/logos/homepage/airbyte.png"
@@ -65,6 +60,11 @@ export default function LogoList({ copy = {} }) {
         <img
           src="/images/logos/homepage/descript.png"
           alt="Descript logo"
+          className={classy}
+        />
+        <img
+          src="/images/logos/homepage/box.png"
+          alt="Box logo"
           className={classy}
         />
       </div>
