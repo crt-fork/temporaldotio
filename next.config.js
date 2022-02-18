@@ -72,12 +72,12 @@ module.exports = {
       },
       {
         source: '/go',
-        destination: 'https://docs.temporal.io/docs/go/introduction',
+        destination: 'https://docs.temporal.io/docs/go',
         permanent: false,
       },
       {
         source: '/java',
-        destination: 'https://docs.temporal.io/docs/java/introduction',
+        destination: 'https://docs.temporal.io/docs/java/',
         permanent: false,
       },
       {
@@ -87,7 +87,7 @@ module.exports = {
       },
       {
         source: '/node',
-        destination: 'https://docs.temporal.io/docs/node/introduction',
+        destination: 'https://docs.temporal.io/docs/typescript/introduction',
         permanent: false,
       },
       {
