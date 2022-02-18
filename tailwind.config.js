@@ -229,7 +229,7 @@ module.exports = {
       }),
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
-        mono: ["Poppins", ...defaultTheme.fontFamily.mono],
+        mono: ['Source Code Pro', ...defaultTheme.fontFamily.mono],
         source: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
         "ubuntu-mono": ["Ubuntu Mono", ...defaultTheme.fontFamily.mono],
       },

@@ -280,10 +280,6 @@ function MyApp({ Component, pageProps }) {
     }
   });
 
-  useEffect(() => {
-    console.log('showAnnouncement: ', showAnnouncement);
-  }, [showAnnouncement]);
-
   return (
     <SSRProvider>
       <BaseLayout.AlertBar
@@ -318,6 +314,9 @@ function MyApp({ Component, pageProps }) {
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800&display=swap"
             rel="stylesheet"
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap&text=0123456789," rel="stylesheet" />
         </Head>
         <Component {...pageProps} />
       </BaseLayout>
