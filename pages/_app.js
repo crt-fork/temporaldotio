@@ -228,28 +228,28 @@ const GLOBAL_DATA = {
     partners: [
       {
         image: {
-          src: '/images/logos/logo-Index-v2.svg',
+          src: '/images/logos/logo-Index-v2.png',
           alt: 'Index Ventures logo icon',
         },
         href: 'https://www.indexventures.com/',
       },
       {
         image: {
-          src: '/images/logos/logo-Amplify.svg',
+          src: '/images/logos/logo-Amplify.png',
           alt: 'Amplify Partners logo icon',
         },
         href: 'https://amplifypartners.com/portfolio-news/our-investment-in-temporal/',
       },
       {
         image: {
-          src: '/images/logos/logo-Sequoia-capital.svg',
+          src: '/images/logos/logo-Sequoia-capital.png',
           alt: 'Sequoia logo icon',
         },
         href: 'https://medium.com/sequoia-capital/temporal-the-promise-of-more-resilient-applications-87c46469d74a',
       },
       {
         image: {
-          src: '/images/logos/logo-Madrona.svg',
+          src: '/images/logos/logo-Madrona.png',
           alt: 'Madrona Venture Group logo icon',
         },
         href: 'https://www.madrona.com/',
