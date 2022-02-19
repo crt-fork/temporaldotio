@@ -24,9 +24,9 @@ module.exports = {
         permanent: false,
       },
       {
-        "source": "/intros",
-        "destination": "https://calendly.com/community-temporal",
-        "permanent": false
+        source: '/intros',
+        destination: 'https://calendly.com/community-temporal',
+        permanent: false,
       },
       {
         source: '/slack',
@@ -72,7 +72,7 @@ module.exports = {
       },
       {
         source: '/go',
-        destination: 'https://docs.temporal.io/docs/go',
+        destination: 'https://docs.temporal.io/docs/go/',
         permanent: false,
       },
       {
@@ -82,22 +82,22 @@ module.exports = {
       },
       {
         source: '/php',
-        destination: 'https://docs.temporal.io/docs/php/introduction',
+        destination: 'https://docs.temporal.io/docs/php/introduction/',
         permanent: false,
       },
       {
         source: '/node',
-        destination: 'https://docs.temporal.io/docs/typescript/introduction',
+        destination: 'https://docs.temporal.io/docs/typescript/introduction/',
         permanent: false,
       },
       {
         source: '/typescript',
-        destination: 'https://docs.temporal.io/docs/typescript/introduction',
+        destination: 'https://docs.temporal.io/docs/typescript/introduction/',
         permanent: false,
       },
       {
         source: '/ts',
-        destination: 'https://docs.temporal.io/docs/typescript/introduction',
+        destination: 'https://docs.temporal.io/docs/typescript/introduction/',
         permanent: false,
       },
       {
@@ -119,8 +119,7 @@ module.exports = {
       },
       {
         source: '/airbyte',
-        destination:
-          'https://docs.temporal.io/blog/airbyte-case-study',
+        destination: 'https://docs.temporal.io/blog/airbyte-case-study',
         permanent: false,
       },
       {
@@ -165,7 +164,7 @@ module.exports = {
         destination: 'https://lu.ma/temporalintro',
         permanent: false,
       },
-    ];
+    ]
   },
   env: {
     MAIL_CHIMP_HOST: process.env.MAIL_CHIMP_HOST,
