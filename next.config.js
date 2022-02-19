@@ -145,6 +145,12 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/datadogtalk',
+        destination:
+          'https://youtu.be/Hz7ZZzafBoE?t=100',
+        permanent: false,
+      },
+      {
         source: '/xstate',
         destination: 'https://youtu.be/GpbOkDjpeYU?t=1616',
         permanent: false,
