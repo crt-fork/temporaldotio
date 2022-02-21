@@ -149,6 +149,16 @@ const FriendJobs = {
       text: "Senior Software Engineer (Cloud Database Infra)",
     },
   ],
+  "Season Health": [
+    {
+      hostedUrl:
+        "https://season.rippling-ats.com/job/332520/senior-fullstack-engineer-remote?s=cw",
+      id: "",
+      location: "Austin, TX, US Remote",
+      team: "",
+      text: "Senior Fullstack Enginee",
+    },
+  ],
   "SS & C Technologies": [
     {
       hostedUrl:
