@@ -1,4 +1,9 @@
-Careers.title = "Careers | Temporal";
+import CareersList from '@/components/CareersList';
+import Hero from '@/components/Hero';
+import CallOut from '@/components/CallOut';
+import dynamic from 'next/dynamic';
+
+Careers.title = 'Careers | Temporal';
 Careers.description =
   "Come work with us. We’re on a mission to change the way we build applications. We want you to be a part of this journey.";
 // {
@@ -216,19 +221,36 @@ const FriendJobs = {
     },
   ],
 };
+
+const friendJobsList = Object.entries(FriendJobs).reduce((acc, [team, jobs]) => {
+  const teamJobs = jobs.map(job => {
+    job.team = team;
+    return job;
+  });
+  return acc.concat(teamJobs);
+}, []);
+
+const ClientMap = dynamic(() => import('../../components/Map'), {
+  ssr: false,
+  loading: () => <p>...Loading</p>
+});
+
 export default function Careers({ allJobs }) {
   return (
     <div>
       <section className="max-w-screen-lg px-8 p-10 mx-auto">
-        <div className="text-center">
-          <h1 className="text-2xl md:text-5xl  mt-12 leading-lg sm:text-4xl sm:leading-4xl md:font-bold mb-4">
-            Careers at Temporal
-          </h1>
-          <h2 className="text-xl md:text-2xl">
-            Help us deliver a new way to build scalable and reliable
-            applications!
-          </h2>
-        </div>
+        <Hero copy={{
+          headline: "Careers at Temporal",
+          subHead: "Help us deliver a new way to build scalable and reliable applications!"
+        }}/>
+      </section>
+      <section className='max-w-screen-lg px-8 p-10 mx-auto'>
+        <CallOut
+          textAlign="center"
+          copy={{
+          headline: "Remote-first openings.",
+          subhead: `We’re growing at an incredible speed and want you to be a part of it. If none of these positions are a fit for you, email <a href="mailto:careers@temporal.io">careers@temporal.io</a> describing your dream job.`
+        }}/>
         <div className="mt-24">
           <div>
             {Object.entries(allJobs).map(([team, jobs]) => {
@@ -237,33 +259,10 @@ export default function Careers({ allJobs }) {
                   <h3 className="mb-5 text-4xl font-semibold tracking-wide">
                     {team}
                   </h3>
-                  <div className="space-y-3">
-                    {jobs.map((job) => (
-                      <a
-                        href={job.hostedUrl}
-                        className="p-5 rounded-lg grid grid-cols-1 md:grid-cols-4 gap-3 hover:bg-gray-100"
-                        key={job.hostedUrl}
-                        target="_blank"
-                      >
-                        <p className="col-span-3 text-xl mr-5">{job.text}</p>
-                        <p className="col-span-1 flex items-center text-md space-x-2">
-                          <svg
-                            className="w-5 h-5"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                          <span>{job.location}</span>
-                        </p>
-                      </a>
-                    ))}
-                  </div>
+                  <CareersList
+                    key={`carrer-list-${team}`}
+                    jobs={jobs}
+                    team={team}/>
                 </div>
               );
             })}
@@ -276,46 +275,24 @@ export default function Careers({ allJobs }) {
             </a>{" "}
             describing your dream job.
           </h2>
-
+        </div>
+      </section>
+      <section className='w-full aspect-square md:aspect-video'>
+        <ClientMap/>
+      </section>
+      <section className='max-w-screen-lg px-8 p-10 mx-auto'>
+        <div className="mt-24">
           <h2 className="text-2xl md:text-5xl  mt-12 leading-lg sm:text-4xl sm:leading-4xl md:font-bold mb-10">
             Check out these job postings from our friends.
           </h2>
-
           <div>
-            {Object.entries(FriendJobs).map(([team, jobs]) => {
-              console.log(team, jobs);
-              return (
-                <div className="space-y-3">
-                  {jobs.map((job) => (
-                    <a
-                      href={job.hostedUrl}
-                      className="p-5 rounded-lg grid grid-cols-1 md:grid-cols-4 gap-3 hover:bg-gray-100"
-                      key={job.hostedUrl}
-                      target="_blank"
-                    >
-                      <p className="col-span-3 text-xl mr-5">
-                        {team} - {job.text}
-                      </p>
-                      <p className="col-span-1 flex items-center text-md space-x-2">
-                        <svg
-                          className="w-5 h-5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        <span>{job.location}</span>
-                      </p>
-                    </a>
-                  ))}
-                </div>
-              );
-            })}
+            {Object.entries(friendJobsList).map((job, i) => (
+              <CareersList.CareerLink
+                key={`friends-jobs-${job.team}-${i}`}
+                {...job}
+                showTeam={true}
+              />
+            ))}
           </div>
         </div>
       </section>

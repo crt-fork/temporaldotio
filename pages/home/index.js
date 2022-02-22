@@ -23,7 +23,7 @@ const goSnippet = `func RemindUserWorkflow(ctx workflow.Context, userID string, 
   // Send reminder emails, e.g. after 1, 7, and 30 days
   for _, interval := range intervals {
     _ = workflow.Sleep(ctx, days(interval)) // Sleep for days!
-    _ = workflow.ExecuteActivity(ctx, SendEmail, userID).Get(ctx, nil) 
+    _ = workflow.ExecuteActivity(ctx, SendEmail, userID).Get(ctx, nil)
     // Activities have timeouts, and will be retried by default!
   }
   // ...
@@ -32,7 +32,7 @@ const goSnippet = `func RemindUserWorkflow(ctx workflow.Context, userID string, 
 const javaSnippet =`public class RemindUserWorkflowImpl implements RemindUserWorkflow {
   public void EmailUser(String userId, int[] intervals) {
     // Send reminder emails, e.g. after 1, 7, and 30 days
-    for (int interval : intervals) {   
+    for (int interval : intervals) {
       Workflow.sleep(Duration.ofDays(interval)); // Sleep for days!
       activities.sendEmail(interval, userId);    // Activities retried by default!
     }
@@ -147,7 +147,7 @@ export default function Home() {
           {typescriptSnippet}
         </CodeSnippet> */}
 
-     
+
       </section>
       <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
         <CallOut
@@ -337,9 +337,7 @@ export default function Home() {
           copy={{
             headline: 'Take it from  these legends.',
             subhead:
-              'Some of the best distributed systems developers hang out in our Forum, Slack and monthly Meetups. Come join us and share your lessons! Check out our ',
-            subheadLinkCopy: 'Use Cases.',
-            subheadLinkUrl: '/use-cases',
+              `Some of the best distributed systems developers hang out in our Forum, Slack and monthly Meetups. Come join us and share your lessons! Check out our <a href="/use-cases">Use Cases</a>`,
           }}
           className="text-center pt-32 md:pt-40 lg:pt-64 xl:pt-96 pb-10"
         ></CallOut>

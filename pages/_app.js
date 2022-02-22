@@ -19,8 +19,10 @@ import {
 import {
   faPlus as farPlus,
   faMinus as farMinus,
+  faCheckSquare as falCheckSquare
 } from '@fortawesome/pro-regular-svg-icons';
 import { SSRProvider } from 'react-bootstrap';
+import 'maplibre-gl/dist/maplibre-gl.css';
 import "../public/prism/prism"
 import "../public/prism/prism.css"
 
@@ -32,6 +34,7 @@ library.add(
   faYoutube,
   faPaperPlane,
   farPlus,
+  falCheckSquare,
   falPlus,
   falMinus,
   farMinus,
@@ -280,10 +283,6 @@ function MyApp({ Component, pageProps }) {
     }
   });
 
-  useEffect(() => {
-    console.log('showAnnouncement: ', showAnnouncement);
-  }, [showAnnouncement]);
-
   return (
     <SSRProvider>
       <BaseLayout.AlertBar
@@ -308,6 +307,7 @@ function MyApp({ Component, pageProps }) {
           <meta name="description" content={Component.description} />
           <meta name="keywords" content={Component.keywords || ''} />
           <link rel="icon" href="/images/logos/logo-temporal-no-copy.svg" />
+          <link href='https://unpkg.com/maplibre-gl@2.1.6/dist/maplibre-gl.css' rel='stylesheet' />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"

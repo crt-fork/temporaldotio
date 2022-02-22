@@ -5,8 +5,13 @@ import lineBreak from '../utilities/lineBreak'
 import PropTypes from 'prop-types';
 
 CallOut.propTypes = {
-  copy: PropTypes.object,
-  textAlign: PropTypes.string,
+  copy: PropTypes.shape({
+    headline: PropTypes.string,
+    subhead: PropTypes.string,
+    subheadLinkUrl: PropTypes.string,
+    subheadLinkCopy: PropTypes.string
+  }),
+  textAlign: PropTypes.oneOf(["left", "center", "right"]),
   desktopLayout: PropTypes.string,
   className: PropTypes.string,
   officeHours: PropTypes.object,
@@ -39,13 +44,8 @@ export default function CallOut({
         >
           {lineBreak(copy.headline)}
         </h2>
-        <p className="text-sm sm:text-2xl max-w-[960px] mx-auto">
-          {copy.subhead}{" "}
-          {copy.subheadLinkCopy && (
-            <a className="underline" href={`${copy.subheadLinkUrl}`}>
-              {copy.subheadLinkCopy}
-            </a>
-          )}
+        <p className="text-sm sm:text-2xl max-w-[960px] mx-auto callout-copy"
+          dangerouslySetInnerHTML={{__html: copy.subhead}}>
         </p>
         <div
           className={clsx(
