@@ -160,6 +160,11 @@ module.exports = {
         permanent: false,
       },
       {
+        source: '/asyncapi',
+        destination: 'https://www.youtube.com/watch?v=GmSMTrR6sEE',
+        permanent: false,
+      },
+      {
         source: '/workshop',
         destination: 'https://lu.ma/temporalintro',
         permanent: false,
