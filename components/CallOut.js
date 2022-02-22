@@ -9,7 +9,9 @@ CallOut.propTypes = {
     headline: PropTypes.string,
     subhead: PropTypes.string,
     subheadLinkUrl: PropTypes.string,
-    subheadLinkCopy: PropTypes.string
+    subheadLinkCopy: PropTypes.string,
+    linkUrl: PropTypes.string,
+    linkCopy: PropTypes.string
   }),
   textAlign: PropTypes.oneOf(["left", "center", "right"]),
   desktopLayout: PropTypes.string,
@@ -44,7 +46,19 @@ export default function CallOut({
         >
           {lineBreak(copy.headline)}
         </h2>
-        <p className="text-sm sm:text-2xl max-w-[960px] mx-auto callout-copy"
+        {copy.linkCopy && (
+          <div className=" mx-auto sm:max-w-[80%]">
+            <a
+              href={`${copy.linkUrl}`}
+              className="text-sm sm:text-2xl"
+            >
+              {copy.linkCopy}
+            </a>
+          </div>
+          
+        )}
+        
+        <p className="text-sm sm:text-2xl max-w-[1000px] mx-auto callout-copy"
           dangerouslySetInnerHTML={{__html: copy.subhead}}>
         </p>
         <div
