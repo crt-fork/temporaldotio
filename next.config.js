@@ -164,6 +164,16 @@ module.exports = {
         destination: 'https://lu.ma/temporalintro',
         permanent: false,
       },
+      {
+        source: '/b',
+        destination: 'https://docs.temporal.io/blog/tags/funding',
+        permanent: false,
+      },
+      {
+        source: '/a',
+        destination: 'https://docs.temporal.io/blog/funding-announcement',
+        permanent: false,
+      },
     ]
   },
   env: {
