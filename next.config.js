@@ -169,7 +169,8 @@ module.exports = {
   env: {
     MAIL_CHIMP_HOST: process.env.MAIL_CHIMP_HOST,
     MAIL_CHIMP_USER: process.env.MAIL_CHIMP_USER,
-    MAIL_CHIMP_ID: process.env.MAIL_CHIMP_ID
+    MAIL_CHIMP_ID: process.env.MAIL_CHIMP_ID,
+    MAP_BOX_TOKEN: process.env.MAP_BOX_TOKEN
   },
   i18n: {
     locales: ['en-US'],

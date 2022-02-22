@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
+import PropTypes from 'prop-types';
+
+Count.propTypes = {
+  copy: PropTypes.object,
+  className: PropTypes.string
+}
 
 export default function Count({ copy = {}, className}) {
   let animateActive = true;

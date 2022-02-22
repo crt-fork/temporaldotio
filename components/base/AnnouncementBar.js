@@ -1,5 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import PropTypes from 'prop-types';
+
+AnnouncementBar.propTypes = {
+  children: PropTypes.any,
+  closeFn: PropTypes.func.isRequired
+}
+
 export default function AnnouncementBar({children, closeFn }) {
   return (
     <div className='py-3.5 px-10 text-lg bg-black text-white'>

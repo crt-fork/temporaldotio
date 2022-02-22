@@ -1,5 +1,11 @@
 import React from 'react';
 import { v4 as uuid } from 'uuid';
+import PropTypes from 'prop-types';
+
+FullCards.propTypes = {
+  cards: PropTypes.array,
+  className: PropTypes.string
+}
 
 export default function FullCards({ cards = [], className}) {
   return (

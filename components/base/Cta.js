@@ -1,4 +1,7 @@
+import React from 'react';
 import { Button } from '@/components/Button'
+import PropTypes from 'prop-types';
+
 
 export function Cta({ copy = {}, href, label }) {
   return (

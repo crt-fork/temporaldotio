@@ -1,7 +1,23 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import clsx from "clsx";
 import Link from "next/link";
 import OfficeHoursCta from "@/components/base/OfficeHoursCta";
+
+Hero.propTypes = {
+  copy: PropTypes.shape({
+    headline: PropTypes.string,
+    subhead: PropTypes.string
+  }),
+  officeHours: PropTypes.bool,
+  className: PropTypes.string,
+  ctas: PropTypes.arrayOf(PropTypes.shape({
+    style: PropTypes.string,
+    copy: PropTypes.string,
+    url: PropTypes.string
+  })),
+  children: PropTypes.elementType
+}
 
 export default function Hero({
   copy = {},

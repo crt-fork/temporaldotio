@@ -1,5 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+ColumnLayout.propTypes = {
+  left: PropTypes.any,
+  right: PropTypes.any,
+  className: PropTypes.string,
+  leftProps: PropTypes.object,
+  rightProps: PropTypes.object
+}
 export default function ColumnLayout({
   left,
   right,

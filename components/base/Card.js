@@ -1,4 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+Card.propTypes = {
+  card: PropTypes.any,
+  className: PropTypes.string
+}
 
 export default function Card({ card = {}, className}) {
   return (

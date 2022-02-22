@@ -21,10 +21,10 @@ export default function NavBar({ nav = {} }) {
     const coords = {
       width: Math.round(rect.width),
       height: Math.round(rect.height),
-      left: Math.round(rect.left), // 40px = margin-right on nav
+      left: Math.round(rect.left),
       right: Math.round(rect.right),
       top: Math.round(rect.top),
-      bottom: 0 // needs to align with nav bottom
+      bottom: 0
     };
     setActiveBarRect({ ...coords })
   });
@@ -39,17 +39,10 @@ export default function NavBar({ nav = {} }) {
   useIsomorphicLayoutEffect(() => {
     const linkRef = linksRef.current.filter(ref => ref.current.attributes['href'].value == router.asPath);
     if (!!linkRef && linkRef.length) {
-      console.log('rect: ', );
       calcLinkUnderline(linkRef[0].current.getBoundingClientRect())
     } else {
       calcLinkUnderline({ bottom: 0, height: 0, left: 0, right: 0, top: 0, width: 0 });
     }
-    // linksRef.current.forEach(ref => {
-    //   const linkAddress = ref.current.attributes['href'].value;
-    //   if (linkAddress == router.asPath && (typeof window !== undefined)) {
-    //     calcLinkUnderline(ref.current.getBoundingClientRect());
-    //   }
-    // })
   }, [windowSize.width, router.asPath]);
 
   return (
@@ -80,13 +73,13 @@ export default function NavBar({ nav = {} }) {
                   className="text-center px-2.5 text-lg flex align-item-center">
                   <Link
                     className="nav-link"
-                    
+
                     passHref={true}
                     href={link.href}>
                     <a ref={linksRef.current[i]} target={link.target}>
                       {(link.icon && link.icon.length) ? (
                         <FontAwesomeIcon
-                          title={link.copy}
+                          title=""
                           className='h-[1em] white px-2.5 inline-block'
                           icon={["fab", link.icon]}/>
                       ) : (

@@ -1,4 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
+FeatureCards.propTypes = {
+  cards: PropTypes.array,
+  className: PropTypes.string
+}
 
 export default function FeatureCards({ cards = [], className}) {
   return (
