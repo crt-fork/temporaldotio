@@ -5,6 +5,7 @@ import Testimonials from '@/components/Testimonials';
 import CalloutFooter from '@/components/base/Footer';
 import CallOutBackground from '@/components/CallOutBackground';
 import FeatureCards from '@/components/FeatureCards';
+import Timeline from '@/components/Timeline';
 
 export default function AboutPage() {
   return <>
@@ -20,7 +21,12 @@ export default function AboutPage() {
           copy={{
             title: 'index',
             headline: 'About Temporal.',
-            subhead: "We exist to shield developers from unnecessary risk and eliminate everything that gets in their way.  So they can focus on writing code and creating what’s next.",
+            subhead: (
+              <>
+                We exist to shield developers from unnecessary risk and eliminate everything that gets in their way.
+                <br />So they can focus on writing code and creating what’s next.
+              </>
+            ),
           }}
           className="mt-24 mb-10 md:mt-[12.5rem] md:mb-20"
         />
@@ -28,7 +34,7 @@ export default function AboutPage() {
 
       <section>
         <CallOutBackground
-          key={'distributedSystems'}
+          key={'on-a-mission'}
           copy={{
             headline: "We’re on a mission to  champion engineers  everywhere.",
             subhead: "We envision a world where developers are  empowered: influencing and leading the  direction of every business.",
@@ -42,7 +48,7 @@ export default function AboutPage() {
        <section>
         <CallOut
           textAlign="left"
-          key={'distributedSystems'}
+          key={'temporal-raises'}
           copy={{
             headline: "Temporal raises $100 Million Series B to invest in open source and developer communities.",
             linkCopy: "Read Max’s blog.",
@@ -54,7 +60,7 @@ export default function AboutPage() {
 
       <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
         <CallOut
-          key={'code-and-scale'}
+          key={'15-years'}
           textAlign="center"
           copy={{
             headline: '15 years  in the making.',
@@ -62,12 +68,61 @@ export default function AboutPage() {
               'We’re growing at an incredible speed and want you to be a part of it. If none of these  positions are a fit for you, email careers@temporal.io describing your dream job.',
           }}
         />
-        
+        <Timeline
+          textAlign="left"
+          key={'timeline'}
+          items= {[
+            {
+              year: "2004",
+              icon: "/images/icons/timeline/amazon.png",
+              alt: '',
+              copy: "Max was the Tech Lead on Simple Queue Service (SQS) at Amazon.",
+            },
+            {
+              year: "2009",
+              icon: "/images/icons/timeline/amazon.png",
+              alt: '',
+              copy: "Max and Samar worked on the Simple Workflow Service (SWF) using the SQS engine at Amazon.",
+            },
+            {
+              year: "2014",
+              icon: "/images/icons/timeline/azure.png",
+              alt: '',
+              copy: "Samar was the Tech Lead on Azure Service Bus at Microsoft. Lead a side project that turned into Azure Durable Functions.",
+            },
+            {
+              year: "2015",
+              icon: "/images/icons/timeline/cherami.png",
+              alt: '',
+              copy: "Max and Samar both joined Uber and built two open source projects Cherami and Cadence",
+            },
+            {
+              year: "2019",
+              icon: "/images/icons/timeline/temporal.png",
+              alt: '',
+              copy: "Max and Samar founded Temporal Technologies inc.",
+            },
+            {
+              year: "2020",
+              icon: "/images/icons/timeline/temporal.png",
+              alt: '',
+              copy: "Temporal raises $18.75M Series A ",
+            },
+            {
+              year: "2022",
+              icon: "/images/icons/timeline/temporal.png",
+              alt: '',
+              copy: "Temporal.io raises $103 Million Series B, company valuation passes $1.5 Billion",
+            }
+
+          ]}
+          className=""
+        />
       </section>
 
       <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
         <CallOut
-          key={'code-and-scale'}
+          key={'backed-by'}
           textAlign="center"
           copy={{
             headline: 'Backed by',
@@ -78,7 +133,7 @@ export default function AboutPage() {
 
       <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
         <CallOut
-          key={'code-and-scale'}
+          key={'more-about'}
           textAlign="center"
           copy={{
             headline: 'More about  Temporal.',
@@ -90,7 +145,7 @@ export default function AboutPage() {
 
       <section className="mt-20 sm:mt-32 lg:mt-64 xxl:mt-96">
         <CallOut
-          key={'code-and-scale'}
+          key={'join-team'}
           textAlign="center"
           copy={{
             headline: 'Join  our team.',
