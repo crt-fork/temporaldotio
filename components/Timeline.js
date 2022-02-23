@@ -10,7 +10,14 @@ export default function Timeline({items = [], className}) {
   return (
     <div className={`${className}`}>
       <div className='container mx-auto px-10 lg:flex'>
-        <div className='mx-auto'>
+
+        {/* Mobile */}
+        <div className='mx-auto lg:hidden'>
+          <img src="/images/icons/timeline/mobile.png" alt="" />
+        </div>
+
+        {/* Desktop  */}
+        <div className='mx-auto hidden lg:block'>
           {items.map((item, i) => (
             <div
             className='flex flex-wrap items-center mb-20 timeline-date'
@@ -28,8 +35,9 @@ export default function Timeline({items = [], className}) {
               </div>
             </div>
           ))}
-
         </div>
+
+
       </div>
     </div>
   );
