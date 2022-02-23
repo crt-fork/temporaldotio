@@ -6,6 +6,7 @@ import CalloutFooter from '@/components/base/Footer';
 import CallOutBackground from '@/components/CallOutBackground';
 import FeatureCards from '@/components/FeatureCards';
 import Timeline from '@/components/Timeline';
+import LogoFeature from '@/components/LogoFeature';
 
 export default function AboutPage() {
   return <>
@@ -67,6 +68,7 @@ export default function AboutPage() {
             subhead:
               'We’re growing at an incredible speed and want you to be a part of it. If none of these  positions are a fit for you, email careers@temporal.io describing your dream job.',
           }}
+          className="mb-32s"
         />
         <Timeline
           textAlign="left"
@@ -127,6 +129,31 @@ export default function AboutPage() {
           copy={{
             headline: 'Backed by',
           }}
+          className="mb-16"
+        />
+        <LogoFeature
+          key={'logo-feature'}
+
+          copy="As senior software architects, Maxim and Samar saw organizations struggling as they adopted distributed systems and microservices architectures. They designed Temporal to tame this complexity and empower developers to write reliable, fault-tolerant applications at any scale."
+          logos={[
+            {
+              image:"/images/logos/index-ventures.svg",
+              alt:"Index Ventures logo"
+            },
+            {
+              image:"/images/logos/amplify-partners.svg",
+              alt:"Amplify Partners logo"
+            },
+            {
+              image:"/images/logos/sequoia.svg",
+              alt:"Sequoia logo"
+            },
+            {
+              image:"/images/logos/madrona.svg",
+              alt:"Madrona logo"
+            }
+          ]}
+          className=""
         />
         
       </section>
@@ -140,6 +167,8 @@ export default function AboutPage() {
             subhead: 'Morbi nec leo sodales, ultricies lacus fringilla, tempus enim. Phasellus vel magna quis metus tempor tincidunt a ac erat. Quisque magna diam, euismod ut condimentum id.'
           }}
         />
+
+        
         
       </section>
 
