@@ -13,7 +13,7 @@ export default function Count({ copy = {}, className }) {
         <div className="count-background">
           <CountUp
             start={0}
-            end={86400 * 70000}
+            end={86400 * 50000}
             separator=","
             duration={86400}
             delay={0}
