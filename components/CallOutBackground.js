@@ -37,7 +37,7 @@ export default function CallOutBackground({
           >
             {lineBreak(copy.headline)}
           </h2>
-          <p className="text-sm xl:text-3xl">
+          <p className="text-sm xl:text-3xl font-light">
             {lineBreak(copy.subhead)}
           </p>
         </div>

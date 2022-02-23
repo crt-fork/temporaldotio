@@ -58,7 +58,7 @@ export default function CallOut({
           
         )}
         
-        <p className="text-sm sm:text-2xl max-w-[1000px] mx-auto callout-copy"
+        <p className="text-sm sm:text-2xl max-w-[1000px] mx-auto callout-copy font-light"
           dangerouslySetInnerHTML={{__html: copy.subhead}}>
         </p>
         <div

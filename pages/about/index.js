@@ -7,6 +7,7 @@ import CallOutBackground from '@/components/CallOutBackground';
 import FeatureCards from '@/components/FeatureCards';
 import Timeline from '@/components/Timeline';
 import LogoFeature from '@/components/LogoFeature';
+import BlogCards from '@/components/BlogCards';
 
 export default function AboutPage() {
   return <>
@@ -68,7 +69,7 @@ export default function AboutPage() {
             subhead:
               'We’re growing at an incredible speed and want you to be a part of it. If none of these  positions are a fit for you, email careers@temporal.io describing your dream job.',
           }}
-          className="mb-32s"
+          className="mb-32"
         />
         <Timeline
           textAlign="left"
@@ -168,6 +169,33 @@ export default function AboutPage() {
           }}
         />
 
+
+        <BlogCards
+          cards={[
+            {
+              headline: 'An Open Letter to the Temporal User Community',
+              author: 'by Maxim Fateev',
+              position: 'CEO & Co-Founder',
+              headshot: '/images/icons/maxim.svg',
+              url: '/'
+            },
+            {
+              headline: 'Why I joined Temporal',
+              author: 'by Charles Zedlewski',
+              position: 'CPO',
+              headshot: '/images/icons/charles.svg',
+              url: '/'
+            },
+            {
+              headline: 'A journey',
+              author: 'by Samar Abbas',
+              position: 'CTO and Co-Founder',
+              headshot: '/images/icons/samar.svg',
+              url: '/'
+            }
+          ]}
+          className=""
+        />
         
         
       </section>
