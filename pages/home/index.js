@@ -269,7 +269,7 @@ export default function Home() {
           copy={{
             headline: 'Uber scale.',
             number: '5074700000',
-            subhead: 'Temporal State Transitions executed last month.',
+            subhead: 'Temporal State Transitions have executed since loading this page.',
           }}
           className="py-40 lg:pt-96"
         />
@@ -330,7 +330,7 @@ export default function Home() {
           className="pt-32"
         />
       </section>
-      <section className="mt-20 sm:mt-32 lg:mt-48 xxl:mt-48">
+      <section className="mt-20 sm:mt-24 lg:mt-24 xxl:mt-24">
         <CallOut
           key={'coolCompanies'}
           textAlign="center"
