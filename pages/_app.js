@@ -287,7 +287,7 @@ function MyApp({ Component, pageProps }) {
         closeFn={closeAnnouncementBar}
       >
         <p>
-          {data.announcement.copy}{' '}
+          {data.announcement.copy}{" "}
           {data?.announcement?.link && (
             <a
               className="text-blue-200 underline whitespace-pre"
@@ -302,7 +302,7 @@ function MyApp({ Component, pageProps }) {
         <Head>
           <title>{Component.title}</title>
           <meta name="description" content={Component.description} />
-          <meta name="keywords" content={Component.keywords || ''} />
+          <meta name="keywords" content={Component.keywords || ""} />
           <link rel="icon" href="/images/logos/logo-temporal-no-copy.svg" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -315,8 +315,11 @@ function MyApp({ Component, pageProps }) {
             rel="stylesheet"
           />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap&text=0123456789," rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@900&display=swap&text=0123456789,"
+            rel="stylesheet"
+          />
         </Head>
         <Component {...pageProps} />
       </BaseLayout>
