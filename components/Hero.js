@@ -45,11 +45,11 @@ export default function Hero({
     <div
       className={`flex flex-col items-center justify-center container mx-auto px-4  ${className}`}
     >
-      <h1 className="text-slate-900 font-extrabold text-4xl sm:text-6xl md:7xl lg:text-[7.5rem] xl:text-[8.75rem] mb-6 md:mb-12 max-w-[75%] tracking-tight text-center dark:text-white">
+      <h1 className="text-slate-900 font-bold text-4xl sm:text-6xl md:7xl lg:text-[7.5rem] xl:text-[8.75rem] mb-6 md:mb-12 max-w-[75%] tracking-tight text-center dark:text-white">
         {copy.headline}
       </h1>
 
-      <p className="mb-10 md:mb-8 text-center text-2xl">{copy.subhead}</p>
+      <p className="mb-10 md:mb-8 text-center text-lg sm:text-2xl">{copy.subhead}</p>
 
       {ctas && (
         <div className="mb-4 md:mb-6 text-lg font-medium flex flex-col justify-center sm:justify-start sm:space-y-0 sm:flex-row sm:space-x-7 items-center">

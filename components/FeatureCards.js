@@ -21,9 +21,9 @@ export default function FeatureCards({ alignContent, cards = [], className}) {
               <div className={`lg:flex lg:flex-wrap lg:h-4/5 ${(alignContent == "start") ? "lg:content-start" : "lg:content-end" }`}>
                 <h3 className='text-3xl mb-4 line-through font-bold'>{card.super}</h3>
                 <h3 className='text-3xl mb-4 font-bold'>{card.headline}</h3>
-                <p className='text-2xl lg:text-lg'>{card.subhead} </p>
+                <p className='text-sm lg:text-lg'>{card.subhead} </p>
                 {card.tags && (
-                  <ul className='pt-7'>
+                  <ul className='pt-4 md:pt-7'>
                     {card.tags.map((tag, i) => (
                       <li className='inline-block bg-gray-200 px-[14px] py-[8px] text-xs mr-[9px] mb-[10px] rounded-full'>{tag}</li>
                     ))}
@@ -32,7 +32,7 @@ export default function FeatureCards({ alignContent, cards = [], className}) {
                 
               </div>
               {card.linkCopy && (
-                <a className='underline' href={`${card.linkUrl}`}>
+                <a className='underline mt-4 block text-sm md:text-lg' href={`${card.linkUrl}`}>
                   {card.linkCopy}
                 </a>
               )}

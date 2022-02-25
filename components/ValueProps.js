@@ -4,7 +4,7 @@ export default function ValueProps({ copy = {} }) {
   return (
     <div className="container">
       <div className="mx-auto max-w-5xl">
-        <h2 className="text-slate-900 font-extrabold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-center dark:text-white">Get it all out-of-the-box</h2>
+        <h2 className="text-slate-900 font-bold text-5xl sm:text-6xl lg:text-7xl tracking-tight text-center dark:text-white">Get it all out-of-the-box</h2>
         <p className="mt-6 text-lg text-center max-w-3xl mx-auto dark:text-slate-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla ac nunc non molestie. Nam lectus augue, luctus eget rhoncus tincidunt, gravida eu nibh.</p>
         div.
       </div>

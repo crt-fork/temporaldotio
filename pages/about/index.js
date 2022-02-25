@@ -22,11 +22,11 @@ export default function AboutPage() {
         <Hero
           copy={{
             title: 'index',
-            headline: 'About Temporal.',
+            headline: 'What’s a ‘Temporal’?',
             subhead: (
               <>
-                We exist to shield developers from unnecessary risk and eliminate everything that gets in their way.
-                <br />So they can focus on writing code and creating what’s next.
+                We exist to shield developers from unnecessary risk and eliminate everything that
+                <br className="hidden sm:block" />gets in their way. So they can focus on writing code and creating what’s next.
               </>
             ),
           }}
@@ -38,11 +38,11 @@ export default function AboutPage() {
         <CallOutBackground
           key={'on-a-mission'}
           copy={{
-            headline: "We’re on a mission to  champion engineers  everywhere.",
+            headline: "We’re the champion for engineers everywhere.",
             subhead: "We envision a world where developers are  empowered: influencing and leading the  direction of every business.",
           }}
           background="/images/backgrounds/about-callout.png"
-          className="py-40 lg:pt-96 lg:pb-20 text-white"
+          className="py-8 md:py-16 lg:pt-[350px] xl:pt-[416px] 2xl:pt-[600px] lg:pb-20 text-white"
         />
       </section>
 
@@ -53,10 +53,10 @@ export default function AboutPage() {
           key={'temporal-raises'}
           copy={{
             headline: "Temporal raises $100 Million Series B to invest in open source and developer communities.",
-            linkCopy: "Read Max’s blog.",
+            linkCopy: "Read Max’s blog about it.",
             linkUrl: ""
           }}
-          className="bg-gray-900 py-40 lg:py-80 text-white"
+          className="bg-gray-900 py-40 lg:py-80 lg:py-96 text-white"
         />
       </section>
 
@@ -65,9 +65,14 @@ export default function AboutPage() {
           key={'15-years'}
           textAlign="center"
           copy={{
-            headline: '15 years  in the making.',
-            subhead:
-              'We’re growing at an incredible speed and want you to be a part of it. If none of these  positions are a fit for you, email careers@temporal.io describing your dream job.',
+            // headline: (
+            //   <>
+            //     An overnight succes,
+            //     <br className="hidden sm:block" /> 15 years in the making.
+            //   </>
+            // ),
+            headline: 'An overnight succes,  15 years in the making.',
+            subhead: "Temporal is now over 2 years old, our community has grown </br> exponentially, and it is just the beginning."
           }}
           className="mb-32"
         />
@@ -77,43 +82,44 @@ export default function AboutPage() {
           items= {[
             {
               year: "2004",
-              icon: "/images/icons/timeline/amazon.png",
+              icon: "/images/icons/timeline/amazon.svg",
               alt: '',
               copy: "Max was the Tech Lead on Simple Queue Service (SQS) at Amazon.",
             },
             {
               year: "2009",
-              icon: "/images/icons/timeline/amazon.png",
+              icon: "/images/icons/timeline/swf.svg",
               alt: '',
               copy: "Max and Samar worked on the Simple Workflow Service (SWF) using the SQS engine at Amazon.",
             },
             {
               year: "2014",
-              icon: "/images/icons/timeline/azure.png",
+              icon: "/images/icons/timeline/azure.svg",
               alt: '',
               copy: "Samar was the Tech Lead on Azure Service Bus at Microsoft. Lead a side project that turned into Azure Durable Functions.",
             },
             {
               year: "2015",
-              icon: "/images/icons/timeline/cherami.png",
+              icon: "/images/icons/timeline/cherami.svg",
               alt: '',
               copy: "Max and Samar both joined Uber and built two open source projects Cherami and Cadence",
             },
             {
               year: "2019",
-              icon: "/images/icons/timeline/temporal.png",
+              icon: "/images/icons/timeline/temporal.svg",
               alt: '',
-              copy: "Max and Samar founded Temporal Technologies inc.",
+              copy: "Max and Samar founded  Temporal Technologies inc.",
+              invert: true,
             },
             {
               year: "2020",
-              icon: "/images/icons/timeline/temporal.png",
+              icon: "/images/icons/timeline/temporal-light.svg",
               alt: '',
               copy: "Temporal raises $18.75M Series A ",
             },
             {
               year: "2022",
-              icon: "/images/icons/timeline/temporal.png",
+              icon: "/images/icons/timeline/temporal-light.svg",
               alt: '',
               copy: "Temporal.io raises $103 Million Series B, company valuation passes $1.5 Billion",
             }
@@ -167,6 +173,7 @@ export default function AboutPage() {
             headline: 'More about  Temporal.',
             subhead: 'Morbi nec leo sodales, ultricies lacus fringilla, tempus enim. Phasellus vel magna quis metus tempor tincidunt a ac erat. Quisque magna diam, euismod ut condimentum id.'
           }}
+          className="mb-10"
         />
 
 
@@ -205,16 +212,17 @@ export default function AboutPage() {
           key={'join-team'}
           textAlign="center"
           copy={{
-            headline: 'Join  our team.',
+            headline: 'We’re hiring!',
             subhead: 'We’re growing at an incredible speed and want you to be a part of it. If none of these positions are a fit for you, email careers@temporal.io describing your dream job.'
           }}
+          className="mb-10"
         />
 
         <FeatureCards
           alignContent="start"
           cards={[
             {
-              icon: '/images/icons/spiral.svg',
+              icon: '/images/icons/hands.svg',
               alt: 'orbital icon',
               headline: 'Product',
               subhead:
@@ -224,7 +232,7 @@ export default function AboutPage() {
               linkUrl: "/",
             },
             {
-              icon: '/images/icons/wrench.svg',
+              icon: '/images/icons/code.svg',
               alt: 'wrench icon',
               headline: 'Engineering',
               subhead:
@@ -234,7 +242,7 @@ export default function AboutPage() {
               linkUrl: "/"
             },
             {
-              icon: '/images/icons/brackets.svg',
+              icon: '/images/icons/people.svg',
               alt: 'code brackets icon',
               headline: 'Operations',
               subhead:

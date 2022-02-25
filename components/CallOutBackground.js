@@ -32,12 +32,12 @@ export default function CallOutBackground({
           )}>
           <h2
             className={clsx(
-              "text-3xl sm:text-5xl lg:text-6xl xl:text-7xl mb-6 lg:mb-12 font-bold",
+              "text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl md:mb-6 lg:mb-12 font-bold ",
             )}
           >
             {lineBreak(copy.headline)}
           </h2>
-          <p className="text-sm xl:text-3xl font-light">
+          <p className="hidden md:block text-sm md:text-base  xl:text-3xl 2xl:text-5xl font-light leading-tight	md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight">
             {lineBreak(copy.subhead)}
           </p>
         </div>

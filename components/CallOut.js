@@ -50,7 +50,7 @@ export default function CallOut({
           <div className=" mx-auto sm:max-w-[80%]">
             <a
               href={`${copy.linkUrl}`}
-              className="text-sm sm:text-2xl"
+              className="text-lg sm:text-2xl underline" 
             >
               {copy.linkCopy}
             </a>
