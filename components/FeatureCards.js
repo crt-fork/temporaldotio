@@ -25,7 +25,7 @@ export default function FeatureCards({ alignContent, cards = [], className}) {
                 {card.tags && (
                   <ul className='pt-7'>
                     {card.tags.map((tag, i) => (
-                      <li className='inline-block bg-gray-200 px-[14px] py-[8px] text-xs mr-[10px] mb-[10px] rounded-full'>{tag}</li>
+                      <li className='inline-block bg-gray-200 px-[14px] py-[8px] text-xs mr-[9px] mb-[10px] rounded-full'>{tag}</li>
                     ))}
                   </ul>
                 )}
