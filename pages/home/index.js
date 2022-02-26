@@ -80,7 +80,7 @@ export default function Home() {
             {
               copy: 'Go to Docs',
               url: 'https://docs.temporal.io/',
-              style: 'light',
+              style: 'dark',
             },
             {
               copy: 'Join our Slack Channel',
